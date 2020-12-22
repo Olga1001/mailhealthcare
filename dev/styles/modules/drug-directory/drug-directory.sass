@@ -1,0 +1,48 @@
+.max-370 
+  max-width: 370px
+
+.directory
+    &-first
+        background-color: $bg-blue-light
+        padding-bottom: 295px
+        .title
+            margin: 43px 0 90px
+
+
+.icon-monitor
+  width: 104px
+  height: 104px
+  fill: $gray-light
+  margin-right: 35px
+
+.letter
+    margin-bottom: 100px
+    &-link
+        width: 35px
+        font-size: 18px
+        line-height: 35px
+        font-weight: 500
+        text-transform: uppercase
+        color: #06396a
+        text-align: center
+        border-radius: 50%
+        display: block
+        transition: all 0.3s ease
+        &.active, &:hover
+            background-color: $green
+            color: $white
+
+@media only screen and (max-width : 991px)
+    .letter-item 
+        margin: 0 8px 20px 8px
+    .letter 
+        margin-left: -8px 
+        margin-right: -8px 
+        margin-bottom: 40px
+@media only screen and (max-width : 575px)  
+    .directory-first .title 
+        margin: 10px 0 99px
+    .icon-monitor
+        margin-bottom: 15px
+        width: 76px
+        height: 76px

@@ -1,0 +1,170 @@
+.topblock
+    background-color: $bg-white
+    box-shadow: $shadow2
+    padding: 49px 15px 29px
+    position: relative
+    margin-top: -295px
+    margin-bottom: 80px
+    &-container 
+        max-width: 1240px 
+        width: 100% 
+        margin: 0 auto 
+    &-title
+        padding: 0 10px
+        .icon-top_20_arrow
+            width: 30px
+            height: 30px
+            fill: $gray-100
+    &-img 
+        position: absolute 
+        right: 60px 
+        bottom: calc(100% - 180px)
+
+.medications 
+    padding-top: 50px
+    padding-bottom: 20px
+    outline: none
+    width: 235px
+    &-item  
+        position: relative
+        overflow: visible
+        outline: none
+        &:before 
+            content: ''
+            +centerXY 
+            background-color: $white
+            height: 80px 
+            width: calc(100% + 12px)
+            box-shadow: $shadow
+            pointer-events: none
+            transition: all 0.3s ease
+            opacity: 0
+            z-index: 1
+        &:hover
+            &:before 
+                opacity: 1
+            .medications-link 
+                color: $green
+                &:before
+                    opacity: 1
+            .medications-icon 
+                fill: $green
+            .icon-arrow_right
+                opacity: 1
+            .medications-plus 
+                opacity: 0
+    &.slick-active:last-child
+        .medications-link
+            border-right-width: 0
+        .medications-plus
+            &:before, &:after 
+                content: none 
+    &-plus
+        background-color: $bg-white
+        position: absolute
+        right: -18px 
+        bottom: -18px 
+        width: 36px
+        height: 36px
+        opacity: 1
+        transition: all 0.3s ease
+        &:before, &:after 
+            content: ''
+            +centerXY
+            background-color: rgba($bg-gray-light, 0.49)
+        &:before
+            width: 22px
+            height: 1px
+        &:after
+            height: 22px
+            width: 1px
+    &-link 
+        font-size: 16px
+        line-height: 1.2
+        font-weight: 500
+        color: $blue-navy
+        transition: all 0.3s ease
+        border-right: 1px dotted rgba($gray-light, 0.49)
+        border-bottom: 1px dotted rgba($gray-light, 0.49)
+        padding: 18px 20px
+        outline: none
+        span 
+            white-space: nowrap
+            text-overflow: ellipsis
+            overflow: hidden
+            z-index: 1
+        &:before 
+            content: ''
+            left: -6px
+            +centerY
+            width: 3px
+            height: 45px
+            background-color: $green
+            opacity: 0
+            transition: all 0.3s ease
+            z-index: 1
+        .medications-icon 
+            width: 25px
+            height: 25px
+            fill: $gray-light
+            transition: all 0.3s ease
+            flex-shrink: 0
+            margin-right: 20px
+        .icon-arrow_right
+            width: 18px
+            height: 18px
+            fill: $green
+            opacity: 0 
+            flex-shrink: 0
+            transition: all 0.3s ease
+            z-index: 1
+
+.max-270
+  max-width: 270px
+
+@media only screen and (max-width : 1199px)
+    .topblock-img 
+        width: 250px
+        height: 217px
+        bottom: calc(100% - 109px)
+    .topblock
+        padding-top: 120px
+        margin-top: -260px
+
+@media only screen and (max-width : 991px)    
+    .topblock-img 
+        right: 50% 
+        transform: translateX(50%)
+    .dashed-vertical-lg
+        transform: rotate(90deg)
+        margin: 0 0 0 32px
+    .max-270
+        max-width: 100%
+    .topblock 
+        margin-left: -15px 
+        margin-right: -15px
+    .topblock
+        margin-bottom: 60px
+@media only screen and (max-width : 575px)    
+    .topblock-title
+        .fs-35
+            font-size: 30px
+    .topblock-title
+        .mr-25 
+            margin-right: 0
+            margin-bottom: 20px
+    .dashed-vertical-md
+        transform: rotate(90deg)
+        margin: -6px 0 -3px 30px
+    .slider-medications
+        margin-left: -15px 
+        margin-right: -15px
+    .topblock-title .icon-top_20_arrow
+        width: 24px
+        height: 24px
+    .topblock 
+        padding-top: 110px
+    .topblock-title
+        padding: 0
+    .medications-link 
+        padding: 17px 15px

@@ -1,0 +1,54 @@
+@import "vars"
+
+/*==========  Desktop First  ==========*/
+
+/* Large Devices, Wide Screens */
+
+
+@media only screen and (min-width : 992px)               
+    .flex-lg-center-between
+        +d-flex(space-between, center) 
+    .align-lg-items-end
+        display: flex 
+        align-items: flex-end
+@media only screen and (min-width : 768px)
+    .flex-md-center-between 
+        +d-flex(space-between, center) 
+    .align-md-items-end
+        display: flex 
+        align-items: flex-end
+    .d-md-block
+        display: block
+    .d-md-none
+        display: none
+    .align-md-items-center
+        display: flex 
+        align-items: center
+@media only screen and (min-width : 576px)
+    .align-sm-items-center
+        display: flex 
+        align-items: center
+@media only screen and (max-width : 991px)
+    .slick-slide
+        margin-right: 10px
+    .mb-75
+        margin-bottom: 50px
+    .active-search-lg  
+        .search
+           opacity: 0
+           pointer-events: none
+        .search-lg
+            display: block
+            margin: 20px 0 0
+            max-width: 100%
+            
+@media only screen and (max-width : 575px)
+    .fs-35
+        font-size: 30px
+        line-height: 30px
+    .fs-40
+        font-size: 32.6px
+        line-height: 1.2
+    .fs-100
+        font-size: 81.4px
+        line-height: 52px

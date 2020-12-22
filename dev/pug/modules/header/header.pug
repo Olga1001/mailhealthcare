@@ -1,0 +1,26 @@
+header.header.active-search-lg 
+    .container
+        .flex-center-between 
+            button.burger(type="button")
+                span.burger-line.burger-line-top
+                span.burger-line.burger-line-center
+                span.burger-line.burger-line-bottom
+            a.logo(href="#")
+                img.logo-icon(src="img/logo-icon.png", alt="logo")
+                img.logo-name(src="img/logo-name.png", alt="logo")
+            form.search
+                input(type="text" placeholder="Type your drug name (like Atorvastin, Sildenafil, etc)")
+                button(type="submit")
+                    +icon("search_magnific")
+            nav.navmenu 
+                ul.menu 
+                    each val, index in [{icon: 'head_question', link: 'How it Works'},{icon: 'head_discount', link: 'Discount'},{icon: 'head_call', link: 'Contact Us'}]    
+                        li.menu-item(class=index==0 ? 'active': '') 
+                            a.menu-link(href="#")
+                                span.align-items-center
+                                    +icon(val.icon)
+                                    =val.link
+        form.search-lg
+            input(type="text" placeholder="Type your drug name (like Atorvastin, Sildenafil, etc)")
+            button(type="submit")
+                +icon("search_magnific")

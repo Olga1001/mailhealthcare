@@ -1,0 +1,34 @@
+extends layout/main
+
+block variables
+	-var title = 'Drug Directory'
+
+block content
+	.directory-first
+		.container
+			ul.breadcrumbs
+				li.breadcrumbs__item
+					a.breadcrumbs__link(href="")
+						+icon("house")
+				+breadcrumbs-item('Drug Directory')
+			.align-md-items-center.title 
+				h1.fs-35.text-up.c-blue Browse <br> drugs
+				.dashed-vertical.dashed-vertical-md
+				p.c-blue.max-370 Browse prescription and over the counter medications from A to Z, compare drug prices, and start saving.
+	.container
+
+		include layout/top-block
+		
+		.align-sm-items-center.mb-75
+			+icon("monitor")
+			h1.fs-35.text-up.c-blue Browse <br> Medications <br> 
+				span.c-green.fw-bold by Letter
+
+		ul.letter.flex-wrap.flex-lg-center-between.flex-center-center
+			each val, index in ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+				if (index==0)
+					li.letter-item
+						a.letter-link.active(href="#")=val
+				else
+					li.letter-item
+						a.letter-link(href="#")=val

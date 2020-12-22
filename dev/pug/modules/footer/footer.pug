@@ -1,0 +1,40 @@
+footer.footer
+    .container 
+        .footer-top
+            .footer-top_container.flex-md-center-between  
+                a.licence.d-md-block.d-none(href="#")
+                    span.licence-border 
+                        img(src="img/licence.png", alt="licence")
+                    span.fs-14.c-green-light.text-center.d-block License N325-687
+                
+                div 
+                    a.logo(href="#")
+                        img.logo-icon(src="img/logo-icon.png", alt="logo")
+                        img.logo-name(src="img/logo-name-white.png", alt="logo")
+                    ul.social.flex-center-center 
+                        each val in ['facebook','twitter','instagram']
+                            li.social-item 
+                                a.social-link(href="#")
+                                    +icon(val)
+                    p.c-white.text-center Copyright ©2011-2020 DrugRx, Inc.
+
+                    ul.flex-wrap.flex-center-center.footer_menu
+                        each val in ['Terms of Use', 'Privacy Policy' , ' Disclaimer']
+                            li.footer_menu-item
+                                a.c-white(href="#")=val
+
+
+                a.licence.d-md-none(href="#")
+                    span.licence-border 
+                        img(src="img/licence.png", alt="licence")
+                    span.fs-14.c-green-light.text-center.d-block License N325-687
+
+                a.licence(href="#")
+                    span.licence-border 
+                        img(src="img/licence2.png", alt="licence")
+                    span.fs-14.c-green-light.text-center.d-block License 358N325-687
+
+    .footer-bottom 
+        .container 
+            p.c-white.text-center.max-1230 Usu melius facilis accumsan ex, duo id nonumes scripserit, tacimates instructior mel ad. Choro dolorum ut usu. Minim nostro sea no. Semper facete mei ne. Vis cu ornatus aliquando. Eros oratio graece ex vel. Dolor patrioque vel te. Duo vocibus assueverit eu, dicta aliquam percipit eos an. Vis cu or.
+

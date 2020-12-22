@@ -1,0 +1,97 @@
+.licence 
+    display: block
+    &-border 
+        border: 1px solid rgba($white, 0.2)
+        width: 220px
+        height: 160px
+        padding: 10px
+        margin-bottom: 25px
+        display: block
+        img 
+            width: 100%
+            height: 100% 
+            object-fit: cover
+            
+.footer
+    &-top
+        background-color: $bg-blue-navy
+        padding: 40px 15px
+        margin-bottom: -100px
+        position: relative
+        z-index: 1
+        &_container  
+            max-width: 1220px
+            margin: 0 auto
+            width: 100%
+    .logo
+        height: 60px
+        margin: 0 auto 35px
+    .logo-icon
+        width: 64px
+    &_menu
+        padding: 23px 0
+        &-item 
+            padding: 0 17px
+            line-height: 1
+            margin: 5px 0
+            border-right: 1px solid $white
+            &:last-child
+                border-right: none
+            a:hover 
+                color: $green-light
+    &-bottom 
+        padding-top: 135px
+        padding-bottom: 35px
+        background-color: $bg-green-light
+
+.social
+    padding-bottom: 37px
+    &-link
+        width: 32px
+        height: 32px
+        border: 1px solid $white
+        margin: 0 6px 
+        display: block 
+        border-radius: 50% 
+        +d-flex(center)
+        svg 
+            fill: $white
+            width: 16px 
+            height: 16px
+
+        &:hover 
+            background-color: $bg-blue-bright
+            border-color: $bg-blue-bright
+
+.max-1230
+    max-width: 1230px 
+    margin: 0 auto 
+
+@media only screen and (max-width : 991px)
+    .footer_menu
+        flex-direction: column
+    .footer_menu-item 
+        border-right: none
+    .footer-top 
+        margin-left: -15px
+        margin-right: -15px
+
+@media only screen and (max-width : 767px)  
+    .footer-top
+        padding: 60px 15px 50px
+        margin-bottom: 0
+    .licence
+        margin-top: 30px
+    .licence-border
+        margin: 0 auto 25px
+    .footer-bottom 
+        padding: 42px 0
+@media only screen and (max-width : 575px)  
+    .footer .logo
+        margin: 0 auto 28px
+    .social
+        padding-bottom: 25px
+    .footer_menu
+        padding: 47px 0 16px
+    .footer_menu-item
+        margin: 7px 0

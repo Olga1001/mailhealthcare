@@ -1,0 +1,50 @@
+.topblock 
+    .topblock-container
+        img.topblock-img(src="img/atoz.png", alt="img")
+        .topblock-title.align-lg-items-end
+            .align-md-items-end
+                .mr-25.text-up 
+                    p.fs-40.fw-semi.c-green.align-items-center 
+                        span.mr-8 Top
+                        +icon("top_20_arrow")
+                    p.fs-100.fw-bold.c-green 20
+                p.fs-35.c-blue-navy.mb--5.text-up Most <br> Common <br> Medications
+            .dashed-vertical.dashed-vertical-lg
+            p.c-blue.max-270.fs-18.mb--5 These are the most commonly-prescribed medications on GoodRx.
+        .slider-medications
+            ul.medications
+                each val, index in [{icon: 'pills_002', name: 'Sildenafil'}, {icon: 'pills_002', name: 'Amphetamine Salt Co ...'}, {icon: 'pills_002', name: 'Phentermine'}, {icon: 'pills_002', name: 'Hydrocodone / Acet ...'}, {icon: 'pills_001', name: 'Gabapentin'}]
+                    li.medications-item
+                        a.medications-link.flex-center-between(href="#")
+                            span.align-items-center
+                                +icon(val.icon, "medications-icon")
+                                span=val.name
+                            +icon("arrow_right")
+                            span.medications-plus
+            ul.medications
+                each val, index in [{icon: 'pills_001', name: 'Alprazolam'}, {icon: 'pills_001', name: 'Prednisone'}, {icon: 'pills_001', name: 'Albuterol'}, {icon: 'pills_002', name: 'Zolpidem'}, {icon: 'pills_001', name: 'Amoxicillin'}]
+                    li.medications-item
+                        a.medications-link.flex-center-between(href="#")
+                            span.align-items-center
+                                +icon(val.icon, "medications-icon")
+                                span=val.name
+                            +icon("arrow_right")
+                            span.medications-plus
+            ul.medications
+                each val, index in [{icon: 'pills_001', name: 'Amphetamine Salt C ...'}, {icon: 'pills_002', name: 'Atorvastatin'}, {icon: 'pills_002', name: 'Lisinopril'}, {icon: 'pills_004', name: 'Azithromycin'}, {icon: 'pills_002', name: 'Tramadol'}]
+                    li.medications-item
+                        a.medications-link.flex-center-between(href="#")
+                            span.align-items-center
+                                +icon(val.icon, "medications-icon")
+                                span=val.name
+                            +icon("arrow_right")
+                            span.medications-plus
+            ul.medications
+                each val, index in [{icon: 'pills_002', name: 'Amoxicillin / Potassiu ...'}, {icon: 'pills_002', name: 'Clonazepam'}, {icon: 'pills_002', name: 'Ondansetron'}, {icon: 'pills_002', name: 'Pantoprazole'}, {icon: 'pills_002', name: 'Cyclobenzaprine'}]
+                    li.medications-item
+                        a.medications-link.flex-center-between(href="#")
+                            span.align-items-center
+                                +icon(val.icon, "medications-icon")
+                                span=val.name
+                            +icon("arrow_right")
+                            span.medications-plus
