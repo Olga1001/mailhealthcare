@@ -1,0 +1,34 @@
+.product
+    background-color: $bg-white
+    box-shadow: $shadow2
+    padding: 40px 30px
+    margin-top: 28px
+    &-title 
+        position: relative
+        width: 100%
+        margin-right: 70px
+        &:before, &:after
+            content: ''
+            position: absolute
+            bottom: 0
+        &:before 
+            left: 0
+            width: 62px
+            height: 2px
+            margin: 0
+            background: url("../img/dotted-2.png") no-repeat center / contain
+        &:after
+            right: 0
+            width: calc(100% - 62px - 32px)
+            height: 1px
+            background-color: #e6ebeb
+
+    &-left 
+        width: 315px 
+    &-center  
+        width: calc(100% - 630px)
+        padding: 0 30px
+        max-width: 655px
+        margin-right: auto
+    &-right 
+        width: 315px 

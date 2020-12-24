@@ -39,6 +39,34 @@
     font-size: 14px
     line-height: 30px
 
+.breadcrumbs_v2
+  +d-flex(start,flex-end)
+  padding: 17px 0 24px
+  .breadcrumbs__item
+    padding: 0 10px
+    &:first-child 
+      padding: 0
+      .breadcrumbs__link 
+        font-size: 35px
+        line-height: 1.2
+        font-weight: 400
+        text-transform: uppercase
+        color: #06396a
+      &:before 
+        content: none
+    .breadcrumbs__link 
+      font-size: 16px
+      text-transform: none
+      color: #00c498
+  .breadcrumbs__item:before
+    content: '/'
+    background-color: transparent
+    width: auto 
+    height: auto
+    font-size: 16px
+    text-transform: none
+    color: #cad6d9
+
 @media only screen and (max-width : 767px)
   .breadcrumbs 
     padding: 12px 0

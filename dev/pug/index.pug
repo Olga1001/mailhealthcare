@@ -1,23 +1,114 @@
 extends layout/main
 
 block variables
-	-var title = 'Drug Directory'
+	-var title = 'Product'
 
 block content
 	.directory-first
 		.container
-			ul.breadcrumbs
-				li.breadcrumbs__item
-					a.breadcrumbs__link(href="")
-						+icon("house")
-				+breadcrumbs-item('Drug Directory')
-			.align-md-items-center.title 
-				h1.fs-35.text-up.c-blue Browse <br> drugs
-				.dashed-vertical.dashed-vertical-md
-				p.c-blue.max-370 Browse prescription and over the counter medications from A to Z, compare drug prices, and start saving.
-	.container
+			.flex-end-between.pt-35 
+				.product-title
+					ul.breadcrumbs.breadcrumbs_v2
+						+breadcrumbs-item('Pantoprazole', '#')
+						+breadcrumbs-item('Generic', '#')
+						+breadcrumbs-item('Sildenafil', '#')
+				.align-items-center
+					p.fs-14.c-gray.mr-14 Share
+					ul.social.social-gray.d-flex 
+						each val in ['facebook','twitter','instagram']
+							li.social-item 
+								a.social-link(href="#")
+									+icon(val)
+			.product
+				.flex-wrap.justify-content-between 
+					.product-left 
+						.slider-for 
+							.slider-for-item 
+								img(src="img/product/rectangle_12_7672.jpg", alt="product")
+							.slider-for-item 
+								img(src="img/product/rectangle_12_7672.jpg", alt="product")
+							.slider-for-item 
+								img(src="img/product/rectangle_12_7672.jpg", alt="product")
+							.slider-for-item 
+								img(src="img/product/rectangle_12_7672.jpg", alt="product")
+						.slider-nav
+							.slider-nav-item 
+								img(src="img/product/rectangle_12_7672.jpg", alt="product")
+							.slider-nav-item 
+								img(src="img/product/rectangle_12_7672.jpg", alt="product")
+							.slider-nav-item 
+								img(src="img/product/rectangle_12_7672.jpg", alt="product")
+							.slider-nav-item 
+								img(src="img/product/rectangle_12_7672.jpg", alt="product")
+					.product-center
+						p.fw-bold.c-blue Description
+						.dashed-horizontal.my-10
+						p.fs-14.c-blue.line-clamp Pantoprazole (
+							a.c-green(href="#") Protonix
+							|) is an inexpensive drug used to treat 
+							a.c-green(href="#")  gastroesophageal reflux disease, 
+							| inflammation of the esophagus, and Zollinger-Ellison syndrome. This drug is slightly more popular than comparable drugs. It is available in brand and generic form. Generic pantoprazole is covered by most Medicare and insurance plans, but some pharmacy coupons or cash prices may be lower. The lowest GoodRx price for the most common version of pantoprazole is around $8.84, 86% off the average retail price of $66.96 ...
+						a.c-green.btn-more(href="#") 
+							+icon("long-arrow", "c-green mr-14")
+							| More
+						hr.line.mb-10.mt-20
+						p.fw-bold.c-blue.py-3 Prescription Settings
+						.d-flex.settings
+							.select
+								select
+									option(value="" selected) Generic
+									option(value="") Generic
+									option(value="") Generic
+							.select
+								select
+									option(value="" selected) Tablet
+									option(value="") Tablet
+									option(value="") Tablet
+							.select
+								select
+									option(value="" selected) 40mg
+									option(value="") 40mg
+									option(value="") 40mg
+							.select
+								select
+									option(value="" selected) 30 tablets
+									option(value="") 30 tablets
+									option(value="") 30 tablets
+					.product-right 
+						p.fs-35.text-up.c-blue.mb-10 we found <br class="d-sm-block d-none"> best price 
+						.align-items-center
+							img.mr-10(src="img/flags/germany.png", alt="germany" width="16px" height="12px")
+							p.c-blue in 
+								span.c-green.fs-14 Germany
+						hr.line
+						.justify-content-between
+							div
+								p.fs-50.fw-bold.c-green $8.38
+								p.fs-18.fw-medium.c-gray $31 retail
+							div 
+								p.fs-18.c-green.fw-semi Save 73%
+								p.fs-14.c-blue Much сheaper <br> than in the USA
 
-		include layout/top-block
+						a.btn(href="#") Order Now
+							+icon("arrow_right")
+
+						.align-items-center
+							.align-items-center.w-50.px-20 
+								+icon("mail")
+								p.fs-12.text-up.fw-semi.c-gray-600 Mail <br> Order
+							.align-items-center.w-50.px-20 
+								+icon("mail")
+								p.fs-12.text-up.fw-semi.c-gray-600 Free <br> shipping
+					
+
+
+
+
+
+
+	.container
+		.topblock_v2
+			include layout/top-block
 		
 		.align-sm-items-center.mb-75
 			+icon("monitor")
