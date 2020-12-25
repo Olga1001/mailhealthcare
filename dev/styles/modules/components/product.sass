@@ -1,8 +1,19 @@
 .product
     background-color: $bg-white
     box-shadow: $shadow2
-    padding: 40px 30px
+    padding: 40px 30px 5px
     margin-top: 28px
+    position: relative
+    margin-bottom: 22px
+    // &:before 
+    //     content: ''
+    //     position: absolute
+    //     background: url("../img/common/shape_1_copy_7464.png") no-repeat center / contain 
+    //     width: 220px 
+    //     height: 220px 
+    //     z-index: 0
+    //     top: calc(100% - 80px)
+    //     right: 225px
     &-title 
         position: relative
         width: 100%
@@ -16,7 +27,7 @@
             width: 62px
             height: 2px
             margin: 0
-            background: url("../img/dotted-2.png") no-repeat center / contain
+            background: url("../img/common/dotted-2.png") no-repeat center / contain
         &:after
             right: 0
             width: calc(100% - 62px - 32px)
@@ -32,3 +43,149 @@
         margin-right: auto
     &-right 
         width: 315px 
+
+.mailfree-block 
+    .w-50 
+        border-right: 1px solid $gray-200
+        &:last-child
+            border-right: none
+
+.content-item_table
+    padding-right: 10px
+
+.table
+    &-tr
+        padding: 13px 0 13px 10px
+        border-bottom: 1px solid  $gray-200
+        min-height: 59px
+
+.mapside
+    padding: 40px 22px
+    position: relative
+    width: 50%
+
+.map-tooltip
+    position: absolute 
+    top: 20px 
+    right: 0
+    background-color: $bg-white
+    border: 1px solid $gray-200
+    box-shadow: $shadow2
+    padding: 13px 25px
+
+.contry 
+    border-top: 1px solid $gray-200
+    padding: 20px 0
+    margin-top: 14px
+
+.bg-before-blue:before 
+    content: ''
+    position: absolute 
+    top: 0 
+    left: 0
+    width: 100%
+    height: 719px;
+    background-color: $bg-blue-light
+    z-index: -1
+    pointer-events: none
+
+.table_in_td-first
+    flex-basis: 60%
+
+.content-item_table
+    width: 50%
+
+.flex-basis-1
+    flex-basis: 59.5%
+
+.flex-basis-2
+    flex-basis: 50%
+
+.flex-basis-3 
+    flex-basis: 44%
+
+@media only screen and (max-width : 1199px)
+    .content-item_table, .mapside, .product-right
+        width: 100%
+    .product-right
+        padding-bottom: 30px 
+        padding-top: 60px
+        border-bottom: 1px solid $gray-200
+    .product-center
+        width: calc(100% - 315px)
+        max-width: 100%
+    .flex-basis-2
+        flex-basis: 45.5%
+
+@media only screen and (max-width : 991px)
+    .product
+        padding: 20px 15px
+
+@media only screen and (max-width : 767px)
+    .product-left
+        width: 100%
+    .product-center 
+        width: 100% 
+        padding: 0
+    .table_in 
+        tr
+            display: grid
+        td 
+            width: 100%
+        .c-green
+            font-size: 14px
+        .fs-20 
+            text-align: right
+            font-size: 16px
+        .fs-30 
+            font-size: 20px
+    .table_in_td-first 
+        border-bottom: 1px solid $gray-200
+        padding-bottom: 15px 
+        margin-bottom: 15px
+        display: flex
+        min-height: 57px
+    .flex-basis-2, .flex-basis-3
+        flex-basis: 50%
+
+@media only screen and (max-width : 575px)
+    .settings 
+        flex-wrap: wrap
+    .settings .select
+        border-right: 1px solid $gray-100
+        border-bottom: none 
+        border-radius: 0!important
+        &:last-child
+            border-bottom: 1px solid $gray-100
+    .mapside 
+        display: none
+    .product 
+        padding-bottom: 0
+        margin-right: -15px 
+        margin-left: -15px
+        margin-top: 5px
+        &-right 
+            padding-bottom: 25px
+            .line.my-30
+                margin: 20px 0
+            .fs-50
+                font-size: 35px
+                line-height: 45px
+            .fs-18
+                font-size: 16px
+                line-height: 24px
+            .btn.mt-30
+                margin-top: 25px
+    .table-tr 
+        padding: 16px 0
+        img.mr-25 
+            margin-right: 15px
+    .table_in_td-first
+        .c-blue
+            font-size: 14px
+            line-height: 1.2
+    .table_in_td-second 
+        padding-left: 33px
+    .content-item_table
+        padding-right: 0
+            

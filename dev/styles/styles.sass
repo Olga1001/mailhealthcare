@@ -132,6 +132,11 @@ input
   appearance: none
   border: none 
 
+table
+  border-spacing: 0
+  border-collapse: collapse
+  width: 100% 
+
 .container 
   max-width: $desktop
   width: 100% 
@@ -170,13 +175,13 @@ input
 .dashed-vertical
   height: 62px
   width: 2px
-  background: url("../img/dotted.png") no-repeat center / contain
+  background: url("../img/common/dotted.png") no-repeat center / contain
   margin: 0 45px
 
 .dashed-horizontal
   width: 62px
   height: 2px
-  background: url("../img/dotted-2.png") no-repeat center / contain
+  background: url("../img/common/dotted-2.png") no-repeat center / contain
 
 .social
   padding-bottom: 37px
@@ -232,13 +237,15 @@ hr
   select
     appearance: none
     width: 100%
-    height: 50px
+    height: 49px
     padding: 0 10px
     border: none 
     margin: 0
+    font-size: 14px
+    color: $blue
   &:before 
     content: ''
-    background: url("../img/angle-down.svg") no-repeat center / contain
+    background: url("../img/common/angle-down.svg") no-repeat center / contain
     +centerY
     right: 10px
     width: 14px 
@@ -250,6 +257,88 @@ hr
   height: 16px 
   width: 14px
  
+.tabs 
+  border-bottom: 1px solid $gray-200
+  margin-top: 9px
+  &-item 
+    padding: 0 40px 
+    font-size: 16px
+    line-height: 1.2
+    font-weight: 500
+    color: $gray-light
+    position: relative
+    cursor: pointer
+    &:before 
+      content: ''
+      +centerY 
+      right: 0
+      width: 1px
+      height: 20px
+      background-color: $bg-gray-100
+    svg 
+      width: 20px
+      height: 20px
+      fill: $gray-light
+      margin-right: 14px
+    &:first-child
+      padding-left: 0
+    &.active 
+      color: $blue
+      svg 
+        fill: $green
+      .tabs-item_main
+        border-bottom-color: $green
+    .tabs-item_main
+      border-bottom: 3px solid transparent
+      padding: 13px 0
+
+.plus
+  width: 20px
+  height: 20px
+  position: relative
+  margin-left: auto 
+  &:before, &:after 
+    content: ''
+    +centerXY 
+    background-color: #00c498
+    transition: all 0.3s ease
+  &:before 
+    width: 2px 
+    height: 100%
+  &:after 
+    width: 100%
+    height: 2px
+
+.icon-mail
+  width: 20px
+  height: 20px
+  fill: $gray-light
+
+.icon-delivery-truck 
+  width: 32px
+  height: 32px
+  fill: $gray-light
+
+.checkbox 
+  display: none 
+  &:checked ~ .check-radio
+    background-color: $bg-green
+    border-color: $green
+
+.check-radio
+  width: 15px 
+  height: 15px 
+  border-radius: 50% 
+  border: 1px solid $gray-light
+  position: relative
+  &:before 
+    content: ''
+    +centerXY 
+    width: 4px 
+    height: 4px 
+    background-color: $white 
+    border-radius: 50%
+
 @import "modules/modules";
    
 .w-50

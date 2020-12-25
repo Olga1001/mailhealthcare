@@ -41,6 +41,14 @@ $(".slider-for").slick({
   fade: true,
   asNavFor: '.slider-nav',
   centerPadding: '0',
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        dots: true,
+      }
+    },
+  ]
 });
 
 $(".slider-nav").slick({

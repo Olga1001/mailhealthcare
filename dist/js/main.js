@@ -38,7 +38,13 @@ $(".slider-for").slick({
   dots: false,
   fade: true,
   asNavFor: '.slider-nav',
-  centerPadding: '0'
+  centerPadding: '0',
+  responsive: [{
+    breakpoint: 768,
+    settings: {
+      dots: true
+    }
+  }]
 });
 $(".slider-nav").slick({
   slidesToShow: 4,

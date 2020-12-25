@@ -4,13 +4,19 @@
 
 /* Large Devices, Wide Screens */
 
-
+@media only screen and (min-width : 1200px)   
+    .d-xl-block
+        display: block
 @media only screen and (min-width : 992px)               
     .flex-lg-center-between
         +d-flex(space-between, center) 
     .align-lg-items-end
         display: flex 
         align-items: flex-end
+    .flex-lg-end-between
+        +d-flex(space-between, flex-end) 
+    .d-lg-block
+        display: block
 @media only screen and (min-width : 768px)
     .flex-md-center-between 
         +d-flex(space-between, center) 
@@ -24,12 +30,19 @@
     .align-md-items-center
         display: flex 
         align-items: center
+    .justify-md-content-center
+        +d-flex(center, start) 
+    
 @media only screen and (min-width : 576px)
     .align-sm-items-center
         display: flex 
         align-items: center
     .d-sm-block 
         display: block
+    .d-sm-flex 
+        display: flex
+    .d-sm-none
+        display: none
 @media only screen and (max-width : 991px)
     .slick-slide
         margin-right: 10px
@@ -56,3 +69,41 @@
         line-height: 52px
     .social
         padding-bottom: 25px
+    .tabs
+        border: none
+    .tabs-item
+        border-right: 0
+        border-bottom: 1px solid $gray-200
+        margin-right: -15px 
+        margin-left: -15px 
+        padding: 0 15px!important
+        width: calc(100% + 30px)
+    .tabs-item .tabs-item_main
+        border-bottom: none
+        position: relative
+        padding: 16px 0
+        &:before 
+            content: none
+            position: absolute
+            left: 0 
+            bottom: -1px
+            height: 3px 
+            width: 130px
+            background-color: $bg-green
+    .tabs-item.active 
+        border-bottom: none
+        .tabs-item_main
+            border-color: $gray-200
+            border-bottom: 1px solid $gray-200
+            &:before 
+                content: ''
+            .plus
+                &:before, &:after 
+                    background-color: $gray-600
+                &:before
+                    transform: translate(-50%,-50%) rotate(90deg)
+    .tabs-item
+        padding-left: 0
+    .tabs-item:before
+        content: none
+                

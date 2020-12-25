@@ -21,8 +21,22 @@
     outline: none 
 
 .slider-for
-    width: 100%
-    max-height: 315px
+  width: 100%
+  max-height: 315px
+  img 
+    margin: 0 auto
+  .slick-dots 
+    padding-top: 32px
+    li button 
+      border-radius: 50% 
+      width: 14px 
+      height: 14px
+      background-color: transparent 
+      border: 1px solid $gray-light
+  .slick-dots li.slick-active button
+    background-color: $bg-green 
+    border-color: $green
+
 
 .slider-nav 
     padding: 10px 0
@@ -37,3 +51,12 @@
 
 .slick-slide.slick-current.slick-center
     border-color: $green
+
+
+@media only screen and (max-width : 767px)
+  .slider-nav 
+    display: none!important
+  .slider-for
+    max-height: 100%
+    padding-bottom: 74px
+

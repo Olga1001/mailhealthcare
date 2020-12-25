@@ -122,6 +122,17 @@
 .max-270
   max-width: 270px
 
+.topblock_v2
+    .topblock 
+        background-color: transparent
+        margin-top: 0
+        box-shadow: none
+        margin-bottom: 37px
+        &-img 
+            display: none
+        &-title
+            padding-bottom: 10px
+            
 @media only screen and (max-width : 1199px)
     .topblock-img 
         width: 250px
@@ -145,14 +156,19 @@
         margin-right: -15px
     .topblock
         margin-bottom: 60px
-@media only screen and (max-width : 575px)    
-    .topblock-title
-        .fs-35
-            font-size: 30px
+
+@media only screen and (max-width : 767px)   
+    .topblock_v2 .topblock
+        padding-top: 30px
     .topblock-title
         .mr-25 
             margin-right: 0
             margin-bottom: 20px
+
+@media only screen and (max-width : 575px)    
+    .topblock-title
+        .fs-35
+            font-size: 30px
     .dashed-vertical-md
         transform: rotate(90deg)
         margin: -6px 0 -3px 30px
@@ -168,10 +184,3 @@
         padding: 0
     .medications-link 
         padding: 17px 15px
-
-.topblock_v2
-    .topblock 
-        background-color: transparent
-        margin-top: 0
-        &-img 
-            display: none

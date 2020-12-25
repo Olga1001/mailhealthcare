@@ -7,13 +7,22 @@
     border-radius: 29.5px
     text-align: center 
     display: block
+    padding: 0 23px
+    position: relative
+    white-space: nowrap
     svg 
         fill: $white 
         +centerY 
         right: 20px
-        width: 19px
-        height: 17px
-
+        width: 20px
+        height: 20px
 .btn-more
     margin: 17px 0
     display: block
+
+@media only screen and (max-width : 575px)
+    .btn-more
+        font-size: 14px
+    .tabs-item svg
+        width: 13px
+        height: 13px
