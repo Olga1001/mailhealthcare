@@ -1,364 +1,52 @@
 extends layout/main
 
 block variables
-	-var title = 'Product'
+	-var title = 'Letter'
 
 block content
+	.letters
+		.container 
+			ul.letter.flex-wrap.flex-lg-center-between.flex-center-center
+				each val, index in ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+					if (index==0)
+						li.letter-item
+							a.letter-link.active(href="#")=val
+					else
+						li.letter-item
+							a.letter-link(href="#")=val
 	.bg-before-blue
 	.container
-		.flex-lg-end-between.pt-35 
-			.product-title
-				ul.breadcrumbs.breadcrumbs_v2
-					+breadcrumbs-item('Pantoprazole', '#')
-					+breadcrumbs-item('Generic', '#')
-					+breadcrumbs-item('Sildenafil', '#')
-			.align-items-center
-				p.fs-14.c-gray.mr-14.d-lg-block.d-none Share
-				ul.social.social-gray.d-flex 
-					each val in ['facebook','twitter','instagram']
-						li.social-item 
-							a.social-link(href="#")
-								+icon(val)
-		.product
-			.flex-wrap.justify-content-between 
-				.product-left 
-					.slider-for 
-						.slider-for-item 
-							img(src="img/product/rectangle_12_7672.jpg", alt="product")
-						.slider-for-item 
-							img(src="img/product/rectangle_12_7672.jpg", alt="product")
-						.slider-for-item 
-							img(src="img/product/rectangle_12_7672.jpg", alt="product")
-						.slider-for-item 
-							img(src="img/product/rectangle_12_7672.jpg", alt="product")
-					.slider-nav
-						.slider-nav-item 
-							img(src="img/product/rectangle_12_7672.jpg", alt="product")
-						.slider-nav-item 
-							img(src="img/product/rectangle_12_7672.jpg", alt="product")
-						.slider-nav-item 
-							img(src="img/product/rectangle_12_7672.jpg", alt="product")
-						.slider-nav-item 
-							img(src="img/product/rectangle_12_7672.jpg", alt="product")
-				.product-center
-					p.fw-bold.c-blue Description
-					.dashed-horizontal.my-10
-					p.fs-14.c-blue.line-clamp Pantoprazole (
-						a.c-green(href="#") Protonix
-						|) is an inexpensive drug used to treat 
-						a.c-green(href="#")  gastroesophageal reflux disease, 
-						| inflammation of the esophagus, and Zollinger-Ellison syndrome. This drug is slightly more popular than comparable drugs. It is available in brand and generic form. Generic pantoprazole is covered by most Medicare and insurance plans, but some pharmacy coupons or cash prices may be lower. The lowest GoodRx price for the most common version of pantoprazole is around $8.84, 86% off the average retail price of $66.96 ...
-					a.c-green.btn-more(href="#") 
-						+icon("long-arrow", "c-green mr-14")
-						| More
-					hr.line.mb-10.mt-20.d-sm-block.d-none
-					p.fw-bold.c-blue.py-3 Prescription Settings
-					.d-flex.settings
-						.select
-							select
-								option(value="" selected) Generic
-								option(value="") Generic
-								option(value="") Generic
-						.select
-							select
-								option(value="" selected) Tablet
-								option(value="") Tablet
-								option(value="") Tablet
-						.select
-							select
-								option(value="" selected) 40mg
-								option(value="") 40mg
-								option(value="") 40mg
-						.select
-							select
-								option(value="" selected) 30 tablets
-								option(value="") 30 tablets
-								option(value="") 30 tablets
-				.product-right 
-					p.fs-35.text-up.c-blue.mb-5 we found <br class="d-xl-block d-none"> best price 
-					.align-items-center
-						img.mr-10(src="img/flags/germany.png", alt="germany" width="16px" height="12px")
-						p.c-blue in 
-							span.c-green.fs-14 Germany
-					hr.line.my-30
-					.d-flex
-						div.mr-40 
-							p.fs-50.fw-bold.c-green $8.38
-							p.fs-18.fw-medium.c-gray $31 retail
-						div 
-							p.fs-18.c-green.fw-semi.lh-24 Save 73%
-							p.fs-14.c-blue.lh-20 Much сheaper <br> than in the USA
+		ul.breadcrumbs
+			li.breadcrumbs__item
+				a.breadcrumbs__link(href="")
+					+icon("house")
+			+breadcrumbs-item('Drug Directory', '#')
+			+breadcrumbs-item('K')
 
-					a.btn.mt-30(href="#") Order Now
-						+icon("arrow_right")
-
-					.align-items-center.mt-20.mailfree-block
-						.align-items-center.w-50.px-20 
-							+icon("mail", "mr-20")
-							p.fs-12.text-up.fw-semi.c-gray-600 Mail <br> Order
-						.align-items-center.w-50.px-20 
-							+icon("delivery-truck", "mr-20")
-							p.fs-12.text-up.fw-semi.c-gray-600 Free <br> shipping
-			ul.tabs.d-sm-flex 
-				li.tabs-item.active
-					.align-items-center.tabs-item_main
-						+icon("price-tag")
-						p.fw-medium.c-blue Price worldwide
-						.plus.d-sm-none
-					.content-item.d-sm-none
-						.flex-wrap
-							.content-item_table
-								table.table.w-100
-									tr.flex-md-center-between.d-flex.py-20.table-tr
-										td.w-100
-											table.table_in
-												tr.flex-md-center-between
-													td.table_in_td-first
-														.align-sm-items-center.d-flex
-															img.mr-25(src="img/flags/germany.png", alt="germany" width="16px" height="14px")
-															div 
-																p.c-blue.lh-1_2 Best price <br> in 
-																	span.fs-14.c-green Germany
-													td.table_in_td-second 
-														p.fs-30.fw-bold.c-green.lh-1_2 $8.38
-														p.fw-medium.c-green.lh-20 Save 73%
-										td.w-100
-											table.table_in
-												tr.flex-md-center-between
-													td.table_in_td-first.justify-md-content-center  
-														p.fs-14.c-blue.lh-20 Much сheaper <br> than in the USA
-													td 
-														a.btn.lh-45.fs-14.fw-semi(href="#") Order Now
-									- 
-										list = [
-											{
-												flag: 'germany.png', 
-												place: 'Moldova', 
-												save: '69%'
-											},
-											{
-												flag: 'buigaria.png', 
-												place: 'Buigaria', 
-												save: '65%'
-											},
-											{
-												flag: 'finland.png', 
-												place: 'Finland', 
-												save: '65%'
-											},
-											{
-												flag: 'russia.png', 
-												place: 'Russia', 
-												save: '65%'
-											},
-											{
-												flag: 'romania.png', 
-												place: 'Romania', 
-												save: '65%'
-											},
-											{
-												flag: 'italy.png', 
-												place: 'Italy', 
-												save: '65%'
-											},
-											{
-												flag: 'switzerland.png', 
-												place: 'Switzerland', 
-												save: '65%'
-											},
-											{
-												flag: 'poland.png', 
-												place: 'Poland', 
-												save: '65%'
-											},
-											{
-												flag: 'uk.png', 
-												place: 'UK', 
-												save: '42%'
-											}
-
-										]
-									each val in list
-										tr.flex-center-between.py-20.table-tr
-											td.flex-basis-1 
-												.align-items-center
-													img.mr-25(src="img/flags/"+val.flag, alt="germany" width="16px" height="14px")
-													div 
-														p.c-blue.lh-1_2 Price in 
-															span.fs-14.c-green=val.place
-											td.w-100
-												table.w-100.table_in 
-													tr.flex-md-center-between.flex-center-end
-														td
-															p.fs-20.c-blue $8.44
-														td 
-															p.fw-medium.c-green Save  
-																span=val.save
-								a.c-green.btn-more.my-20(href="#") 
-									+icon("long-arrow", "c-green mr-14")
-									| Load more results
-							.mapside 
-								#map 
-									img.w-100(src="img/common/map.png", alt="map")
-								.map-tooltip
-									.align-items-center 
-										img.mr-10(src="img/flags/germany.png", alt="germany" width="16px" height="16px")
-										p.c-blue.fw-bold Moldova
-									hr.line.my-20
-									.align-items-center 
-										p.fs-30.c-green.text-up.mr-20 $8.44
-										p.fs-14.c-gray-600.lh-14 Average price <br> in country
-								.contry.flex-center-around 
-									label.align-items-center  
-										input.checkbox(type="radio" name="contry")
-										span.check-radio.mr-8
-										span.c-blue USA
-									label.align-items-center  
-										input.checkbox(type="radio" name="contry" checked)
-										span.check-radio.mr-8
-										span.c-blue Europe
-									label.align-items-center  
-										input.checkbox(type="radio" name="contry")
-										span.check-radio.mr-8
-										span.c-blue Russia
-									label.align-items-center 
-										input.checkbox(type="radio" name="contry")
-										span.check-radio.mr-8
-										span.c-blue Asia
-				li.tabs-item
-					.align-items-center.tabs-item_main
-						+icon("info")
-						p.fw-medium.c-blue Drug Info
-						.plus.d-sm-none
-					.content-item.d-sm-none
-				li.tabs-item
-					.align-items-center.tabs-item_main
-						+icon("warning")
-						p.fw-medium.c-blue Side Effects
-						.plus.d-sm-none
-					.content-item.d-sm-none
-			.content.d-sm-block.d-none 
-				.content-item
-					.flex-wrap
-						.content-item_table
-							table.table.w-100
-								tr.flex-md-center-between.d-flex.py-20.table-tr
-									td.w-100
-										table.table_in
-											tr.flex-md-center-between
-												td.table_in_td-first
-													.align-items-center
-														img.mr-25(src="img/flags/germany.png", alt="germany" width="16px" height="14px")
-														div 
-															p.c-blue.lh-1_2 Best price <br> in 
-																span.fs-14.c-green Germany
-												td 
-													p.fs-30.fw-bold.c-green.lh-1_2 $8.38
-													p.fw-medium.c-green.lh-20 Save 73%
-									td.w-100
-										table.table_in
-											tr.flex-md-center-between
-												td.table_in_td-first.justify-md-content-center  
-													p.fs-14.c-blue.lh-20 Much сheaper <br> than in the USA
-												td 
-													a.btn.lh-45.fs-14.fw-semi(href="#") Order Now
-								- 
-									list = [
-										{
-											flag: 'germany.png', 
-											place: 'Moldova', 
-											save: '69%'
-										},
-										{
-											flag: 'buigaria.png', 
-											place: 'Buigaria', 
-											save: '65%'
-										},
-										{
-											flag: 'finland.png', 
-											place: 'Finland', 
-											save: '65%'
-										},
-										{
-											flag: 'russia.png', 
-											place: 'Russia', 
-											save: '65%'
-										},
-										{
-											flag: 'romania.png', 
-											place: 'Romania', 
-											save: '65%'
-										},
-										{
-											flag: 'italy.png', 
-											place: 'Italy', 
-											save: '65%'
-										},
-										{
-											flag: 'switzerland.png', 
-											place: 'Switzerland', 
-											save: '65%'
-										},
-										{
-											flag: 'poland.png', 
-											place: 'Poland', 
-											save: '65%'
-										},
-										{
-											flag: 'uk.png', 
-											place: 'UK', 
-											save: '42%'
-										}
-
-									]
-								each val in list
-									tr.flex-center-between.py-20.table-tr
-										td.flex-basis-1 
-											.align-items-center
-												img.mr-25(src="img/flags/"+val.flag, alt="germany" width="16px" height="14px")
-												div 
-													p.c-blue.lh-1_2 Price in 
-														span.fs-14.c-green=val.place
-										td.w-100
-											table.w-100.table_in 
-												tr.flex-md-center-between.flex-center-end
-													td
-														p.fs-20.c-blue $8.44
-													td 
-														p.fw-medium.c-green Save  
-															span=val.save
-							a.c-green.btn-more.my-20(href="#") 
-								+icon("long-arrow", "c-green mr-14")
-								| Load more results
-						.mapside 
-							#map 
-								img.w-100(src="img/common/map.png", alt="map")
-							.map-tooltip
-								.align-items-center 
-									img.mr-10(src="img/flags/germany.png", alt="germany" width="16px" height="16px")
-									p.c-blue.fw-bold Moldova
-								hr.line.my-20
-								.align-items-center 
-									p.fs-30.c-green.text-up.mr-20 $8.44
-									p.fs-14.c-gray-600.lh-14 Average price <br> in country
-							.contry.flex-center-around 
-								label.align-items-center  
-									input.checkbox(type="radio" name="contry")
-									span.check-radio.mr-8
-									span.c-blue USA
-								label.align-items-center  
-									input.checkbox(type="radio" name="contry" checked)
-									span.check-radio.mr-8
-									span.c-blue Europe
-								label.align-items-center  
-									input.checkbox(type="radio" name="contry")
-									span.check-radio.mr-8
-									span.c-blue Russia
-								label.align-items-center 
-									input.checkbox(type="radio" name="contry")
-									span.check-radio.mr-8
-									span.c-blue Asia
-
-
-		.topblock_v2
+		.topblock_v3
 			include layout/top-block
+		
+		h2.fs-35.text-up.c-blue All drugs that start with 
+			span.c-green.fw-bold  'k'
+		.dashed-horizontal.my-20.py-3
+
+		.flex-wrap 
+			ul.drugs.flex-wrap 
+				each val in ['K-Brovet', 'K-Effervescent', 'K-Phos', 'K-Phos 2', 'K-Phos MF', 'K-Phos Neutral', 'K-Tab', 'K9 Advantix II', 'Kadcyla', 'Kadian', 'Kaitlib FE', 'Kalbitor', 'Kaletra', 'Kalexate', 'Kalliga','K-Brovet', 'K-Effervescent', 'K-Phos', 'K-Phos 2', 'K-Phos MF', 'K-Phos Neutral', 'K-Tab', 'K9 Advantix II', 'Kadcyla', 'Kadian', 'Kaitlib FE', 'Kalbitor', 'Kaletra', 'Kalexate', 'Kalliga','K-Brovet', 'K-Effervescent', 'K-Phos', 'K-Phos 2', 'K-Phos MF', 'K-Phos Neutral', 'K-Tab', 'K9 Advantix II', 'Kadcyla', 'Kadian', 'Kaitlib FE', 'Kalbitor', 'Kaletra', 'Kalexate', 'Kalliga','K-Brovet', 'K-Effervescent', 'K-Phos', 'K-Phos 2', 'K-Phos MF', 'K-Phos Neutral', 'K-Tab', 'K9 Advantix II', 'Kadcyla', 'Kadian', 'Kaitlib FE', 'Kalbitor', 'Kaletra', 'Kalexate', 'Kalliga']
+					li.drugs-item 
+						a.drugs-link(href="#")
+							+icon("arrow_right")
+							=val
+			.drug
+				img.drug-img(src="img/product/layer_67_7584.jpg", alt="product")
+				.justify-content-between 
+					div
+						a.fs-25.c-blue.text-up(href="#") Ketoprofen
+						a.fs-16.c-green.d-block(href="#") Sildenafil
+					p.c-blue.lh-20 Much сheaper <br> than in the USA
+				.flex-center-between.my-10 
+					.align-items-end
+						p.fs-30.c-green.fw-bold.lh-34 $8.38
+						p.c-gray-light /
+						p.fs-18.fw-semi.c-green Save 73%
+					a.btn.fs-16.lh-50(href="#") Order Now

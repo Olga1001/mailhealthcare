@@ -3,7 +3,7 @@
     box-shadow: $shadow2
     padding: 49px 15px 29px
     position: relative
-    margin-top: -295px
+    // margin-top: -295px
     margin-bottom: 80px
     &-container 
         max-width: 1240px 
@@ -19,6 +19,9 @@
         position: absolute 
         right: 60px 
         bottom: calc(100% - 180px)
+        background: url("../img/common/atoz.png") no-repeat center / contain
+        width: 509px
+        height: 441px
 
 .medications 
     padding-top: 50px
@@ -125,14 +128,20 @@
 .topblock_v2
     .topblock 
         background-color: transparent
-        margin-top: 0
         box-shadow: none
         margin-bottom: 37px
         &-img 
             display: none
         &-title
             padding-bottom: 10px
-            
+.topblock_v3 
+    .topblock
+        margin-bottom: 60px
+    .topblock-img 
+        background-image: url("../img/common/k.png")       
+        width: 114px
+        height: 111px
+          
 @media only screen and (max-width : 1199px)
     .topblock-img 
         width: 250px
@@ -140,7 +149,6 @@
         bottom: calc(100% - 109px)
     .topblock
         padding-top: 120px
-        margin-top: -260px
 
 @media only screen and (max-width : 991px)    
     .topblock-img 
