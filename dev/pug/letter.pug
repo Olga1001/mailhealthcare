@@ -4,8 +4,12 @@ block variables
 	-var title = 'Letter'
 
 block content
-	.letters
+	.letters.active
 		.container 
+			button.btn-letter 
+				span.flex-center-between
+					span.c-blue.fw-medium Browse Medications by Letter
+					img.btn-letter_arrow(src="img/common/angle-down.svg", alt="down")
 			ul.letter.flex-wrap.flex-lg-center-between.flex-center-center
 				each val, index in ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
 					if (index==0)
@@ -16,7 +20,7 @@ block content
 							a.letter-link(href="#")=val
 	.bg-before-blue
 	.container
-		ul.breadcrumbs
+		ul.breadcrumbs.my-sm-0.my-20
 			li.breadcrumbs__item
 				a.breadcrumbs__link(href="")
 					+icon("house")
@@ -43,10 +47,12 @@ block content
 					div
 						a.fs-25.c-blue.text-up(href="#") Ketoprofen
 						a.fs-16.c-green.d-block(href="#") Sildenafil
-					p.c-blue.lh-20 Much сheaper <br> than in the USA
+					p.c-blue.lh-20.d-xl-block.d-none Much сheaper <br> than in the USA
 				.flex-center-between.my-10 
-					.align-items-end
+					.align-xl-items-end
 						p.fs-30.c-green.fw-bold.lh-34 $8.38
-						p.c-gray-light /
+						p.c-gray-light.px-15.d-xl-block.d-none /
 						p.fs-18.fw-semi.c-green Save 73%
 					a.btn.fs-16.lh-50(href="#") Order Now
+				hr.line.my-20
+				p.c-blue.lh-20.d-xl-none.d-block Much сheaper than in the USA

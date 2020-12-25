@@ -134,13 +134,19 @@
             display: none
         &-title
             padding-bottom: 10px
-.topblock_v3 
+.topblock_v3
+    margin-top: 10px
     .topblock
         margin-bottom: 60px
+        padding-top: 30px
     .topblock-img 
         background-image: url("../img/common/k.png")       
-        width: 114px
-        height: 111px
+        height: 190px
+        width: 190px
+        bottom: calc(100% - 161px)
+        right: 140px;
+    .topblock-title
+        padding-bottom: 30px
           
 @media only screen and (max-width : 1199px)
     .topblock-img 
@@ -149,6 +155,9 @@
         bottom: calc(100% - 109px)
     .topblock
         padding-top: 120px
+    .topblock_v3 .topblock-img 
+        right: 40px
+        transform: none
 
 @media only screen and (max-width : 991px)    
     .topblock-img 
@@ -192,3 +201,16 @@
         padding: 0
     .medications-link 
         padding: 17px 15px
+    .topblock_v3 .topblock
+        padding-top: 145px
+    .topblock_v3 .topblock-img
+        transform: translateX(50%)
+        right: 50%
+    .topblock_v3 .topblock-img
+        bottom: calc(100% - 88px)
+    .topblock_v3
+        margin-top: 120px
+    .topblock_v3 .topblock
+        padding-top: 121px
+        margin-bottom: 23px
+    
