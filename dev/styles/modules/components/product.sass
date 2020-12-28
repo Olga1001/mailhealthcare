@@ -50,9 +50,6 @@
         &:last-child
             border-right: none
 
-.content-item_table
-    padding-right: 10px
-
 .table
     &-tr
         padding: 13px 0 13px 10px
@@ -88,7 +85,7 @@
     top: 0 
     left: 0
     width: 100%
-    height: 719px;
+    height: 719px
     background-color: $bg-blue-light
     z-index: -1
     pointer-events: none
@@ -96,8 +93,22 @@
 .table_in_td-first
     flex-basis: 60%
 
-.content-item_table
-    width: 50%
+.content-item
+    display: none
+    &.active 
+        display: block
+    &_table
+        width: 50%
+        padding-right: 10px
+    &_links
+        width: 220px
+        border-right: 1px dashed $gray-200
+    &_info
+        width: calc(100% - 440px - 220px)
+        padding: 0 30px
+        
+    &-imgs
+        width: 440px
 
 .flex-basis-1
     flex-basis: 59.5%
@@ -105,6 +116,22 @@
 .flex-basis-2
     flex-basis: 50%
 
+.flex-basis 
+    +d-flex(flex-start,flex-end)
+    flex-basis: 57%
+
+.card-images 
+    width: calc(33.33%)
+    padding: 14px 12px
+    line-height: 18px
+    img 
+        margin-bottom: 13px
+        border-radius: 3px
+
+.content-item-imgs_cards
+    margin-left: -12px 
+    margin-right: -12px
+    padding-top: 3px 
 
 @media only screen and (max-width : 1199px)
     .content-item_table, .mapside, .product-right
@@ -119,7 +146,7 @@
     .flex-basis-2
         flex-basis: 45.5%
     .flex-basis-1
-        flex-basis: 71.5%;
+        flex-basis: 71.5%
 
 @media only screen and (max-width : 991px)
     .product

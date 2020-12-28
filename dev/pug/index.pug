@@ -357,7 +357,128 @@ block content
 									input.checkbox(type="radio" name="contry")
 									span.check-radio.mr-8
 									span.c-blue Asia
+				
+				.content-item.active
+					.flex-wrap
+						.content-item_links.mt-25  
+							p.fs-16.fw-bold.c-blue Quick Links
+							.dashed-horizontal.my-10
+							ul.list 
+								each val in ['What is Pantoprazole?', 'Overview', 'Proper Use', 'Dosing', 'Missed Dose', 'Use & Storage', 'Before Using', 'Allergies', 'Pediatric', 'Geriatric', 'Breastfeeding', 'Drug Interactions', 'Other Interactions', 'Other Medical Problems', 'Precautions']
+									li.list-item
+										a.list-link(href="#")
+											+icon("arrow_right")
+											=val
+						.content-item_info.mt-25 
+							.collapse 
+								.align-items-center.collapse-item
+									div
+										p.fs-16.fw-bold.c-blue What is Pantoprazole?
+										.dashed-horizontal.my-10
+									+icon("angle-down", "d-sm-none")
+							
+								ul.collapse-drop 
+									li.d-flex.mb-8
+										.flex-basis.align-items-center
+											p.fs-14.c-blue.text-nowrap Commonly Used Brand Name(s) 
+											.dotted.mx-30
+										a.fs-14.c-green.fw-semi(href="#") Protonix
+									li.d-flex.mb-8
+										.flex-basis.align-items-center
+											p.fs-14.c-blue.text-nowrap Therapeutic Classifications
+											.dotted.mx-30 
+										a.fs-14.c-green.fw-semi(href="#") Gastric Acid Secretion Inhibitor
+									li.d-flex.mb-8
+										.flex-basis.align-items-center
+											p.fs-14.c-blue.text-nowrap Pharmacologic Classifications
+											.dotted.mx-30 
+										a.fs-14.c-green.fw-semi(href="#") Proton Pump Inhibitor
+							hr.line.my-20
+							.collapse.pt-10
+								.align-items-center.collapse-item
+									div
+										p.fs-16.fw-bold.c-blue Overview
+										.dashed-horizontal.my-10
+									+icon("angle-down", "d-sm-none")
+								.collapse-drop 
+									p.fs-14.pb-20
+										a.c-green(href="#") Pantoprazole 
+										|is used to treat certain conditions in which there is too much acid in the stomach. It is used to treat erosive esophagitis or "heartburn" caused by 
+										a.c-green(href="#") gastroesophageal reflux disease (GERD)
+										|, a condition where the acid in the stomach washes back up into the esophagus. This medicine may also be used to treat Zollinger-Ellison syndrome, a condition where the stomach produces too much acid.
+									p.fs-14.pb-20 
+										a.c-green(href="#") Pantoprazole 
+										|is a proton pump inhibitor (PPI). It works by decreasing the amount of acid produced by the stomach.
+									p.fs-14.pb-20 This medicine is available only with your doctor's prescription.
+							hr.line.my-20
+							.collapse.pt-10
+								.align-items-center.collapse-item
+									div
+										p.fs-16.fw-bold.c-blue Proper Use
+										.dashed-horizontal.my-10
+									+icon("angle-down", "d-sm-none")
+								.collapse-drop 
+									p.fs-14.pb-20
+										i.fw-semi  Take this medicine only as directed by your doctor. 
+										| Do not take more of it, do not take it more often, and do not take it for a longer time than your doctor ordered.
+									
+									p.fs-14.pb-20 This medicine comes with a Medication Guide. Read and follow these instructions carefully. Ask your doctor if you have any questions.
+									p.fs-14.pb-20 Swallow the delayed-release tablet whole. Do not split, crush, or chew it. You may take the tablet with or without food.
+									p.fs-14.pb-10 For 
+										i.fw-semi delayed-release oral suspension granules:
+									.pl-20
+										p.fs-14.fw-semi.mb-8 Applesauce method:
+										ol.list-number.pb-20
+											li.fs-14.c-blue.pb-10 Open packet.
+											li.fs-14.c-blue.pb-10 Mix the packet contents with 1 teaspoonful of applesauce. Do not mix with water, other liquids, or food.
+											li.fs-14.c-blue.pb-10 Swallow the mixture at least 30 minutes before a meal. Take it within 10 minutes after you mix it.
+											li.fs-14.c-blue.pb-10 Sip some water after you swallow the mixture. This will make sure all of the granules get all the way to your stomach.
+											li.fs-14.c-blue.pb-10 Do not chew or crush the granules. Do not divide the packet contents to make smaller doses.
+										
+										p.fs-14.fw-semi.mb-8 Apple juice method:
+										ol.list-number.pb-20
+											li.fs-14.c-blue.pb-10 Open packet.
+											li.fs-14.c-blue.pb-10 Mix the packet contents with 1 teaspoon of apple juice in a small cup or container.
+											li.fs-14.c-blue.pb-10 Stir for 5 seconds (granules will not dissolve) and swallow it immediately or take it at least 30 minutes before a meal.
+											li.fs-14.c-blue.pb-10 Rinse the container with apple juice to make sure you get all of the medicine. Swallow it immediately.
+											li.fs-14.c-blue.pb-10 Do not chew or crush the granules. Do not divide the packet contents to make smaller doses.
+										p.fs-14.fw-semi.mb-8 Feeding tube:
+										ol.list-number
+											li.fs-14.c-blue.pb-10 Pour the packet contents in a 2-ounce (60 mL) catheter-tip syringe.
+											li.fs-14.c-blue.pb-10 Clear any clogs from the feeding tube before you put this medicine mixture into the tube.
+											li.fs-14.c-blue.pb-10 Add 10 mL of apple juice into the syringe. Gently tap or shake the barrel of the syringe to help rinse the syringe and tube.
+											li.fs-14.c-blue.pb-10 Repeat with an additional 10 mL of apple juice. No granules should remain in the syringe.
+											li.fs-14.c-blue.pb-10 Take this medicine at least 30 minutes before a meal.
+							hr.line.my-20
+									
+							.collapse.pt-10
+								.align-items-center.collapse-item
+									div
+										p.fs-16.fw-bold.c-blue Drug Interactions
+										.dashed-horizontal.my-10
+									+icon("angle-down", "d-sm-none")
+								.collapse-drop 
+									p.fs-14.pb-20 Although certain medicines should not be used together at all, in other cases two different medicines may be used together even if an interaction might occur. In these cases, your doctor may want to change the dose, or other precautions may be necessary. When you are taking this medicine, it is especially important that your healthcare professional know if you are taking any of the medicines listed below. The following interactions have been selected on the basis of their potential significance and are not necessarily all-inclusive.
 
+									p.fs-14 Using this medicine with any of the following medicines is not recommended. Your doctor may decide not to treat you with this medication or change some of the other medicines you take.
+										a.c-green.fw-semi.fs-14.my-10.d-block(href="#") ·  Rilpivirine
+									p.fs-14.pb-20 Using this medicine with any of the following medicines is usually not recommended, but may be required in some cases. If both medicines are prescribed together, your doctor may change the dose or how often you use one or both of the medicines.
+								
+							.flex-wrap
+								ul.list-disk.pb-20.w-50
+									each val in ['Acalabrutinib','Acalabrutinib','Amphetamine','Atazanavir','Benzphetamine','Bosutinib','Capecitabine','Cilostazol','Citalopram','Dacomitinib','Dasatinib','Dextroamphetamine','Erlotinib','Eslicarbazepine Acetate','Gefitinib','Ketoconazole']
+										li.fs-14.c-blue.fw-medium=val 
+								ul.list-disk.pb-20.w-50
+									each val in ['Acalabrutinib','Acalabrutinib','Amphetamine','Atazanavir','Benzphetamine','Bosutinib','Capecitabine','Cilostazol','Citalopram','Dacomitinib','Dasatinib','Dextroamphetamine','Erlotinib','Eslicarbazepine Acetate','Gefitinib','Ketoconazole']
+										li.fs-14.c-blue.fw-medium=val 
+						.content-item-imgs.mt-25 
+							p.fs-16.fw-bold.c-blue Pantoprazole Images
+							.dashed-horizontal.my-10
+							.flex-wrap.content-item-imgs_cards 
+								each val in [{src: 'rectangle_21_8623.jpg', title: 'Pantoprazole Sodium 40mg Delayed - Release Tablet'},{src: 'rectangle_21_8623.jpg', title: 'Pantoprazole Sodium 40mg Delayed - Release Tablet'},{src: 'rectangle_21_8623.jpg', title: 'Pantoprazole Sodium 40mg Delayed - Release Tablet'},{src: 'rectangle_21_8623.jpg', title: 'Pantoprazole Sodium 40mg Delayed - Release Tablet'},{src: 'rectangle_21_8623.jpg', title: 'Pantoprazole Sodium 40mg Delayed - Release Tablet'},{src: 'rectangle_21_8623.jpg', title: 'Pantoprazole Sodium 40mg Delayed - Release Tablet'},{src: 'rectangle_21_8623.jpg', title: 'Pantoprazole Sodium 40mg Delayed - Release Tablet'}]
+									a.card-images(href="#")
+										img(src="img/common/"+val.src, alt="img") 
+										span.fs-12.c-gray-500=val.title
 
 		.topblock_v2
 			include layout/top-block

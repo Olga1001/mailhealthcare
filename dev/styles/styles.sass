@@ -1,8 +1,8 @@
-@import "utils/libs";
-@import "utils/vars";
-@import "utils/mixins";
-@import "utils/fonts";
-@import "utils/sprite";
+@import "utils/libs"
+@import "utils/vars"
+@import "utils/mixins"
+@import "utils/fonts"
+@import "utils/sprite"
 
 html 
   font-family: "Montserrat", sans-serif
@@ -93,6 +93,9 @@ body, h1, h2, h3, h4, h5, h6, p, ol, ul
 
 ol, ul 
   list-style: none
+
+ol
+  counter-reset: li
 
 img 
   max-width: 100%
@@ -342,7 +345,60 @@ hr
     background-color: $white 
     border-radius: 50%
 
-@import "modules/modules";
+.list 
+  &-link 
+    font-size: 14px
+    line-height: 30px
+    color: $blue
+    svg
+      opacity: 0
+      width: 0
+      height: 16px
+      fill: $green
+      transition: all 0.3s ease
+    &:hover 
+      color: $green
+      font-weight: 500
+      svg 
+        width: 17px
+        opacity: 1
+        margin-right: 8px
+  &-number
+    li 
+      position: relative
+      counter-increment: li
+      padding-left: 15px
+      &:before 
+        content: counter(li)
+        color: $green 
+        +centerXY(0,0)
+        font-size: 14px
+        font-weight: 600
+  &-disk
+    li 
+      line-height: 30px
+      position: relative
+      padding-left: 15px
+      &:before 
+        content: ''
+        +centerY
+        left: 0
+        width: 2px 
+        height: 2px 
+        border-radius: 50% 
+        background-color: $bg-green
+
+
+.dotted 
+  height: 1px
+  width: 100%
+  border-bottom: 1px dashed $gray-200
+
+.collapse 
+  .fs-14 
+    line-height: 22px
+
+@import "modules/modules"
    
 .w-50
   width: 50% 
@@ -378,4 +434,4 @@ hr
     -webkit-line-clamp: 7
     height: calc(1em * 22px * 7)
 
-@import "utils/media";
+@import "utils/media"
