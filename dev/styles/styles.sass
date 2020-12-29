@@ -290,6 +290,8 @@ hr
       padding-left: 0
     &.active 
       color: $blue
+      .content-item 
+        display: block
       svg 
         fill: $green
       .tabs-item_main
@@ -381,13 +383,13 @@ hr
       padding-left: 15px
       &:before 
         content: ''
-        +centerY
+        position: absolute
+        top: 14px
         left: 0
         width: 2px 
         height: 2px 
         border-radius: 50% 
         background-color: $bg-green
-
 
 .dotted 
   height: 1px
@@ -395,11 +397,19 @@ hr
   border-bottom: 1px dashed $gray-200
 
 .collapse 
-  .fs-14 
+  p.fs-14 
     line-height: 22px
+
+.icon-angle-down
+  fill: $green 
+  width: 15px 
+  height: 15px
+  margin: 0
 
 @import "modules/modules"
    
+
+
 .w-50
   width: 50% 
 

@@ -103,12 +103,29 @@
     &_links
         width: 220px
         border-right: 1px dashed $gray-200
+        position: sticky 
+        top: 90px
+        height: fit-content
+        padding-bottom: 20px
     &_info
         width: calc(100% - 440px - 220px)
         padding: 0 30px
         
     &-imgs
         width: 440px
+        .drug 
+            width: 100%
+            &-img 
+                max-height: 350px
+    &_side
+        width: calc(100% - 440px)
+        padding-right: 30px
+    &_drug 
+        max-width: 440px
+        width: 100%
+        padding-bottom: 20px
+        .drug 
+            width: 100%
 
 .flex-basis-1
     flex-basis: 59.5%
@@ -122,17 +139,63 @@
 
 .card-images 
     width: calc(33.33%)
-    padding: 14px 12px
+    padding: 14px 11px
     line-height: 18px
+    border-right: 1px dashed rgba($gray-light, 0.24)
+    position: relative
+    &.bb-1
+        border-bottom: 1px dashed rgba($gray-light, 0.24)
+    &_plus 
+        position: absolute
+        right: -22.5px
+        bottom: -22.5px
+        background-color: $white
+        width: 43px 
+        height: 43px
+        z-index: 1
+        &:before, &:after 
+            content: ''
+            +centerXY
+            background-color: rgba($bg-gray-light, 0.24)
+        &:before 
+            width: 21px
+            height: 1px
+        &:after 
+            height: 21px
+            width: 1px
     img 
         margin-bottom: 13px
         border-radius: 3px
+        width: 100%
+        height: 91px
+        object-fit: cover
+    .fs-12, img
+        position: relative
+        z-index: 3
+    &:nth-child(3n+3)
+        border-right-width: 0
+        .card-images_plus
+            display: none
+        
+    
 
 .content-item-imgs_cards
     margin-left: -12px 
     margin-right: -12px
     padding-top: 3px 
 
+@media only screen and (max-width : 1400px)
+    .content-item_links
+        width: 190px
+    .content-item_info
+        width: calc(100% - 375px - 190px)
+        padding: 0 15px
+    .content-item-imgs
+        width: 375px
+        .drug
+            padding: 0 15px 15px
+    .card-images img 
+        height: 80px
 @media only screen and (max-width : 1199px)
     .content-item_table, .mapside, .product-right
         width: 100%
@@ -147,13 +210,30 @@
         flex-basis: 45.5%
     .flex-basis-1
         flex-basis: 71.5%
-
+    .content-item_links 
+        display: none
+    .content-item_info
+        width: calc(100% - 375px)
+        padding: 0 30px 0 0
 @media only screen and (max-width : 991px)
     .product
         padding: 20px 15px
     .flex-basis-1
         flex-basis: 67.5%
-
+    .content-item-imgs, .content-item_info
+        width: 100%
+        padding: 0
+    .content-item-imgs_cards
+        max-width: 470px
+    .max-lg-440
+        max-width: 440px
+    .card-images img
+        height: 101px
+    .content-item_side
+        width: 100%
+        padding-right: 0
+    .content-item_drug
+        margin: 0 auto
 @media only screen and (max-width : 767px)
     .product-left
         width: 100%
@@ -221,4 +301,23 @@
         padding-left: 33px
     .content-item_table
         padding-right: 0
-            
+    .content-item-imgs_cards 
+        max-width: calc(100% + 24px)
+    .card-images img
+        height: 19vw
+    .content-item-imgs .drug 
+        margin-bottom: 20px
+@media only screen and (max-width : 360px)
+    .card-images
+        width: 50%
+    .card-images
+        &:nth-child(3n+3)
+            border-right-width: 1px
+            .card-images_plus
+                display: block
+        &:nth-child(2n+2)
+            border-right-width: 0
+            .card-images_plus
+                display: none
+    .card-images img
+        height: 30vw
