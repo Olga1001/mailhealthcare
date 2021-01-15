@@ -11,9 +11,198 @@
         position: absolute 
         bottom: 100px
         right: 0
-        width: 857px
-        height: 717px
         z-index: -1
+        img 
+            width: 857px
+            height: 717px
 
-.max-w-480
-    max-width: 480px
+.order-from 
+    padding-right: 125px
+    padding-left: 125px
+    padding-bottom: 130px
+    background: url("../img/common/map_9669.png") no-repeat center / 96%
+    .icon-top_20_arrow 
+        width: 40px 
+        height: 40px
+    .max-470
+        margin-top: 297px
+
+.max-470
+    max-width: 470px
+
+.steps 
+    max-width: 1305px 
+    width: 100%
+    margin: 85px auto 110px
+
+.step 
+    width: 33.33%
+    position: relative
+    padding: 0 30px
+    margin-bottom: 50px
+    &:nth-child(2)
+        .step__line 
+            top: 3px
+            left: calc(50% + 55px)
+            width: 72%
+    &__line
+        position: absolute 
+        top: 19px
+        left: calc(50% + 50px)
+        width: 75%
+    &__circle 
+        width: 97px
+        height: 97px
+        background-color: $gray-100
+        border-radius: 50% 
+        position: relative
+        margin: 0 auto 47px
+        &:before 
+            content: ''
+            position: absolute 
+            width: 98px
+            height: 98px
+            top: -4px 
+            background: url("../img/common/steps_circle.svg") no-repeat center / contain
+        &.left:before  
+            left: -7px
+        &.right:before 
+            right: -7px
+
+        .svg-sprite-icon 
+            width: 55px 
+            height: 100%
+            fill: $green
+            margin: 0 auto
+            display: block
+    &__num 
+        position: absolute
+        width: 36px
+        height: 36px
+        background-color: $bg-blue-navy
+        text-align: center
+        font-size: 18px
+        line-height: 36px
+        font-weight: 500
+        color: $white
+        border-radius: 50%
+        &.topright 
+            top: -2px 
+            right: -9px
+        &.bottomleft 
+            left: -9px
+            bottom: -9px
+        &.topleft 
+            top: -5px 
+            left: -11px
+
+.sample-savings
+    background-color: $bg-blue-light
+    padding: 83px 0
+
+.card-medication
+    background-color: $bg-white
+    padding: 30px 25px
+    width: 345px
+    margin-right: 30px
+    &__img 
+        width: 100%
+        height: 290px
+        object-fit: contain 
+        border-bottom: 1px solid $gray-200
+        margin-bottom: 15px
+
+@media only screen and (min-width : 992px)
+    .max-w-lg-480
+        max-width: 480px
+
+@media only screen and (max-width : 1400px)
+  .product-i-map_img img
+    height: auto
+    width: 690px
+
+@media only screen and (max-width : 1199px)
+    .order-from 
+        padding-right: 0
+        padding-left: 0
+    .card-medication__img 
+        height: 220px
+    .card-medication
+        .fs-25
+            font-size: 20px
+        .fs-30
+            font-size: 25px
+        .fs-18
+            font-size: 16px
+    .product-i-map .container 
+        padding: 126px 15px 170px
+
+@media only screen and (max-width : 991px)
+    .product-i-map_img
+        position: initial
+        margin-top: 25px
+        img
+            margin-left: auto
+    .product-i-map 
+        margin-bottom: 0
+        .container
+            padding-bottom: 0
+    .step
+        padding: 0 15px
+    .product-i-map__main
+        .topblock
+            padding-top: 50px
+
+@media only screen and (max-width : 767px)
+    .step
+        padding: 0
+        width: 100%
+    .step__line 
+        display: none
+    .product-i-map .container 
+        padding: 40px 15px 0
+
+@media only screen and (max-width : 575px)
+    .product-i-map 
+        overflow: hidden
+        .fs-80
+            font-size: 40px
+            line-height: 40px
+        .c-blue-light
+            text-align: center
+    .product-i-map_img
+        margin-left: -40px 
+        margin-right: -40px 
+        width: calc(100% + 80px)
+    .order-from 
+        background: none
+    .order-from__map
+        width: calc(100% + 30px)
+        margin-left: -15px
+        margin-right: -15px
+        img 
+            width: 100%
+    .order-from 
+        padding-bottom: 30px
+        .max-470
+            margin-top: 34px
+        .fs-80 
+            font-size: 57.8px
+            line-height: 1
+        .fs-100
+            font-size: 72.2px
+        .fs-40
+            font-size: 28.9px
+            line-height: 25px
+        .fs-50
+            font-size: 36.1px
+            line-height: 25px
+        .fs-20
+            font-size: 16px
+    .order-from .icon-top_20_arrow
+        width: 30px
+        height: 30px
+    .steps
+        margin: 30px auto 60px
+    .sample-savings
+        padding: 60px 0

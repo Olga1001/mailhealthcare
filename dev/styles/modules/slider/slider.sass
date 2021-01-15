@@ -37,7 +37,6 @@
     background-color: $bg-green 
     border-color: $green
 
-
 .slider-nav 
     padding: 10px 0
 
@@ -52,6 +51,60 @@
 .slick-slide.slick-current.slick-center
     border-color: $green
 
+.slider
+  padding-top: 70px
+
+.slider-arrow
+  width: 60px
+  height: 60px
+  background-color: $bg-white
+  box-shadow: $shadow2
+  border-radius: 50% 
+  color: transparent
+  +centerY
+  top: 57%
+  z-index: 3
+  svg 
+    width: 43px
+    height: 100%
+    margin: 0 auto
+    fill: $green-light
+  &:hover 
+    background-color: $bg-green-light
+    svg
+      fill: $white
+
+.slider-prev 
+  left: -30px 
+
+.slider-next
+  right: -30px
+
+.dots-circle
+  .slick-dots 
+    padding-top: 32px
+    li button 
+      border-radius: 50% 
+      width: 14px 
+      height: 14px
+      background-color: transparent 
+      border: 1px solid $gray-light
+    
+    li.slick-active button
+      background-color: $bg-green 
+      border-color: $green
+
+
+@media only screen and (max-width : 1560px)
+  .slider-prev 
+    left: -15px
+  .slider-next
+    right: -15px
+
+@media only screen and (max-width : 1199px)
+  .card-medication.slick-slide
+    margin-right: 20px
+    width: 260px
 
 @media only screen and (max-width : 767px)
   .slider-nav 
@@ -59,4 +112,9 @@
   .slider-for
     max-height: 100%
     padding-bottom: 74px
+
+@media only screen and (max-width : 575px)
+  .slider
+    padding-top: 30px
+    margin-right: -15px
 

@@ -74,23 +74,19 @@ block content
 								option(value="") 30 tablets
 								option(value="") 30 tablets
 				.product-right 
-					p.fs-35.text-up.mb-5 we found <br class="d-xl-block d-none"> best price 
-					.align-items-center
-						img.mr-10(src="img/flags/germany.png", alt="germany" width="16px" height="12px")
-						p in 
-							span.c-green.fs-14 Germany
-					hr.line.my-30
-					.d-flex
-						div.mr-40 
-							p.fs-50.fw-bold.c-green $8.38
-							p.fs-18.fw-medium.c-gray $31 retail
-						div 
-							p.fs-18.c-green.fw-semi.lh-24 Save 73%
-							p.fs-14.lh-20 Much сheaper <br> than in the USA
+					p.fs-35.text-up.mb-5 Our <br> best price 
+					.d-flex.pt-35
+						div.mr-30.c-green 
+							p.fs-50.fw-bold $8.38
+							p.fs-18.fw-semi Save 73%
+						div.c-gray-light
+							p.lh-24 Price in USA
+							p.fs-20.lh-20.fw-bold $31.00
 
-					a.btn.mt-30(href="#") Order Now
+					a.btn.mt-30.mb-40(href="#") Order Now
 						+icon("arrow_right")
 
+					hr.line.my-30
 					.align-items-center.mt-20.mailfree-block
 						.align-items-center.w-50.px-20 
 							+icon("mail", "mr-20")
@@ -98,105 +94,8 @@ block content
 						.align-items-center.w-50.px-20 
 							+icon("delivery-truck", "mr-20")
 							p.fs-12.text-up.fw-semi.c-gray-600 Free <br> shipping
-			ul.tabs.d-sm-flex 
+			ul.tabs.d-sm-flex
 				li.tabs-item.active
-					.align-items-center.tabs-item_main
-						+icon("price-tag")
-						p.fw-medium Price worldwide
-						.plus.d-sm-none
-					.content-item.d-sm-none
-						.flex-wrap
-							.content-item_table
-								table.table.w-100
-									tr.flex-md-center-between.d-flex.py-20.table-tr
-										td.w-100
-											table.table_in
-												tr.flex-md-center-between
-													td.table_in_td-first
-														.align-sm-items-center.d-flex
-															img.mr-25(src="img/flags/germany.png", alt="germany" width="16px" height="14px")
-															div 
-																p.lh-1_2 Best price <br> in 
-																	span.fs-14.c-green Germany
-													td.table_in_td-second 
-														p.fs-30.fw-bold.c-green.lh-1_2 $8.38
-														p.fw-medium.c-green.lh-20 Save 73%
-										td.w-100
-											table.table_in
-												tr.flex-md-center-between
-													td.table_in_td-first.justify-md-content-center  
-														p.fs-14.lh-20 Much сheaper <br> than in the USA
-													td 
-														a.btn.lh-45.fs-14.fw-semi(href="#") Order Now
-									- 
-										list = [
-											{
-												flag: 'germany.png', 
-												place: 'Moldova', 
-												save: '69%'
-											},
-											{
-												flag: 'buigaria.png', 
-												place: 'Buigaria', 
-												save: '65%'
-											},
-											{
-												flag: 'finland.png', 
-												place: 'Finland', 
-												save: '65%'
-											},
-											{
-												flag: 'russia.png', 
-												place: 'Russia', 
-												save: '65%'
-											},
-											{
-												flag: 'romania.png', 
-												place: 'Romania', 
-												save: '65%'
-											},
-											{
-												flag: 'italy.png', 
-												place: 'Italy', 
-												save: '65%'
-											},
-											{
-												flag: 'switzerland.png', 
-												place: 'Switzerland', 
-												save: '65%'
-											},
-											{
-												flag: 'poland.png', 
-												place: 'Poland', 
-												save: '65%'
-											},
-											{
-												flag: 'uk.png', 
-												place: 'UK', 
-												save: '42%'
-											}
-
-										]
-									each val in list
-										tr.flex-center-between.py-20.table-tr
-											td.flex-basis-1 
-												.align-items-center
-													img.mr-25(src="img/flags/"+val.flag, alt="germany" width="16px" height="14px")
-													div 
-														p.lh-1_2 Price in 
-															span.fs-14.c-green=val.place
-											td.w-100
-												table.w-100.table_in 
-													tr.flex-md-center-between.flex-center-end
-														td
-															p.fs-20 $8.44
-														td 
-															p.fw-medium.c-green Save  
-																span=val.save
-								a.c-green.btn-more.my-20(href="#") 
-									+icon("long-arrow", "c-green mr-14")
-									| Load more results
-				li.tabs-item
 					.align-items-center.tabs-item_main
 						+icon("info")
 						p.fw-medium Drug Info
@@ -222,7 +121,7 @@ block content
 										p.fs-14.text-nowrap Pharmacologic Classifications
 										a.fs-14.c-green.fw-semi(href="#") Proton Pump Inhibitor
 							hr.line.my-20
-							.collapse.pt-10
+							.collapse.pt-10.active 
 								.flex-center-between.collapse-item
 									div
 										p.fs-16.fw-bold Overview
@@ -240,7 +139,7 @@ block content
 										|is a proton pump inhibitor (PPI). It works by decreasing the amount of acid produced by the stomach.
 									p.fs-14.pb-20 This medicine is available only with your doctor's prescription.
 							hr.line.my-20
-							.collapse.pt-10
+							.collapse.pt-10.active 
 								.flex-center-between.collapse-item
 									div
 										p.fs-16.fw-bold Proper Use
@@ -281,7 +180,7 @@ block content
 											li.fs-14.pb-10 Take this medicine at least 30 minutes before a meal.
 							hr.line.my-20
 									
-							.collapse.pt-10
+							.collapse.pt-10.active 
 								.flex-center-between.collapse-item
 									div
 										p.fs-16.fw-bold Drug Interactions
@@ -381,127 +280,6 @@ block content
 			.content.d-sm-block.d-none 
 				.content-item.active
 					.flex-wrap
-						.content-item_table
-							table.table.w-100
-								tr.flex-md-center-between.d-flex.py-20.table-tr
-									td.w-100
-										table.table_in
-											tr.flex-md-center-between
-												td.table_in_td-first
-													.align-items-center
-														img.mr-25(src="img/flags/germany.png", alt="germany" width="16px" height="14px")
-														div 
-															p.lh-1_2 Best price <br> in 
-																span.fs-14.c-green Germany
-												td 
-													p.fs-30.fw-bold.c-green.lh-1_2 $8.38
-													p.fw-medium.c-green.lh-20 Save 73%
-									td.w-100
-										table.table_in
-											tr.flex-md-center-between
-												td.table_in_td-first.justify-md-content-center  
-													p.fs-14.lh-20 Much сheaper <br> than in the USA
-												td 
-													a.btn.lh-45.fs-14.fw-semi(href="#") Order Now
-								- 
-									list = [
-										{
-											flag: 'germany.png', 
-											place: 'Moldova', 
-											save: '69%'
-										},
-										{
-											flag: 'buigaria.png', 
-											place: 'Buigaria', 
-											save: '65%'
-										},
-										{
-											flag: 'finland.png', 
-											place: 'Finland', 
-											save: '65%'
-										},
-										{
-											flag: 'russia.png', 
-											place: 'Russia', 
-											save: '65%'
-										},
-										{
-											flag: 'romania.png', 
-											place: 'Romania', 
-											save: '65%'
-										},
-										{
-											flag: 'italy.png', 
-											place: 'Italy', 
-											save: '65%'
-										},
-										{
-											flag: 'switzerland.png', 
-											place: 'Switzerland', 
-											save: '65%'
-										},
-										{
-											flag: 'poland.png', 
-											place: 'Poland', 
-											save: '65%'
-										},
-										{
-											flag: 'uk.png', 
-											place: 'UK', 
-											save: '42%'
-										}
-
-									]
-								each val in list
-									tr.flex-center-between.py-20.table-tr
-										td.flex-basis-1 
-											.align-items-center
-												img.mr-25(src="img/flags/"+val.flag, alt="germany" width="16px" height="14px")
-												div 
-													p.lh-1_2 Price in 
-														span.fs-14.c-green=val.place
-										td.w-100
-											table.w-100.table_in 
-												tr.flex-md-center-between.flex-center-end
-													td
-														p.fs-20 $8.44
-													td 
-														p.fw-medium.c-green Save  
-															span=val.save
-							a.c-green.btn-more.my-20(href="#") 
-								+icon("long-arrow", "c-green mr-14")
-								| Load more results
-						.mapside 
-							#map 
-								img.w-100(src="img/common/map.png", alt="map")
-							.map-tooltip
-								.align-items-center 
-									img.mr-10(src="img/flags/germany.png", alt="germany" width="16px" height="16px")
-									p.fw-bold Moldova
-								hr.line.my-20
-								.align-items-center 
-									p.fs-30.c-green.text-up.mr-20 $8.44
-									p.fs-14.c-gray-600.lh-14 Average price <br> in country
-							.contry.flex-center-around 
-								label.align-items-center  
-									input.checkbox(type="radio" name="contry")
-									span.check-radio.mr-8
-									span USA
-								label.align-items-center  
-									input.checkbox(type="radio" name="contry" checked)
-									span.check-radio.mr-8
-									span Europe
-								label.align-items-center  
-									input.checkbox(type="radio" name="contry")
-									span.check-radio.mr-8
-									span Russia
-								label.align-items-center 
-									input.checkbox(type="radio" name="contry")
-									span.check-radio.mr-8
-									span Asia
-				
-				.content-item
-					.flex-wrap
 						.content-item_links.mt-25  
 							p.fs-16.fw-bold Quick Links
 							.dashed-horizontal.my-10
@@ -537,7 +315,7 @@ block content
 											.dotted.mx-30 
 										a.fs-14.c-green.fw-semi(href="#") Proton Pump Inhibitor
 							hr.line.my-20
-							.collapse.pt-10
+							.collapse.pt-10.active 
 								.flex-center-between.collapse-item
 									div
 										p.fs-16.fw-bold Overview
@@ -555,7 +333,7 @@ block content
 										|is a proton pump inhibitor (PPI). It works by decreasing the amount of acid produced by the stomach.
 									p.fs-14.pb-20 This medicine is available only with your doctor's prescription.
 							hr.line.my-20
-							.collapse.pt-10
+							.collapse.pt-10.active 
 								.flex-center-between.collapse-item
 									div
 										p.fs-16.fw-bold Proper Use
@@ -596,7 +374,7 @@ block content
 											li.fs-14.pb-10 Take this medicine at least 30 minutes before a meal.
 							hr.line.my-20
 									
-							.collapse.pt-10
+							.collapse.pt-10.active 
 								.flex-center-between.collapse-item
 									div
 										p.fs-16.fw-bold Drug Interactions

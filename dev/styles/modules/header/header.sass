@@ -8,14 +8,11 @@
     +d-flex(center)
 
 .logo 
-    height: 51px 
-    width: fit-content
-    +d-flex(center)
-    flex-shrink: 0
-    &-icon 
-        height: 100% 
-        width: 51px
-        margin-right: 15px
+    &-item 
+        height: 45px 
+        width: 231px
+        flex-shrink: 0
+        background: url("../img/common/logo-full-1.png") no-repeat center / contain
 
 .menu 
     &-link
@@ -83,12 +80,18 @@
             top: 50% 
             transform: translate(-50%,-50%) rotate(-225deg)
 
-
 @media only screen and (min-width : 992px)
     .menu 
         +d-flex(center)
     .burger
         display: none
+
+@media only screen and (max-width : 1199px)
+    .logo 
+        &-item 
+            background-image: url("../img/common/logo___02_1067.png")
+            width: 143px
+            height: 50px
 
 @media only screen and (max-width : 991px)
     .header
@@ -119,7 +122,7 @@
         transition: all 0.3s ease
     .menu-item
         padding: 0 15px!important
-    .search 
+    .header .search 
         width: 24px 
         height: 24px
         margin: 0

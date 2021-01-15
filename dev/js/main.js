@@ -61,3 +61,16 @@ $(".slider-nav").slick({
   focusOnSelect: true,
   centerPadding: '39px',
 });
+
+$(".slider").slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  dots: true,
+  arrows: true,
+  // centerMode: true,
+  focusOnSelect: true,
+  centerPadding: '0',
+  variableWidth: true,
+  prevArrow: $('.slider-prev'),
+  nextArrow: $('.slider-next'),
+});

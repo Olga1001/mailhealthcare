@@ -1,3 +1,4 @@
+
 .topblock
     .topblock-container
         .topblock-img
@@ -8,9 +9,11 @@
                         span.mr-8 Top
                         +icon("top_20_arrow")
                     p.fs-100.fw-bold.c-green 20
-                p.fs-35.c-blue-navy.mb--5.text-up Most <br> Common <br> Medications
+                p.fs-35.c-blue-navy.mb--5.text-up Most 
+                    span.d-block Common
+                    | Medications
             .dashed-vertical.dashed-vertical-lg
-            p.c-blue.max-270.fs-18.mb--5 These are the most commonly-prescribed medications on GoodRx.
+            p.c-blue.fs-18.mb--5 These are the most <br class="d-lg-block d-none"> commonly-prescribed <br class="d-lg-block d-none"> medications on GoodRx.
         .slider-medications
             ul.medications
                 each val, index in [{icon: 'pills_002', name: 'Sildenafil'}, {icon: 'pills_002', name: 'Amphetamine Salt Co ...'}, {icon: 'pills_002', name: 'Phentermine'}, {icon: 'pills_002', name: 'Hydrocodone / Acet ...'}, {icon: 'pills_001', name: 'Gabapentin'}]
