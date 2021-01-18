@@ -78,6 +78,7 @@
         padding-bottom: 16px
     .mr-sm-8
         margin-right: 8px
+        
 @media only screen and (max-width : 991px)
     .slick-slide
         margin-right: 10px
@@ -92,6 +93,18 @@
     .search-lg
         margin: 20px 0 0
         max-width: 100%
+    .collapse 
+        &-item
+            .icon-angle-down
+                transition: all 0.3s ease
+                transform: rotate(-90deg)
+                margin: 0
+        &.active  
+            .collapse-item .icon-angle-down
+                transform: rotate(0)
+    .collapse-drop 
+        display: none
+
 @media only screen and (max-width : 575px)
     .fs-35
         font-size: 30px
@@ -116,25 +129,21 @@
         width: calc(100% + 30px)
         &:first-child .tabs-item_main
             border-top: none
-    .tabs-desk
-        .tabs-item
-            margin-bottom: 0
-    .tabs-mob
-        .tabs-item .tabs-item_main
-            border-bottom: none
     .tabs-item .tabs-item_main
         position: relative
         padding: 16px 0
-        &:before 
-            content: none
-            position: absolute
-            left: 0 
-            bottom: -1px
-            height: 3px 
-            width: 130px
-            background-color: $bg-green
+    .tabs-item.active .tabs-item_main 
+        border-bottom: none
+    .tabs-item.active .tabs-item_main:before 
+        content: ''
+        position: absolute
+        left: 0
+        bottom: -1px
+        height: 3px
+        width: 130px
+        background-color: #00c498
+        transition: all 0.3s ease
     .tabs-item
         padding-left: 0
     .tabs-item:before
-        content: none
-                
+        content: none        

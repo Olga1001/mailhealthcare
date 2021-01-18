@@ -94,6 +94,9 @@
     flex-basis: 60%
 
 .content-item
+    display: none 
+    &.active 
+        display: block
     &_table
         width: 50%
         padding-right: 10px
@@ -207,11 +210,17 @@
         flex-basis: 45.5%
     .flex-basis-1
         flex-basis: 71.5%
-    .content-item_links 
-        display: none
     .content-item_info
-        width: calc(100% - 375px)
+        width: calc(100% - 190px)
         padding: 0 30px 0 0
+    .content-item_links
+        position: initial
+    .content-item-imgs
+        width: 100%
+    .content-item-imgs_cards
+        max-width: 470px
+    .max-xl-440
+        max-width: 440px
 @media only screen and (max-width : 991px)
     .product
         padding: 20px 15px
@@ -222,8 +231,6 @@
         padding: 0
     .content-item-imgs_cards
         max-width: 470px
-    .max-lg-440
-        max-width: 440px
     .card-images img
         height: 101px
     .content-item_side
@@ -231,6 +238,11 @@
         padding-right: 0
     .content-item_drug
         margin: 0 auto
+    .content-item_links
+        position: initial
+        width: 100% 
+        border-right: none
+        border-bottom: 1px solid $gray-200
 @media only screen and (max-width : 767px)
     .product-left
         width: 100%

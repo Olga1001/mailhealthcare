@@ -310,33 +310,16 @@ hr
         fill: $green
       .tabs-item_main
         border-bottom-color: $green
+      .plus
+        &:before, &:after 
+          background-color: $gray-600
+        &:before
+          transform: translate(-50%,-50%) rotate(90deg)
+
     .tabs-item_main
       border-bottom: 3px solid transparent
       padding: 13px 0
 
-.tabs-mob 
-  border-bottom: none
-  .tabs-item 
-    border-right: 0
-    border-bottom: 1px solid #e4eaec
-    &:before 
-      content: none
-  
-    &.active 
-      // border-bottom: none
-      padding-bottom: 20px
-      .tabs-item_main
-        border-color: $gray-200
-        border-bottom: 1px solid $gray-200
-        &:before 
-          content: ''
-        .plus
-          &:before, &:after 
-            background-color: $gray-600
-          &:before
-            transform: translate(-50%,-50%) rotate(90deg)
-  .collapse-drop 
-    display: none
 .plus
   width: 20px
   height: 20px
@@ -434,6 +417,8 @@ hr
   border-bottom: 1px dashed $gray-200
 
 .collapse 
+  &-drop 
+    display: block
   p.fs-14 
     line-height: 22px
   &-item
