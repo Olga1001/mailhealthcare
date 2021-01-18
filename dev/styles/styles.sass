@@ -295,7 +295,7 @@ hr
       width: 1px
       height: 20px
       background-color: $bg-gray-100
-    svg 
+    .icon-info, .icon-warning 
       width: 20px
       height: 20px
       fill: $gray-light
@@ -306,7 +306,7 @@ hr
       color: $blue
       .content-item 
         display: block
-      svg 
+      .icon-info, .icon-warning  
         fill: $green
       .tabs-item_main
         border-bottom-color: $green
@@ -314,6 +314,29 @@ hr
       border-bottom: 3px solid transparent
       padding: 13px 0
 
+.tabs-mob 
+  border-bottom: none
+  .tabs-item 
+    border-right: 0
+    border-bottom: 1px solid #e4eaec
+    &:before 
+      content: none
+  
+    &.active 
+      // border-bottom: none
+      padding-bottom: 20px
+      .tabs-item_main
+        border-color: $gray-200
+        border-bottom: 1px solid $gray-200
+        &:before 
+          content: ''
+        .plus
+          &:before, &:after 
+            background-color: $gray-600
+          &:before
+            transform: translate(-50%,-50%) rotate(90deg)
+  .collapse-drop 
+    display: none
 .plus
   width: 20px
   height: 20px
@@ -413,6 +436,14 @@ hr
 .collapse 
   p.fs-14 
     line-height: 22px
+  &-item
+    .icon-angle-down
+      transform: rotate(-90deg)
+      transition: all 0.3s ease
+      margin: 0
+  &.active  
+    .collapse-item .icon-angle-down
+      transform: rotate(0)
 
 .icon-angle-down
   fill: $green 

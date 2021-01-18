@@ -89,23 +89,9 @@
            pointer-events: none
         .search-lg
             display: block
-            margin: 20px 0 0
-            max-width: 100%
-          
-    .collapse
-        &-item
-            .icon-angle-down
-                transform: rotate(-90deg)
-                transition: all 0.3s ease
-                margin: 0
-        &-drop 
-            display: none 
-        &.active  
-            .collapse-drop
-                display: block
-            .collapse-item .icon-angle-down
-                transform: rotate(0)
-
+    .search-lg
+        margin: 20px 0 0
+        max-width: 100%
 @media only screen and (max-width : 575px)
     .fs-35
         font-size: 30px
@@ -126,9 +112,17 @@
         margin-right: -15px 
         margin-left: -15px 
         padding: 0 15px!important
+        // margin-bottom: 30px
         width: calc(100% + 30px)
+        &:first-child .tabs-item_main
+            border-top: none
+    .tabs-desk
+        .tabs-item
+            margin-bottom: 0
+    .tabs-mob
+        .tabs-item .tabs-item_main
+            border-bottom: none
     .tabs-item .tabs-item_main
-        border-bottom: none
         position: relative
         padding: 16px 0
         &:before 
@@ -139,18 +133,6 @@
             height: 3px 
             width: 130px
             background-color: $bg-green
-    .tabs-item.active 
-        border-bottom: none
-        .tabs-item_main
-            border-color: $gray-200
-            border-bottom: 1px solid $gray-200
-            &:before 
-                content: ''
-            .plus
-                &:before, &:after 
-                    background-color: $gray-600
-                &:before
-                    transform: translate(-50%,-50%) rotate(90deg)
     .tabs-item
         padding-left: 0
     .tabs-item:before

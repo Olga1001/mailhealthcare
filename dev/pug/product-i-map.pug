@@ -1,4 +1,4 @@
-extends layout/main
+extends layout/main2
 
 block variables
 	-var title = 'product map'
@@ -103,46 +103,59 @@ block content
 						button.slider-next.slider-arrow(type="button")
 							+icon("arrow_right")
 					.slider.dots-circle
-						- 
-							card = [
-								{
-									srcProduct: 'layer_67_7584.jpg',
-									name: 'Ketoprofen',
-									span: 'Sildenafil',
-									price: '$8.38',
-									stock: '73%'
-								},
-								{
-									srcProduct: 'rectangle_12_7672.jpg',
-									name: 'Pantoprazole',
-									span: 'Generic',
-									price: '$10.78',
-									stock: '22%'
-								},
-								{
-									srcProduct: 'layer_67_7584.jpg',
-									name: 'Ketoprofen',
-									span: 'Sildenafil',
-									price: '$8.38',
-									stock: '73%'
-								},
-								{
-									srcProduct: 'rectangle_12_7672.jpg',
-									name: 'Pantoprazole',
-									span: 'Generic',
-									price: '$10.78',
-									stock: '22%'
-								}
-							]
-						each val in card 
-							.card-medication
-								a(href="#")
-									img.card-medication__img(src="img/product/"+val.srcProduct, alt=val.name)
-								.mb-10
-									a.text-up.fs-25.c-blue(href="#")=val.name
-									a.c-green.d-block.lh-1(href="#")=val.span
-								.align-items-end
-									p.fs-30.c-green.fw-bold.lh-34=val.price
-									p.c-gray-light.px-xl-15.px-8 /
-									p.fs-18.fw-semi.c-green Save 
-										span=val.stock
+						.d-flex
+							- 
+								card = [
+									{
+										srcProduct: 'layer_67_7584.jpg',
+										name: 'Ketoprofen',
+										span: 'Sildenafil',
+										price: '$8.38',
+										stock: '73%'
+									},
+									{
+										srcProduct: 'rectangle_12_7672.jpg',
+										name: 'Pantoprazole',
+										span: 'Generic',
+										price: '$10.78',
+										stock: '22%'
+									},
+									{
+										srcProduct: 'layer_67_7584.jpg',
+										name: 'Ketoprofen',
+										span: 'Sildenafil',
+										price: '$8.38',
+										stock: '73%'
+									},
+									{
+										srcProduct: 'rectangle_12_7672.jpg',
+										name: 'Pantoprazole',
+										span: 'Generic',
+										price: '$10.78',
+										stock: '22%'
+									}
+								]
+							each val in card 
+								.card-medication
+									a(href="#")
+										img.card-medication__img(src="img/product/"+val.srcProduct, alt=val.name)
+									.mb-10
+										a.text-up.fs-25.c-blue(href="#")=val.name
+										a.c-green.d-block.lh-1(href="#")=val.span
+									.align-items-end
+										p.fs-30.c-green.fw-bold.lh-34=val.price
+										p.c-gray-light.px-xl-15.px-8 /
+										p.fs-18.fw-semi.c-green Save 
+											span=val.stock
+
+						ul.slick-dots
+							li.slick-active(role='presentation')
+								button(type='button' role='tab')
+							li(role='presentation')
+								button(type='button' role='tab')
+							li(role='presentation')
+								button(type='button' role='tab')
+							li(role='presentation')
+								button(type='button' role='tab')
+			
+			include modules/footer/footer

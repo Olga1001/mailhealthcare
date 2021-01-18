@@ -98,13 +98,19 @@
 
 .sample-savings
     background-color: $bg-blue-light
-    padding: 83px 0
+    padding: 83px 0 0
+    .slider  
+        margin-bottom: 83px
 
 .card-medication
     background-color: $bg-white
     padding: 30px 25px
-    width: 345px
+    max-width: 345px
+    min-width: 259px
+    width: 100%
     margin-right: 30px
+    &:last-child
+        margin-right: 0
     &__img 
         width: 100%
         height: 290px
@@ -205,4 +211,6 @@
     .steps
         margin: 30px auto 60px
     .sample-savings
-        padding: 60px 0
+        padding: 60px 0 0
+        .slider  
+            margin-bottom: 60px

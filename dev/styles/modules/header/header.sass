@@ -89,8 +89,7 @@
 @media only screen and (max-width : 1199px)
     .logo 
         &-item 
-            background-image: url("../img/common/logo___02_1067.png")
-            width: 143px
+            width: 191px
             height: 50px
 
 @media only screen and (max-width : 991px)
@@ -99,29 +98,21 @@
     .navmenu 
         position: fixed
         left: 0 
-        top: 0 
-        height: 100vh 
+        top: 80px
         width: 100% 
-        overflow-y: auto
-        background-color: rgba($bg-black, 0.8)
         z-index: 8
-        opacity: 0
-        pointer-events: none 
-        transition: all 0.3s ease
-        &.active 
-            opacity: 1
-            pointer-events: auto 
-            .menu
-                transform: translateX(0)
-    .menu 
-        max-width: 75% 
         background-color: $bg-white
-        height: 100%
-        padding: 60px 0
-        transform: translateX(-100px)
-        transition: all 0.3s ease
+        border-top: 1px solid $gray-200
+        display: none
     .menu-item
-        padding: 0 15px!important
+        padding: 0!important
+    .menu-item.active .menu-link
+        border-bottom: 1px solid $gray-200
+        border-left: 3px solid $green
+    .menu-link
+        padding: 17px
+        border-bottom: 1px solid $gray-200
+        line-height: 1
     .header .search 
         width: 24px 
         height: 24px

@@ -24,12 +24,15 @@ block content
 					.slider-for 
 						.slider-for-item 
 							img(src="img/product/rectangle_12_7672.jpg", alt="product")
-						.slider-for-item 
-							img(src="img/product/rectangle_12_7672.jpg", alt="product")
-						.slider-for-item 
-							img(src="img/product/rectangle_12_7672.jpg", alt="product")
-						.slider-for-item 
-							img(src="img/product/rectangle_12_7672.jpg", alt="product")
+						ul.slick-dots.d-md-none
+							li.slick-active(role='presentation')
+								button(type='button' role='tab')
+							li(role='presentation')
+								button(type='button' role='tab')
+							li(role='presentation')
+								button(type='button' role='tab')
+							li(role='presentation')
+								button(type='button' role='tab')
 					.slider-nav
 						.slider-nav-item 
 							img(src="img/product/rectangle_12_7672.jpg", alt="product")
@@ -94,191 +97,18 @@ block content
 						.align-items-center.w-50.px-20 
 							+icon("delivery-truck", "mr-20")
 							p.fs-12.text-up.fw-semi.c-gray-600 Free <br> shipping
-			ul.tabs.d-sm-flex
+			ul.tabs.d-flex.tabs-desk
 				li.tabs-item.active
 					.align-items-center.tabs-item_main
 						+icon("info")
 						p.fw-medium Drug Info
-						.plus.d-sm-none
-					.content-item.d-sm-none
-						.content-item_info.mt-25 
-							.collapse.active 
-								.flex-center-between.collapse-item
-									div
-										p.fs-16.fw-bold What is Pantoprazole?
-										.dashed-horizontal.my-10
-									.mb-20
-										+icon("angle-down", "d-lg-none")
-							
-								ul.collapse-drop 
-									li.mb-8
-										p.fs-14.text-nowrap Commonly Used Brand Name(s) 
-										a.fs-14.c-green.fw-semi(href="#") Protonix
-									li.mb-8
-										p.fs-14.text-nowrap Therapeutic Classifications
-										a.fs-14.c-green.fw-semi(href="#") Gastric Acid Secretion Inhibitor
-									li.mb-8
-										p.fs-14.text-nowrap Pharmacologic Classifications
-										a.fs-14.c-green.fw-semi(href="#") Proton Pump Inhibitor
-							hr.line.my-20
-							.collapse.pt-10.active 
-								.flex-center-between.collapse-item
-									div
-										p.fs-16.fw-bold Overview
-										.dashed-horizontal.my-10
-									.mb-20
-										+icon("angle-down", "d-lg-none")
-								.collapse-drop 
-									p.fs-14.pb-20
-										a.c-green(href="#") Pantoprazole 
-										|is used to treat certain conditions in which there is too much acid in the stomach. It is used to treat erosive esophagitis or "heartburn" caused by 
-										a.c-green(href="#") gastroesophageal reflux disease (GERD)
-										|, a condition where the acid in the stomach washes back up into the esophagus. This medicine may also be used to treat Zollinger-Ellison syndrome, a condition where the stomach produces too much acid.
-									p.fs-14.pb-20 
-										a.c-green(href="#") Pantoprazole 
-										|is a proton pump inhibitor (PPI). It works by decreasing the amount of acid produced by the stomach.
-									p.fs-14.pb-20 This medicine is available only with your doctor's prescription.
-							hr.line.my-20
-							.collapse.pt-10.active 
-								.flex-center-between.collapse-item
-									div
-										p.fs-16.fw-bold Proper Use
-										.dashed-horizontal.my-10
-									.mb-20
-										+icon("angle-down", "d-lg-none")
-								.collapse-drop 
-									p.fs-14.pb-20
-										i.fw-semi  Take this medicine only as directed by your doctor. 
-										| Do not take more of it, do not take it more often, and do not take it for a longer time than your doctor ordered.
-									
-									p.fs-14.pb-20 This medicine comes with a Medication Guide. Read and follow these instructions carefully. Ask your doctor if you have any questions.
-									p.fs-14.pb-20 Swallow the delayed-release tablet whole. Do not split, crush, or chew it. You may take the tablet with or without food.
-									p.fs-14.pb-10 For 
-										i.fw-semi delayed-release oral suspension granules:
-									.pl-sm-20
-										p.fs-14.fw-semi.mb-8 Applesauce method:
-										ol.list-number.pb-20
-											li.fs-14.pb-10 Open packet.
-											li.fs-14.pb-10 Mix the packet contents with 1 teaspoonful of applesauce. Do not mix with water, other liquids, or food.
-											li.fs-14.pb-10 Swallow the mixture at least 30 minutes before a meal. Take it within 10 minutes after you mix it.
-											li.fs-14.pb-10 Sip some water after you swallow the mixture. This will make sure all of the granules get all the way to your stomach.
-											li.fs-14.pb-10 Do not chew or crush the granules. Do not divide the packet contents to make smaller doses.
-										
-										p.fs-14.fw-semi.mb-8 Apple juice method:
-										ol.list-number.pb-20
-											li.fs-14.pb-10 Open packet.
-											li.fs-14.pb-10 Mix the packet contents with 1 teaspoon of apple juice in a small cup or container.
-											li.fs-14.pb-10 Stir for 5 seconds (granules will not dissolve) and swallow it immediately or take it at least 30 minutes before a meal.
-											li.fs-14.pb-10 Rinse the container with apple juice to make sure you get all of the medicine. Swallow it immediately.
-											li.fs-14.pb-10 Do not chew or crush the granules. Do not divide the packet contents to make smaller doses.
-										p.fs-14.fw-semi.mb-8 Feeding tube:
-										ol.list-number
-											li.fs-14.pb-10 Pour the packet contents in a 2-ounce (60 mL) catheter-tip syringe.
-											li.fs-14.pb-10 Clear any clogs from the feeding tube before you put this medicine mixture into the tube.
-											li.fs-14.pb-10 Add 10 mL of apple juice into the syringe. Gently tap or shake the barrel of the syringe to help rinse the syringe and tube.
-											li.fs-14.pb-10 Repeat with an additional 10 mL of apple juice. No granules should remain in the syringe.
-											li.fs-14.pb-10 Take this medicine at least 30 minutes before a meal.
-							hr.line.my-20
-									
-							.collapse.pt-10.active 
-								.flex-center-between.collapse-item
-									div
-										p.fs-16.fw-bold Drug Interactions
-										.dashed-horizontal.my-10
-									.mb-20
-										+icon("angle-down", "d-lg-none")
-								.collapse-drop 
-									p.fs-14.pb-20 Although certain medicines should not be used together at all, in other cases two different medicines may be used together even if an interaction might occur. In these cases, your doctor may want to change the dose, or other precautions may be necessary. When you are taking this medicine, it is especially important that your healthcare professional know if you are taking any of the medicines listed below. The following interactions have been selected on the basis of their potential significance and are not necessarily all-inclusive.
-
-									p.fs-14 Using this medicine with any of the following medicines is not recommended. Your doctor may decide not to treat you with this medication or change some of the other medicines you take.
-										a.c-green.fw-semi.fs-14.my-10.d-block(href="#") ·  Rilpivirine
-									p.fs-14.pb-20 Using this medicine with any of the following medicines is usually not recommended, but may be required in some cases. If both medicines are prescribed together, your doctor may change the dose or how often you use one or both of the medicines.
-								
-									.flex-wrap
-										ul.list-disk.pb-sm-20.w-sm-50.pr-20 
-											each val in ['Acalabrutinib','Acalabrutinib','Amphetamine','Atazanavir','Benzphetamine','Bosutinib','Capecitabine','Cilostazol','Citalopram','Dacomitinib','Dasatinib','Dextroamphetamine','Erlotinib','Eslicarbazepine Acetate','Gefitinib','Ketoconazole']
-												li.fs-14.fw-medium=val 
-										ul.list-disk.pb-sm-20.w-sm-50.pr-20 
-											each val in ['Acalabrutinib','Acalabrutinib','Amphetamine','Atazanavir','Benzphetamine','Bosutinib','Capecitabine','Cilostazol','Citalopram','Dacomitinib','Dasatinib','Dextroamphetamine','Erlotinib','Eslicarbazepine Acetate','Gefitinib','Ketoconazole']
-												li.fs-14.fw-medium=val 
-						hr.line.my-20.d-lg-none.w-100
-						.content-item-imgs.mt-25 
-							p.fs-16.fw-bold Pantoprazole Images
-							.dashed-horizontal.my-10
-							.flex-wrap.justify-content-between
-								.flex-wrap.content-item-imgs_cards 
-									each val in [{src: 'rectangle_21_8623.jpg', title: 'Pantoprazole Sodium 40mg Delayed - Release Tablet', plus: true},{src: 'rectangle_21_8623.jpg', title: 'Pantoprazole Sodium 40mg Delayed - Release Tablet', plus: true},{src: 'rectangle_21_8623.jpg', title: 'Pantoprazole Sodium 40mg Delayed - Release Tablet', plus: true},{src: 'rectangle_21_8623.jpg', title: 'Pantoprazole Sodium 40mg Delayed - Release Tablet', plus: true},{src: 'rectangle_21_8623.jpg', title: 'Pantoprazole Sodium 40mg Delayed - Release Tablet', plus: true},{src: 'rectangle_21_8623.jpg', title: 'Pantoprazole Sodium 40mg Delayed - Release Tablet', plus: true},{src: 'rectangle_21_8623.jpg', title: 'Pantoprazole Sodium 40mg Delayed - Release Tablet', plus: false},{src: 'rectangle_21_8623.jpg', title: 'Pantoprazole Sodium 40mg Delayed - Release Tablet', plus: false}]
-										a.card-images(href="#" class=val.plus==true ? 'bb-1': '')
-											img(src="img/common/"+val.src, alt="img") 
-											span.fs-12.c-gray-500=val.title
-											if (val.plus == true)
-												.card-images_plus
-											else
-											
-								.mt-25.w-100.max-lg-440
-									include layout/drug
 				li.tabs-item
 					.align-items-center.tabs-item_main
 						+icon("warning")
 						p.fw-medium Side Effects
-						.plus.d-sm-none
-					.content-item.d-sm-none
-						.content-item_side.mt-25 
-							.collapse.pt-10
-								.flex-center-between.collapse-item
-									div
-										p.fs-16.fw-bold What should I watch for?
-										.dashed-horizontal.my-10
-									.mb-20
-										+icon("angle-down", "d-lg-none")
-								.collapse-drop 
-									p.fs-14.pb-20 It can take several days before your stomach 
-										a.c-green(href="#") pain 
-										| gets better. Check with your doctor or health care provider if your condition does not start to get better, or if it gets worse.
-									p.fs-14.pb-20 This medicine may cause serious skin reactions. They can happen weeks to months after starting the medicine. Contact your health care provider right away if you notice fevers or 
-										a.c-green(href="#") flu
-										|-like symptoms with a rash. The rash may be red or purple and then turn into blisters or peeling of the skin. Or, you might notice a red rash with swelling of the face, lips or lymph nodes in your neck or under your arms.
-									p.fs-14.pb-20 You may need blood work done while you are taking this medicine.
-									p.fs-14 This medicine may cause a decrease in 
-										a.c-green(href="#") vitamin B12
-										|. You should make sure that you get enough 
-										a.c-green(href="#") vitamin B12 
-										| while you are taking this medicine. Discuss the foods you eat and the vitamins you take with your health care provider.
 									
-							hr.line.my-20
-							.collapse.pt-10
-								.flex-center-between.collapse-item
-									div
-										p.fs-16.fw-bold Common and Rare Side Effects
-										.dashed-horizontal.my-10
-									.mb-20
-										+icon("angle-down", "d-lg-none")
-								.collapse-drop 
-									p.fs-14.pb-20 Along with its needed effects, a medicine may cause some unwanted effects. Although not all of these side effects may occur, if they do occur they may need medical attention.
-									p.fs-14.fw-semi.pb-20 Check with your doctor immediately if any of the following side effects occur:
-									.flex-wrap 
-										ul.list-disk.pb-sm-20.w-sm-50.pr-20 
-											each val in ['Less common', 'Blurred vision', 'Dry mouth', 'Flushed, dry skin', 'Fruit-like breath odor', 'Increased hunger', 'Increased thirst', 'Increased urination', 'Nausea', 'Stomach pain', 'Sweating', 'Troubled breathing', 'Unexplained weight loss', 'Vomiting', 'Incidence not known', 'Absence of or decrease in body movements', 'Blindness', 'Blistering, peeling, or loosening of the skin', 'Bloating', 'Bloody or cloudy urine', 'Bloody, black, or tarry stools', 'Blurred vision', 'Chills', 'Clay-colored stools', 'Constipation', 'Continuous ringing or buzzing or other unexplained noise in the ears', 'Cough', 'Dark urine', 'Decreased vision', 'Diarrhea', 'Difficulty with speaking', 'Difficulty with swallowing', 'Dizziness or lightheadedness', 'Drowsiness', 'Fast heartbeat', 'Feeling of constant movement of self or surroundings']
-												li.fs-14.fw-medium=val 
-										ul.list-disk.pb-20.w-sm-50.pr-20 
-											each val in ['Fever', 'General feeling of tiredness or weakness', 'Greatly decreased frequency of urination or amount of urine', 'Headache', 'Hearing loss', 'High fever', 'Hives, itching, or skin rash', 'Indigestion', 'Joint pain', 'Large, hive-like swelling on the face, eyelids, lips, tongue, throat, hands, legs, feet, or genitals', 'Light-colored stools', 'Loss of appetite', 'Mood or mental changes', 'Muscle cramp, pain, or stiffness', 'Muscle spasms (tetany) or twitching', 'Pains in the stomach, side, or abdomen, possibly radiating to the back', 'Pale skin', 'Puffiness or swelling of the eyelids or around the eyes, face, lips, or tongue', 'Red skin lesions, often with a purple center', 'Red, irritated eyes', 'Seizures', 'Sensation of spinning', 'Sore throat', 'Sores, ulcers, or white spots on the lips or in the mouth', 'Stomach pain, continuing', 'Swelling of the feet or lower legs', 'Swollen glands', 'Tightness in the chest', 'Trembling', 'Unexplained bleeding or bruising', 'Unpleasant breath odor', 'Unusual tiredness or weakness', 'Vomiting of blood', 'Yellow eyes or skin']
-												li.fs-14.fw-medium=val 
-									p.fs-14.py-sm-20 Some side effects may occur that usually do not need medical attention. These side effects may go away during treatment as your body adjusts to the medicine. Also, your health care professional may be able to tell you about ways to prevent or reduce some of these side effects. Check with your health care professional if any of the following side effects continue or are bothersome or if you have any questions about them:
-									.flex-wrap.py-20 
-										ul.list-disk.pb-sm-20.w-sm-50.pr-20 
-											each val in ['Less common', 'Belching', 'Bloated or full feeling', 'Excess air or gas in the stomach or bowels']
-												li.fs-14.fw-medium=val 
-										ul.list-disk.pb-sm-20.w-sm-50.pr-20 
-											each val in ['Passing gas', 'Trouble sleeping', 'Incidence not known', 'Increased watering of the mouth']
-												li.fs-14.fw-medium=val 
-									p.fs-14.pb-20 Other side effects not listed may also occur in some patients. If you notice any other effects, check with your healthcare professional.
-									p.fs-14.pb-20 Call your doctor for medical advice about side effects. You may report side effects to the FDA at 
-										a.c-green(href="#") 1-800-FDA-1088.
-						.content-item_drug.mt-25
-							.w-100.stucky
-								include layout/drug
-			.content.d-sm-block.d-none 
-				.content-item.active
+			.content 
+				.content-item.active(style="display: block")
 					.flex-wrap
 						.content-item_links.mt-25  
 							p.fs-16.fw-bold Quick Links
@@ -290,38 +120,34 @@ block content
 											+icon("arrow_right")
 											=val
 						.content-item_info.mt-25 
-							.collapse.active 
+							.collapse 
 								.flex-center-between.collapse-item
 									div
 										p.fs-16.fw-bold What is Pantoprazole?
 										.dashed-horizontal.my-10
-									.mb-20
-										+icon("angle-down", "d-lg-none ")
 							
 								ul.collapse-drop 
-									li.d-flex.mb-8
+									li.d-sm-flex.mb-8
 										.flex-basis.align-items-center
 											p.fs-14.text-nowrap Commonly Used Brand Name(s) 
 											.dotted.mx-30
 										a.fs-14.c-green.fw-semi(href="#") Protonix
-									li.d-flex.mb-8
+									li.d-sm-flex.mb-8
 										.flex-basis.align-items-center
 											p.fs-14.text-nowrap Therapeutic Classifications
 											.dotted.mx-30 
 										a.fs-14.c-green.fw-semi(href="#") Gastric Acid Secretion Inhibitor
-									li.d-flex.mb-8
+									li.d-sm-flex.mb-8
 										.flex-basis.align-items-center
 											p.fs-14.text-nowrap Pharmacologic Classifications
 											.dotted.mx-30 
 										a.fs-14.c-green.fw-semi(href="#") Proton Pump Inhibitor
 							hr.line.my-20
-							.collapse.pt-10.active 
+							.collapse.pt-10 
 								.flex-center-between.collapse-item
 									div
 										p.fs-16.fw-bold Overview
 										.dashed-horizontal.my-10
-									.mb-20
-										+icon("angle-down", "d-lg-none")
 								.collapse-drop 
 									p.fs-14.pb-20
 										a.c-green(href="#") Pantoprazole 
@@ -333,13 +159,11 @@ block content
 										|is a proton pump inhibitor (PPI). It works by decreasing the amount of acid produced by the stomach.
 									p.fs-14.pb-20 This medicine is available only with your doctor's prescription.
 							hr.line.my-20
-							.collapse.pt-10.active 
+							.collapse.pt-10 
 								.flex-center-between.collapse-item
 									div
 										p.fs-16.fw-bold Proper Use
 										.dashed-horizontal.my-10
-									.mb-20
-										+icon("angle-down", "d-lg-none")
 								.collapse-drop 
 									p.fs-14.pb-20
 										i.fw-semi  Take this medicine only as directed by your doctor. 
@@ -374,13 +198,11 @@ block content
 											li.fs-14.pb-10 Take this medicine at least 30 minutes before a meal.
 							hr.line.my-20
 									
-							.collapse.pt-10.active 
+							.collapse.pt-10 
 								.flex-center-between.collapse-item
 									div
 										p.fs-16.fw-bold Drug Interactions
 										.dashed-horizontal.my-10
-									.mb-20
-										+icon("angle-down", "d-lg-none")
 								.collapse-drop 
 									p.fs-14.pb-20 Although certain medicines should not be used together at all, in other cases two different medicines may be used together even if an interaction might occur. In these cases, your doctor may want to change the dose, or other precautions may be necessary. When you are taking this medicine, it is especially important that your healthcare professional know if you are taking any of the medicines listed below. The following interactions have been selected on the basis of their potential significance and are not necessarily all-inclusive.
 
@@ -389,10 +211,10 @@ block content
 									p.fs-14.pb-20 Using this medicine with any of the following medicines is usually not recommended, but may be required in some cases. If both medicines are prescribed together, your doctor may change the dose or how often you use one or both of the medicines.
 								
 									.flex-wrap
-										ul.list-disk.pb-20.w-50
+										ul.list-disk.pb-sm-20.w-sm-50
 											each val in ['Acalabrutinib','Acalabrutinib','Amphetamine','Atazanavir','Benzphetamine','Bosutinib','Capecitabine','Cilostazol','Citalopram','Dacomitinib','Dasatinib','Dextroamphetamine','Erlotinib','Eslicarbazepine Acetate','Gefitinib','Ketoconazole']
 												li.fs-14.fw-medium=val 
-										ul.list-disk.pb-20.w-50
+										ul.list-disk.pb-sm-20.w-sm-50
 											each val in ['Acalabrutinib','Acalabrutinib','Amphetamine','Atazanavir','Benzphetamine','Bosutinib','Capecitabine','Cilostazol','Citalopram','Dacomitinib','Dasatinib','Dextroamphetamine','Erlotinib','Eslicarbazepine Acetate','Gefitinib','Ketoconazole']
 												li.fs-14.fw-medium=val 
 						hr.line.my-20.d-lg-none.w-100
@@ -411,7 +233,7 @@ block content
 											
 								.mt-25.w-100.max-lg-440
 									include layout/drug
-				.content-item
+				.content-item(style="display: none")
 					.flex-wrap 
 						.content-item_side.mt-25 
 							.collapse.pt-10
@@ -419,8 +241,6 @@ block content
 									div
 										p.fs-16.fw-bold What should I watch for?
 										.dashed-horizontal.my-10
-									.mb-20
-										+icon("angle-down", "d-lg-none")
 								.collapse-drop 
 									p.fs-14.pb-20 It can take several days before your stomach 
 										a.c-green(href="#") pain 
@@ -441,24 +261,22 @@ block content
 									div
 										p.fs-16.fw-bold Common and Rare Side Effects
 										.dashed-horizontal.my-10
-									.mb-20
-										+icon("angle-down", "d-lg-none")
 								.collapse-drop 
 									p.fs-14.pb-20 Along with its needed effects, a medicine may cause some unwanted effects. Although not all of these side effects may occur, if they do occur they may need medical attention.
 									p.fs-14.fw-semi.pb-20 Check with your doctor immediately if any of the following side effects occur:
 									.flex-wrap 
-										ul.list-disk.pb-20.w-50.pr-20 
+										ul.list-disk.pb-sm-20.w-sm-50.pr-20 
 											each val in ['Less common', 'Blurred vision', 'Dry mouth', 'Flushed, dry skin', 'Fruit-like breath odor', 'Increased hunger', 'Increased thirst', 'Increased urination', 'Nausea', 'Stomach pain', 'Sweating', 'Troubled breathing', 'Unexplained weight loss', 'Vomiting', 'Incidence not known', 'Absence of or decrease in body movements', 'Blindness', 'Blistering, peeling, or loosening of the skin', 'Bloating', 'Bloody or cloudy urine', 'Bloody, black, or tarry stools', 'Blurred vision', 'Chills', 'Clay-colored stools', 'Constipation', 'Continuous ringing or buzzing or other unexplained noise in the ears', 'Cough', 'Dark urine', 'Decreased vision', 'Diarrhea', 'Difficulty with speaking', 'Difficulty with swallowing', 'Dizziness or lightheadedness', 'Drowsiness', 'Fast heartbeat', 'Feeling of constant movement of self or surroundings']
 												li.fs-14.fw-medium=val 
-										ul.list-disk.pb-20.w-50.pr-20 
+										ul.list-disk.pb-20.w-sm-50.pr-20 
 											each val in ['Fever', 'General feeling of tiredness or weakness', 'Greatly decreased frequency of urination or amount of urine', 'Headache', 'Hearing loss', 'High fever', 'Hives, itching, or skin rash', 'Indigestion', 'Joint pain', 'Large, hive-like swelling on the face, eyelids, lips, tongue, throat, hands, legs, feet, or genitals', 'Light-colored stools', 'Loss of appetite', 'Mood or mental changes', 'Muscle cramp, pain, or stiffness', 'Muscle spasms (tetany) or twitching', 'Pains in the stomach, side, or abdomen, possibly radiating to the back', 'Pale skin', 'Puffiness or swelling of the eyelids or around the eyes, face, lips, or tongue', 'Red skin lesions, often with a purple center', 'Red, irritated eyes', 'Seizures', 'Sensation of spinning', 'Sore throat', 'Sores, ulcers, or white spots on the lips or in the mouth', 'Stomach pain, continuing', 'Swelling of the feet or lower legs', 'Swollen glands', 'Tightness in the chest', 'Trembling', 'Unexplained bleeding or bruising', 'Unpleasant breath odor', 'Unusual tiredness or weakness', 'Vomiting of blood', 'Yellow eyes or skin']
 												li.fs-14.fw-medium=val 
 									p.fs-14.py-20 Some side effects may occur that usually do not need medical attention. These side effects may go away during treatment as your body adjusts to the medicine. Also, your health care professional may be able to tell you about ways to prevent or reduce some of these side effects. Check with your health care professional if any of the following side effects continue or are bothersome or if you have any questions about them:
 									.flex-wrap.py-20 
-										ul.list-disk.pb-20.w-50.pr-20 
+										ul.list-disk.pb-sm-20.w-sm-50.pr-20 
 											each val in ['Less common', 'Belching', 'Bloated or full feeling', 'Excess air or gas in the stomach or bowels']
 												li.fs-14.fw-medium=val 
-										ul.list-disk.pb-20.w-50.pr-20 
+										ul.list-disk.pb-20.w-sm-50.pr-20 
 											each val in ['Passing gas', 'Trouble sleeping', 'Incidence not known', 'Increased watering of the mouth']
 												li.fs-14.fw-medium=val 
 									p.fs-14.pb-20 Other side effects not listed may also occur in some patients. If you notice any other effects, check with your healthcare professional.
@@ -467,7 +285,6 @@ block content
 						.content-item_drug.mt-25
 							.w-100.stucky
 								include layout/drug
-
 
 		.topblock_v2
 			include layout/top-block

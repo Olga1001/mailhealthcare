@@ -24,12 +24,15 @@ block content
 					.slider-for 
 						.slider-for-item 
 							img(src="img/product/rectangle_12_7672.jpg", alt="product")
-						.slider-for-item 
-							img(src="img/product/rectangle_12_7672.jpg", alt="product")
-						.slider-for-item 
-							img(src="img/product/rectangle_12_7672.jpg", alt="product")
-						.slider-for-item 
-							img(src="img/product/rectangle_12_7672.jpg", alt="product")
+						ul.slick-dots.d-md-none
+							li.slick-active(role='presentation')
+								button(type='button' role='tab')
+							li(role='presentation')
+								button(type='button' role='tab')
+							li(role='presentation')
+								button(type='button' role='tab')
+							li(role='presentation')
+								button(type='button' role='tab')
 					.slider-nav
 						.slider-nav-item 
 							img(src="img/product/rectangle_12_7672.jpg", alt="product")
@@ -87,7 +90,6 @@ block content
 						+icon("arrow_right")
 
 					hr.line.my-30
-
 					.align-items-center.mt-20.mailfree-block
 						.align-items-center.w-50.px-20 
 							+icon("mail", "mr-20")
@@ -95,7 +97,7 @@ block content
 						.align-items-center.w-50.px-20 
 							+icon("delivery-truck", "mr-20")
 							p.fs-12.text-up.fw-semi.c-gray-600 Free <br> shipping
-			ul.tabs.d-sm-flex 
+			ul.tabs.d-sm-flex
 				li.tabs-item.active
 					.align-items-center.tabs-item_main
 						+icon("info")
@@ -122,7 +124,7 @@ block content
 										p.fs-14.text-nowrap Pharmacologic Classifications
 										a.fs-14.c-green.fw-semi(href="#") Proton Pump Inhibitor
 							hr.line.my-20
-							.collapse.pt-10
+							.collapse.pt-10.active 
 								.flex-center-between.collapse-item
 									div
 										p.fs-16.fw-bold Overview
@@ -140,7 +142,7 @@ block content
 										|is a proton pump inhibitor (PPI). It works by decreasing the amount of acid produced by the stomach.
 									p.fs-14.pb-20 This medicine is available only with your doctor's prescription.
 							hr.line.my-20
-							.collapse.pt-10
+							.collapse.pt-10.active 
 								.flex-center-between.collapse-item
 									div
 										p.fs-16.fw-bold Proper Use
@@ -181,7 +183,7 @@ block content
 											li.fs-14.pb-10 Take this medicine at least 30 minutes before a meal.
 							hr.line.my-20
 									
-							.collapse.pt-10
+							.collapse.pt-10.active 
 								.flex-center-between.collapse-item
 									div
 										p.fs-16.fw-bold Drug Interactions
@@ -291,7 +293,7 @@ block content
 											+icon("arrow_right")
 											=val
 						.content-item_info.mt-25 
-							.collapse.active 
+							.collapse 
 								.flex-center-between.collapse-item
 									div
 										p.fs-16.fw-bold What is Pantoprazole?
@@ -316,7 +318,7 @@ block content
 											.dotted.mx-30 
 										a.fs-14.c-green.fw-semi(href="#") Proton Pump Inhibitor
 							hr.line.my-20
-							.collapse.pt-10
+							.collapse.pt-10 
 								.flex-center-between.collapse-item
 									div
 										p.fs-16.fw-bold Overview
@@ -334,7 +336,7 @@ block content
 										|is a proton pump inhibitor (PPI). It works by decreasing the amount of acid produced by the stomach.
 									p.fs-14.pb-20 This medicine is available only with your doctor's prescription.
 							hr.line.my-20
-							.collapse.pt-10
+							.collapse.pt-10 
 								.flex-center-between.collapse-item
 									div
 										p.fs-16.fw-bold Proper Use
@@ -375,7 +377,7 @@ block content
 											li.fs-14.pb-10 Take this medicine at least 30 minutes before a meal.
 							hr.line.my-20
 									
-							.collapse.pt-10
+							.collapse.pt-10 
 								.flex-center-between.collapse-item
 									div
 										p.fs-16.fw-bold Drug Interactions
