@@ -1,0 +1,129 @@
+.how-works
+    overflow: hidden
+    .bg-before-blue:before 
+        height: 580px
+    &__block 
+        background-color: $bg-white
+        box-shadow: $shadow2
+        margin-bottom: 50px
+        padding: 50px 125px
+        &-border
+            margin-top: -239px
+            background: url("../img/common/howitwork-border.png") no-repeat center / contain
+            width: 469px 
+            height: 354px
+            +d-flex(center,flex-end)
+            padding-right: 13px
+            position: relative
+            margin-bottom: 60px
+        &-img 
+            width: 100%
+            height: 100%
+            border-radius: 50% 
+            object-fit: cover
+            +centerX
+            bottom: 0
+        &-black
+            width: 343px
+            height: 343px
+            border-radius: 50% 
+            position: relative
+            &:before
+                content: ''
+                +centerXY
+                width: 100% 
+                height: 100%
+                border-radius: 50% 
+                z-index: 2
+                background: linear-gradient(to left, rgba($bg-black, 0.4), rgba($bg-black, 0.4))
+
+.w-max-469 
+    width-max: 469px 
+    width: 100%
+
+.btn-play 
+    width: 80px
+    height: 80px
+    background-color: rgba($bg-white, 0.25)
+    border-radius: 50% 
+    +centerXY
+    z-index: 3
+    svg 
+        width: 30px 
+        height: 100%
+        fill: $white
+        margin: 0 auto
+
+.icon-play-button 
+    width: 20px
+    height: 20px
+    fill: $gray-light
+
+.icon-network
+    width: 94px
+    height: 94px
+    fill: $gray-light
+
+.list_article
+    counter-reset: num
+    &-item
+        position: relative
+        &:before
+            content: '0'counter(num)
+            counter-increment: num
+            position: absolute 
+            top: 5px
+            right: calc(100% + 35px)
+            font-size: 60px
+            line-height: 35px
+            font-weight: 700
+            text-transform: uppercase
+            color: #f5fafa
+        img
+            width: 345px
+            height: 186px
+            border-radius: 5px
+            object-fit: cover
+            margin-right: 30px 
+            float: left
+
+@media only screen and (max-width : 1199px)
+    .how-works__block-border
+        margin-top: -160px
+        width: auto
+        height: 299px
+        margin-bottom: 30px
+    .how-works__block-black
+        width: 290px
+        height: 290px
+    .how-works__block
+        padding: 50px 15px
+    .list_article-item
+        margin-left: 80px
+    .list_article-item:before
+
+        right: calc(100% + 10px)
+@media only screen and (max-width : 991px)
+    .list_article-item img
+        width: 290px
+        height: 186px
+    .list_article-item img
+        margin-right: 15px
+
+@media only screen and (max-width : 767px)
+    .list_article-item
+        margin-left: 0
+    .list_article-item:before
+        content: none
+
+@media only screen and (max-width : 575px)
+    .how-works__block-border
+        margin: -160px -50px 30px
+        min-width: 400px
+    .how-works__block
+        margin: 0 -15px 40px
+    .icon-play-button
+        width: 17px 
+        height: 17px
+
+    

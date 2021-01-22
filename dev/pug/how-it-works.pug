@@ -1,0 +1,81 @@
+extends layout/main
+
+block variables
+	-var title = 'How it Works'
+
+block content
+	.how-works
+		.bg-before-blue
+		.container
+			ul.breadcrumbs
+				li.breadcrumbs__item
+					a.breadcrumbs__link(href="")
+						+icon("house")
+				+breadcrumbs-item('About Us','#')
+				+breadcrumbs-item('How MailHeathCare Works')
+			
+			.flex-end-between.mb-15
+				.align-sm-items-center
+					+icon("network","mr-30 mb-25")
+					h1.fs-35.text-up.mb-25 How
+						span.c-green.fw-bold.d-block mail health care
+						|Works
+				.d-xl-block.d-none
+					p.fs-14.c-gray.mb-5 Share
+					ul.social.social-gray.d-flex 
+						each val in ['facebook','twitter','instagram']
+							li.social-item 
+								a.social-link.ml-0(href="#")
+									+icon(val)
+			.how-works__block.mt-lg-0.mt-110
+				.flex-wrap.flex-lg-row.flex-column-reverse
+					.w-lg-50 
+						p.fw-bold.mb-10 Learn how to save up to 80% on your prescriptions
+						p Omittantur complectitur eam ei, diam congue maiorum an vim. Magna timeam labores mel ea, sed et iriure euripidis. Id est timeam legimus sadipscing, affert veritus intellegat ad per, ea est solum mollis verterem. Quo ad posidonium deterruisset. Cum ei meis munere nullam, nulla ignota vis ne, magna impedit luptatum te eam. No omnis dolorem repudiandae vis, populo principes et sit. Partem commune voluptua cu sea, quem natum invenire ut eum.
+					.w-lg-50.relative
+						.w-max-469.ml-lg-auto.mx-auto.mb-30
+							.how-works__block-border
+								.how-works__block-black
+									img.how-works__block-img(src="img/common/layer_67_7696.png", alt="how it work")
+								button.btn-play(type="button")
+									+icon("play")
+							button.align-items-center.mx-auto.mb-25(type="button")
+								+icon("play-button","mr-14")
+								span.c-green.fs-sm-16.fs-13_5 Watch the How We Works video
+				hr.line-dotted.my-55
+				h2.fs-35.text-up.text-center Search for
+					span.fw-bold.c-green.d-block your prescription 
+				.dashed-horizontal.my-20.mx-auto
+
+				form.search.search-price
+					+icon("search_magnific", "d-md-block d-none") 
+					input(type="text" placeholder="Type your drug name (like Atorvastin, Sildenafil, etc)" required) 
+					button.btn(type="submit") 
+						span.d-md-block.d-none Find Drug Prices
+						+icon("search_magnific", "d-md-none c-green") 
+
+
+				p.fs-14.mt-30.text-center Popular searches: 
+					each val in ['Atorvastatin','Sildenafil','Zoloft','Lexapro','Losartan','Amlodipine']
+						a.c-green(href="#")=val  
+						| , 
+			.how-works__block
+				.product-title.mr-0.pb-30
+					h2.fs-35.text-up What is
+						span.c-green.d-block.fw-semi mail health care?
+				ol.list_article
+					li.list_article-item
+						.my-sm-55.my-30 
+							img(src="img/common/rectangle_14_7750.jpg", alt="img") 
+							p.fw-bold.mb-10 Why do I need Mail Helth Care?
+							p.mb-10 Prescription drug prices are not regulated. The cost of a prescription may differ by more than $100 between pharmacies across the street from each other!
+							p Insurance isn’t helping like it used to. In the past 10 years, insurance companies started passing 25-80% more of the cost of drugs onto patients.
+						hr.line-dotted
+					li.list_article-item
+						.my-sm-55.my-30 
+							img(src="img/common/rectangle_14_copy_7754.jpg", alt="img") 
+							p.fw-bold.mb-10 How can Mail Helth Care help me?
+							p.mb-10 
+								a.c-green(href="#") Mail Helth Care
+								| - gathers current prices and discounts to help you find the lowest cost pharmacy for your prescriptions.
+							p Ei qui omnes iisque graecis. Ex justo utinam disputationi has. Te eum timeam necessitatibus, te vidisse nominati mandamus quo. Ex omnes phaedrum qualisque per. Mea eu ornatus ocurreret interesset, vis iuvaret eripuit at.

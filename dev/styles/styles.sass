@@ -189,6 +189,25 @@ input.search-drug
 .search-lg
   display: none 
 
+.search-price
+  margin: 36px 0 0 0
+  max-width: 100%
+  .icon-search_magnific
+    +centerY 
+    left: 18px
+    width: 20px
+    height: 20px
+    fill: $gray-light
+    pointer-events: none
+  input 
+    padding-left: 58px
+    padding-right: 300px
+  button 
+    width: 100%
+    line-height: 45px
+    font-size: 16px
+    max-width: 250px
+
 .dashed-vertical
   height: 62px
   width: 2px
@@ -449,6 +468,13 @@ hr
 
 @import "modules/modules"
 
+.line-dotted
+  background: none 
+  border-top: 1px dotted $gray-200
+
+
+.bb-1 
+  border-bottom: 1px dotted $gray-200
 
 .w-fit-content 
   width: fit-content
@@ -461,6 +487,9 @@ hr
 
 .w-100
   width: 100%
+
+.max-w-100
+  max-width: 100%
 
 .line-clamp
   display: block

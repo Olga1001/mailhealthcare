@@ -1,11 +1,4 @@
 $(document).ready(function () {
-  // search
-  $(".search button").click(function (e) {
-    e.preventDefault();
-    $(this).hide();
-    $(this).closest(".header").find(".search-lg").slideDown(300);
-  });
-
   // burder
   $(".burger").click(function () {
     $(this).toggleClass('active');
@@ -16,8 +9,7 @@ $(document).ready(function () {
   if (window.matchMedia("(max-width: 575px)").matches) { 
     $(".content-item").removeClass('active');
   }
-  $(".tabs-item").click(function () {
-   
+  $(".tabs-item").click(function () { 
     if (window.matchMedia("(min-width: 576px)").matches) {
       $(".tabs-item").removeClass('active');
       $('[data-content]').removeClass('active');
@@ -26,15 +18,25 @@ $(document).ready(function () {
     $(this).toggleClass('active');
     let i = $(this).data("tab"); 
     $('[data-content="'+ i +'"]').toggleClass('active');
-
   });
  
-  // collapse 
   if (window.matchMedia("(max-width: 991px)").matches) {
+    // collapse 
     $(".collapse-item").click(function () {
       $(this).closest(".collapse").toggleClass('active');
       $(this).closest(".collapse").find(".collapse-drop").slideToggle(300);
     });
+
+    // search
+    $(".header .search button").click(function (e) {
+      e.preventDefault();
+      $(this).hide();
+      $(this).closest(".header").find(".search-lg").slideDown(300);
+    });
   }
 
+  if (window.matchMedia("(max-width: 767px)").matches) {
+    $(".search-price input").attr("placeholder","Type your drug name");
+  }
+ 
 });
