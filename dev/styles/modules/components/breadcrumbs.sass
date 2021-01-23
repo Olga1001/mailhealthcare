@@ -33,6 +33,7 @@
         width: 14px
         height: 14px
         fill: $gray
+        margin-bottom: 2px
   &__text 
     color: $green
     padding: 0 15px 
@@ -87,3 +88,11 @@
         content: none
   .breadcrumbs_v2 .breadcrumbs__item:first-child
     width: 100%
+
+@media only screen and (max-width : 420px)
+  .breadcrumbs__item:first-child .breadcrumbs__link
+    padding-right: 5px
+  .breadcrumbs__link
+    padding: 0 5px
+  .breadcrumbs__text
+    padding: 0 0 0 5px
