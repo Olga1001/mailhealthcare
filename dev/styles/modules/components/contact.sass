@@ -1,0 +1,29 @@
+.max-360
+    max-width: 360px
+    width: 100%
+
+.max-735
+    max-width: 735px
+    width: 100%
+
+.contact 
+    background-color: $bg-blue-light
+    &-row 
+        max-width: 1270px
+        margin: 0 auto 110px
+    .max-360
+        +d-flex(space-between, flex-start)
+        flex-direction: column
+        height: 100%
+
+@media only screen and (max-width : 991px)
+    .max-735
+        margin: 0 auto
+        max-width: 100%
+    .max-360
+        max-width: 100% 
+
+@media only screen and (max-width : 575px)
+    .contact-row
+        margin-bottom: 30px
+

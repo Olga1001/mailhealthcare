@@ -25,6 +25,9 @@
         align-items: flex-end
     .flex-lg-end-between
         +d-flex(space-between, flex-end) 
+    .justify-content-lg-between
+        +d-flex(space-between, flex-start) 
+
     .d-lg-block
         display: block
     .d-lg-none 
@@ -43,6 +46,12 @@
         margin-left: auto
     .mt-lg-0
         margin-top: 0
+    .pr-lg-15
+        padding-right: 15px
+    .pl-lg-15
+        padding-left: 15px
+    .pl-lg-45
+        padding-left: 45px
     
         
 @media only screen and (min-width : 768px)
@@ -65,6 +74,8 @@
     .align-sm-items-center
         display: flex 
         align-items: center
+    .flex-sm-center-between
+        +d-flex(space-between, center)
     .d-sm-block 
         display: block
     .d-sm-flex 
@@ -93,7 +104,15 @@
     .my-sm-55
         margin-top: 55px 
         margin-bottom: 55px
-        
+    .pr-sm-15
+        padding-right: 15px 
+    .pl-sm-15
+        padding-left: 15px
+    .pb-sm-80
+        padding-bottom: 80px
+    .py-sm-60
+        padding-top: 60px 
+        padding-bottom: 60px
 @media only screen and (max-width : 991px)
     .slick-slide
         margin-right: 10px

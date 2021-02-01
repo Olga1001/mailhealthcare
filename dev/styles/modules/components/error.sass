@@ -1,0 +1,32 @@
+.error 
+    max-width: 965px
+    width: 100%
+    margin: 0 auto 
+    padding: 60px 15px
+    min-height: calc(100vh - 538px)
+    position: relative
+    z-index: 1
+    overflow: hidden
+    &-img
+        +centerY
+        right: 0
+        z-index: -1
+
+.max-350
+    max-width: 350px
+
+@media only screen and (max-width : 881px)
+    .error-img 
+        max-width: 350px
+        right: -6%
+
+@media only screen and (max-width : 645px)
+    .error-img 
+        position: initial
+        transform: none
+        margin: -25px auto 63px
+    .max-350 
+        max-width: 100%
+    .error .btn
+        margin-left: auto 
+        margin-right: auto

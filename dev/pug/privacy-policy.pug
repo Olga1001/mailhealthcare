@@ -1,0 +1,107 @@
+extends layout/main
+
+block variables
+	-var title = 'Privacy Policy'
+
+block content
+	main.privacy-policy
+		.bg-before-blue
+		.container
+			ul.breadcrumbs
+				li.breadcrumbs__item
+					a.breadcrumbs__link(href="#")
+						+icon("house")
+				+breadcrumbs-item('Support','#')
+				+breadcrumbs-item('Privacy')
+			.text-center 
+				h1.fs-35.text-up Privacy Policy
+				.dashed-horizontal.my-25.mx-auto
+				p Information about advertising on GoodRx
+					span.d-block.c-green.fw-semi Last modified: November 30, 2020
+
+		.privacy-policy__block
+			.privacy-policy__container
+				p.fw-bold Hello from Mail Heath Care.
+				.dashed-horizontal.my-10
+				.fs-14
+					p.pb-20 This privacy policy covers the Mail Heath Care website (mailheathcare.com) and the Mail Heath Care mobile applications, and any other websites and mobile applications, and services provided by Mail Heath Care (collectively, the “Site”). By using the Site, you agree to the privacy policy.
+					p.pb-20 First of all, thank you for placing your trust in us. We understand that your personal information is sensitive, and also that privacy policies and legalese can be scary, so we want to thank you for trusting Mail Heath Care with your information and taking the time to read this privacy policy. We’ll try to keep it simple!
+					p.pb-20 California Residents: Please click here to read the Privacy Policy Addendum for California Residents for information about California consumer rights.
+					p.pb-20 Mail Heath Care does not sell personal medical information. We do not provide your personally-identifiable medical information to third parties in exchange for payment.
+					p.pb-20 Like many companies, Mail Heath Care uses personal information in order to provide services to you, to run our business (including for the purposes of internal business operations and analytics, to provide, change, market or optimize our services and products) and to communicate and market to you. In some instances, we may use third party service providers to help assist us in the above.
+				hr.line.mb-40.mt-20
+				p.fw-bold Information collected by Mail Heath Care (Who provides it and how we use it) 
+				.dashed-horizontal.my-10
+				.fs-14
+					p.fw-semi.pb-20 Information You Provide to GoodRx 
+					p.pb-20 GoodRx does not require that you provide us with information or create an account in order to view our prices, discounts and services. 
+
+					p.pb-10 You may choose to provide us with information to receive certain services. The information you provide us could include:
+
+					ul.list-disk.mb-30
+						each val in ['Name','Date of Birth','Address','Email address','Home phone number','Mobile phone number','Mailing address','Password','Prescription','Pharmacy','Credit card information']
+							li.fs-14.fw-medium=val 
+					p.pb-20 If you provide us with your information, you agree to let us use such personal information in order to provide services to you, to run our business (including for the purposes of internal business operations and analytics, to provide, change, market or optimize our services and products) and to communicate and market to you (directly or via third parties). 
+
+					p.pb-20 You agree that GoodRx may contact you by telephone or text messages (including by an automatic telephone dialing system) at any of the phone numbers provided by you or on your behalf in connection with your account, including for marketing purposes. Should you send GoodRx a direct SMS message through a mobile device, such message constitutes your prior express written consent to receive the messages you request to that SMS device. You understand that you are not required to provide this consent as a condition of purchasing any property, goods or services. You also understand that you may opt out of receiving marketing text messages from GoodRx at any time, either by texting the word “STOP” to the text message using the mobile device that is receiving the messages.
+
+					p.pb-10 Instances where you may provide us with information includes:
+					ul.list-disk.mb-10
+						each val in ['In order to register for an account (including accounts for GoodRx, GoodRx Gold or Kroger Rx Savings Club Powered by GoodRx). Please see below for additional information related to information collected under GoodRx Gold. You can access the privacy policy for Kroger Rx Savings Club Powered by GoodRx by clicking here.',' In order to receive price alerts on a set of prescription drugs, sign up to receive a coupon, and/or e-mail or text a coupon to yourself','When you request a discount card','When you use a discount card or coupon','When you ask GoodRx to transfer a prescription to a pharmacy on your behalf ','When you reach out to our patient advocacy team']
+							li.fs-14.fw-medium=val 
+					p.pb-20 GoodRx Gold - GoodRx Gold is a premium program offered by GoodRx that provides members (“Members”, and your status as a Member is referred to as your “Membership”) even bigger discounts on prescriptions through the GoodRx Gold website, mobile applications and membership cards, and by email messages (which you may elect to receive or opt out of receiving) sent to the address associated with your GoodRx Gold account.
+
+					p.pb-20.fw-semi Information We Collect From You
+
+					p.pb-20 Information About You. When you join GoodRx Gold, you will be asked for your first name, last name, date of birth, and mailing address. This information allows us to match your Membership with the information on file with your pharmacy. We also send you marketing messages, updates on your Membership, and information about your account, and as otherwise set forth herein.
+
+					p.pb-20 Information About Family Members. GoodRx allows you to add up to 6 total family members (including yourself) to your GoodRx Gold account. Family members may be added to your account or, if they are over 18, they can make their own accounts and connect them to your Membership. When you add family members, we ask for their first name, last name, and dates of birth. If a family member is under the age of 13, GoodRx does not request any additional contact information and children under 13 must not provide any information on or through our Services or through any of their features.
+
+					p.pb-20 Credit Card Information. A GoodRx Gold account is free for the first 30 days. If you decide to discontinue the subscription, your account and the information you provided during your initial sign-up will remain until you delete it. You will be asked to provide a credit card when you sign up. We share your relevant credit card information with our third party payment processor (Stripe, stripe.com), which uses SSL technology to store your information and bill you on a monthly basis, until you tell us to stop.
+
+					p.pb-20 Information About Your Prescriptions. When you use your GoodRx Gold card at a participating pharmacy, information regarding that transaction, including prescription name and pharmacy name, is provided to us, stored and added to your account. It is displayed in your account and we will send you emails regarding your prescriptions.
+
+					p.pb-20 Each Member and Add-On Member may view their own prescription history on the website and mobile application. If you are a Member that has added other people to your Membership (“Add-On Member”), you may automatically view the prescription history of Add-On Members who are under the age of 14, and you may view the prescription history of Add-On Members who are over the age of 13 only with the permission of the Add-On Member (which permission you may request through the websites and mobile applications).
+
+					p.pb-20 We offer the ability for you to order your prescriptions via mail delivery through your GoodRx Gold account. If you use the GoodRx Gold mail delivery service, your prescription will be fulfilled by a GoodRx Gold mail delivery partner or partners. We will provide your account and prescription information to our GoodRx Gold mail delivery partner(s), in addition to the uses set forth herein. If you request that a mail delivery prescription be fulfilled on behalf of a family member, you represent and warrant that you have permission to do so and to view the prescription information related to your request and your family member.
+
+					p.pb-20.fw-semi Cancelling Your Account
+
+					p.pb-20 If you have not opted out of the subscription services after your 30-day free trial, you will be charged and your account will remain open until you cancel your account. We may still use the information you provided to improve our services, to provide you with discounts and to market to you. Please note that although you have cancelled your account, you may still receive commercial email messages from GoodRx until you opt out of receiving them, which can be done by following the instructions contained in the email message. We may also send coupons and offers to the contact information you provided. Any information we have collected on you will remain in our database. o You can suspend your subscription and your account will remain intact. You can also cancel your subscription by logging in to your account and clicking “cancel my account.”
+
+					p.pb-10 In addition to any information that you choose to submit to us, we and our third-party service providers may use a variety of technologies that automatically (or passively) collect certain information whenever you use the Site. This information includes:
+					ul.list-disk.mb-20
+						li.fs-14.fw-medium Information Collected When You Use Our Site
+					p.pb-10 In addition to any information that you choose to submit to us, we and our third-party service providers may use a variety of technologies that automatically (or passively) collect certain information whenever you use the Site. This information includes:
+					
+					ol.list-number.pb-10.fw-medium.pl-sm-20
+						each val in ['Geo-location information','IP address','Cookies. We use cookies to collect, store and sometimes track information for statistical purposes to improve the services we provide. If you are a registered user for any GoodRx service, we will use a cookie to save your settings and to provide customizable and personalized services and information collected will be associated with your GoodRx account. We also use cookies that let us know your location, the drug information visited while on our Site and the third-party websites you visited before accessing our Site. If you do not want information to be collected through the use of cookies, your browser allows you to deny or accept the use of cookies. 	Cookies can be disabled or controlled by setting a preference within your web browser or on your device. You should know that if you visit other websites, you may be required to accept third-party cookies. We do not control the use of any cookies that are deposited 	on your computer when you visit third-party websites, and we expressly disclaim responsibility for information collected through them. ','Remarketing technology. We use Google and Facebook, and other remarketing providers to advertise online and offline. We may place cookies, tags, pixels, SDKs and other tracking technology on your computer or other devices, or otherwise collect and provide your information to assist Google, Facebook, other third parties, or GoodRx to feed advertisements or to send direct mail campaigns to you based on your past visits to GoodRx and other websites; and we may also allow other third parties, including Google, to do so as well. We may permit third parties to collect your personal information over time or across third-party websites, mobile applications and/or online services, including those that assist us in operating our Site and services.','Log information. When you access GoodRx services, our servers automatically record certain internet or electronic information. These logs include information such as the date and time you access our site, the browser you are using, and other common browser information. ','Web beacons.','Embedded scripts.','Mobile device information. If you use our mobile applications, the mobile application may automatically collect and store some or all of the following information from your mobile device, including without limitation: your phone number, location, other unique device identifier assigned to your mobile device, manufacturer and model of your mobile device, your mobile operating system, the type of mobile Internet browsers you are using, your browsing history on the mobile application (including your prescription searches and coupon view history), how often you use the mobile applications.',]
+							li.pb-10=val
+
+					p.pb-20 By using the Site, you agree to let us use such personal information in order to provide services to you, to run our business (including for the purposes of internal business operations and analytics, to provide, change, market or optimize our services and products) and to communicate and market to you (directly or via third parties). 
+
+					p.pb-10 We also use the information we collect from you when use the Site for:
+					ul.list-disk.mb-10
+						li.fs-14.fw-semi.c-green Advertising on GoodRx
+					p.pb-10 We use third-party advertising companies to serve ads when you visit GoodRx. These companies may use internet or electronic information about your visits to this and other websites in order to provide advertisements about goods and services of interest to you. GoodRx adheres to Digital Advertising Alliance principles. If you would like more information about this practice and to know your choices about not having this information used by these companies, click here.
+
+					ul.list-disk.mb-10
+						li.fs-14.fw-semi.c-green Demographics and Interest Information
+					p.pb-20 The GoodRx website has implemented Google Analytics Demographics and Interest reporting. This tool requires that we permit access to cookie identification information and enables us to view demographic and other information aggregated from the overall population of the visitors to our site. The information we receive does not include your name or contact information. 
+
+					p.pb-20.fw-semi Information You Provide to Third Parties
+
+					p.pb-10 We receive information about you from third parties, including as detailed below: 
+					ol.list-number.pb-20.fw-medium.pl-sm-20
+						each val in ['Healthcare professionals. Some health care professionals who use GoodRx may text or email you a coupon. In order to receive the coupon from your health care professional, you must provide your contact information and your prescription information. By providing your health care professional with your contact information and your prescription information, you are requesting to be contacted with prescription-related information, and you acknowledge that there may be some risk that the message could be read by a third party.','Marketing partners. We may work with third parties to conduct marketing campaigns. Such third parties may collect and provide to us personal information such as your name, contact information, medical information (such as condition and prescription) and demographic information (such as age and location).','Data partners. We may in some cases supplement the information we collect about you with records from third parties, including data regarding online activities across devices and online platforms.','Pharmacy benefit managers. Most prescriptions purchased in the United States, including prescriptions filled through the use of discount coupons, loyalty cards or insurance co-pays, result in the pharmacy reporting patient data back to the company that provides the benefit. When you use a coupon provided by GoodRx, we receive information about the transaction from the corresponding pharmacy benefit manager.','We use personal information we receive from third parties in order to provide services to you, to run our business (including for the purposes of internal business operations and analytics, to provide, change, market or optimize our services and products) and to communicate and market to you (directly or via third parties).']
+							li.pb-10=val
+				hr.line.mb-40.mt-10
+				p.fs-35.text-center.text-up Contacting<br>Mail Heath Care
+
+				.dashed-horizontal.my-25.mx-auto
+				
+				.flex-center-center
+					+icon("support_mail")
+					div 
+						p.fs-14.fw-semi.c-gray-600 Our support center 24/7
+						p.fs-sm-16.fs-14.c-green support@mailhealthcare.com

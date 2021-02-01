@@ -1,0 +1,26 @@
+extends layout/main
+
+block variables
+	-var title = '404'
+
+block content
+	main.error
+		.flex-center-between 
+			.max-350 
+				h1.fs-35.text-up 
+					span.c-green.d-block.fw-semi oops!
+					|something<br>went wrong
+				.dashed-horizontal.my-25
+				
+				img.error-img(src="img/common/404.png", alt="404")
+				p.pb-20 The link you followed probably Broken or The page has been removed. 
+				p.pb-20 Brace yourself till we get the error fixed. You may also refresh the page or try again later!
+				.align-items-center.mt-30.pb-30
+					+icon("support_mail")
+					div 
+						p.fs-14.fw-semi.c-gray-600 Our support center 24/7
+						p.fs-sm-16.fs-14.c-green support@mailhealthcare.com
+
+				a.btn.max-220.lh-50.fs-16.mt-20(href="#")
+					+icon("arrow_left","left")
+					|To Home Page

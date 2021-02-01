@@ -1,0 +1,126 @@
+.popup 
+    position: fixed 
+    top: 0
+    left: 0
+    width: 100% 
+    height: 100vh
+    overflow-y: auto
+    background-color: rgba($black, 0.5)
+    z-index: 9
+    display: inline-flex
+    
+    &-container 
+        max-width: 532px
+        width: 100%
+        margin: auto
+        background-color: $bg-white
+        box-shadow: $shadow2
+        // +centerXY
+    &-bottom 
+        background-color: $bg-blue-light
+        padding: 30px
+
+.form-order
+    padding: 20px 30px 40px 30px
+
+.icon-input 
+    width: 20px 
+    height: 20px 
+    +centerY 
+    right: 16px
+    fill: $gray-light
+    &.icon-calendar 
+        width: 15px
+    &.icon-angle-down 
+        height: 15px
+
+.input-form
+    font-size: 16px
+    line-height: 30px
+    font-weight: 400
+    background-color: $bg-white
+    border: 1px solid $gray-100
+    border-radius: 3px
+    padding: 7px 15px
+    &::-webkit-input-placeholder
+        font-size: 16px
+        color: $gray-light
+        font-style: normal
+
+    &:-moz-placeholder
+        font-size: 16px
+        color: $gray-light
+        font-style: normal
+
+    &::-moz-placeholder
+        font-size: 16px
+        color: $gray-light
+        font-style: normal
+
+    &:-ms-input-placeholder
+        font-size: 16px
+        color: $gray-light
+        font-style: normal
+
+.textarea-form
+    font-size: 16px
+    line-height: 24px
+    font-weight: 400
+    background-color: $bg-white
+    border: 1px solid $gray-100
+    border-radius: 3px
+    padding: 10px 15px
+    &::-webkit-input-placeholder
+        color: $gray-light
+        font-style: normal
+        font-size: 16px
+        line-height: 24px
+
+    &:-moz-placeholder
+        color: $gray-light
+        font-style: normal
+        font-size: 16px
+        line-height: 24px
+
+    &::-moz-placeholder
+        color: $gray-light
+        font-style: normal
+        font-size: 16px
+        line-height: 24px
+
+    &:-ms-input-placeholder
+        color: $gray-light
+        font-style: normal
+        font-size: 16px
+        line-height: 24px
+
+.max-220 
+    max-width: 220px
+
+.close 
+    position: relative
+    margin-left: auto
+    margin-right: -10px
+    width: 20px 
+    height: 20px 
+    display: block
+    &:before, &:after 
+        content: ''
+        +centerXY
+        background-color: $bg-gray-light
+        transform: translate(-50%,-50%) rotate(45deg)
+    &:before
+        width: 100% 
+        height: 5px 
+    &:after 
+        width: 5px
+        height: 100% 
+
+@media only screen and (max-width : 575px)
+    .popup .close 
+        margin-bottom: 30px
+        margin-right: 5px
+    .form-order 
+        padding: 20px 15px 40px 15px
+    .popup-bottom
+        padding: 30px 15px

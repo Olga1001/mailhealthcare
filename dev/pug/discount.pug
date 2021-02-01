@@ -1,0 +1,82 @@
+extends layout/main2
+
+block variables
+	-var title = 'Discount'
+
+block content
+	main.discount
+		.container
+			ul.breadcrumbs
+				li.breadcrumbs__item
+					a.breadcrumbs__link(href="#")
+						+icon("house")
+				+breadcrumbs-item('Drug Directory')
+			.justify-content-between.pb-sm-80.pb-30.flex-wrap 
+				.w-lg-50.pr-lg-15.pt-25.w-100 
+					.d-sm-flex
+						+icon("pills_02", "d-sm-block d-none")
+						div
+							h1.fs-35.text-up Get a 
+								span.c-green.fw-semi Mail health care 
+								| Prescription Discount Card 
+								span.fw-semi for free!
+							.dashed-horizontal.my-25
+					
+							p.pb-20 Ad sed timeam scribentur comprehensam. Brute tibique id ius. Quando reprehendunt an vis, est solum noluisse periculis et.
+					.discount-img.d-lg-none
+						img(src="img/common/discount-img.png", alt="image")
+					form.bg-white.form.form-subscription
+						.form-container
+							p.fw-bold.text-up.mb-20 Subscription form
+							.relative.mb-20
+								input.input-form(type="text" placeholder="Full Name" required)
+								+icon("form_user","icon-input")
+							.relative.mb-20
+								input.input-form(type="text" placeholder="Address" required)
+								+icon("form_pin","icon-input")
+							.relative.mb-20
+								input.input-form(type="text" placeholder="Phone Number" required)
+								+icon("form_call","icon-input")
+							.relative.mb-20
+								input.input-form(type="email" placeholder="E-mail" required)
+								+icon("form_envelop","icon-input")
+
+							.flex-sm-center-between.pt-10
+								label.flex-center-center
+									input.checkbox(type="checkbox")
+									span.check.mr-14
+										+icon("check")
+									span.fs-14 I agree to the newsletter
+								button.btn.max-220.lh-50.fs-16.w-100(type="submit")
+									+icon("arrow_right")
+									|Get Discount
+							hr.line-dotted.my-30
+							p.fs-14.c-gray-light.lh-20 Nihil exerci timeam vel in, ei sed postulant temporibus. Per eirmod latine scripta eu. Ex fierent consectetuer nam, atqui elitr posidonium id vix, amet vero eum ut. Pro malorum praesent eu, et mei eripuit vivendum vituperatoribus. Ut natum dolores singulis ius. Sint euismod mea et, ad vix agam eros admodum. Mei munere aliquip eu, ad ius quod dolores propriae.
+				.w-lg-50.pl-lg-45.w-100 
+					img.discount-img.d-lg-block.d-none(src="img/common/discount-img.png", alt="image")
+					ul.benefits
+						- 
+							benefit = [
+								{
+									icon: 'pills',
+									text: 'Use this card for discounts of up to 80% on most prescription drugs at over 70,000 U.S. pharmacies.'
+								},
+								{
+									icon: 'card',
+									text: 'Get discounts for every member of your family, including pets!'
+								},
+								{
+									icon: 'family',
+									text: 'No expiration. No fees or obligations. No credit card required.'
+								},
+								{
+									icon: 'discount',
+									text: 'Mail Health Care is not insurance. Savings based on pharmacy retail price.'
+								}
+							]
+
+						each val in benefit
+							li.d-flex.benefit-item
+								+icon(val.icon,"icon-benefit")
+								p.fs-sm-16.fs-14=val.text
+		include modules/footer/footer

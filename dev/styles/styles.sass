@@ -371,6 +371,11 @@ hr
   &:checked ~ .check-radio
     background-color: $bg-green
     border-color: $green
+  &:checked ~ .check
+    background-color: $bg-green
+    svg 
+      fill: $white
+    
 
 .check-radio
   width: 15px 
@@ -385,6 +390,17 @@ hr
     height: 4px 
     background-color: $white 
     border-radius: 50%
+
+.check 
+  width: 16px
+  height: 16px
+  border: 1px solid $green
+  border-radius: 3px
+  +d-flex(center)
+  svg 
+    fill: none
+    width: 11px 
+    height: 100%
 
 .list 
   &-link 
@@ -466,6 +482,12 @@ hr
 .border-left
   border-left: 2px dotted $green
 
+.icon-support_mail 
+    width: 50px 
+    height: 50px
+    fill: $gray-light
+    margin-right: 25px
+    
 @import "modules/modules"
 
 .line-dotted
