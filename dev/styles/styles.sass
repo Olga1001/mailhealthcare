@@ -213,6 +213,8 @@ input.search-drug
   width: 2px
   background: url("../img/common/dotted.png") no-repeat center / contain
   margin: 0 45px
+  &_white
+    background-image: url("../img/common/dotted-white.png")
 
 .dashed-horizontal
   width: 62px
@@ -518,10 +520,13 @@ hr
   
 @import "modules/modules"
 
+
+.bg-green 
+  background-color: $bg-green
+
 .line-dotted
   background: none 
   border-top: 1px dotted $gray-200
-
 
 .bb-1 
   border-bottom: 1px dotted $gray-200
