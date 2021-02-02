@@ -383,6 +383,7 @@ hr
   border-radius: 50% 
   border: 1px solid $gray-light
   position: relative
+  flex-shrink: 0
   &:before 
     content: ''
     +centerXY 
@@ -396,6 +397,7 @@ hr
   height: 16px
   border: 1px solid $green
   border-radius: 3px
+  flex-shrink: 0
   +d-flex(center)
   svg 
     fill: none
@@ -487,7 +489,27 @@ hr
     height: 50px
     fill: $gray-light
     margin-right: 25px
-    
+
+.upload
+  width: 100%
+  display: block 
+  height: 200px
+  background-color: #f5fafa
+  border-radius: 3px
+  position: relative
+  +d-flex(center)
+  flex-direction: column
+  font-size: 14px
+  line-height: 1.2
+  color: #a6b0b2
+  text-align: center
+  &:before 
+    content: ''
+    +centerXY
+    height: 190px
+    width: calc(100% - 10px)
+    border: 2px dashed #e6ebeb
+    border-radius: 1px
 @import "modules/modules"
 
 .line-dotted

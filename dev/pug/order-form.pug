@@ -1,7 +1,7 @@
 extends layout/main
 
 block variables
-	-var title = 'Product'
+	-var title = 'Order form'
 block content
 	.bg-before-blue
 	.container
@@ -357,6 +357,17 @@ block content
 						input.checkbox(type="radio" name="radio" checked)
 						span.check-radio.mr-8 
 						span No
+				label.upload.mb-30 
+					input.d-none(type="file" name="files[]" multiple="" value="" accept="")
+					img.mx-auto.mb-20(src="img/common/upload.png", alt="upload" width="40px" height="40px")
+					span Please upload your 
+						span.fw-semi prescription!<br> Choose a file 
+						|or drug it here!
+				label.flex-center-center.mb-30
+					input.checkbox(type="checkbox")
+					span.check.mr-14
+						+icon("check")
+					span.fs-14.lh-1_2.c-blue-navy Under perjury of law, I hereby attest that this prescription that I’m uploading in a true, correct and complete true copy
 				button.btn.fs-16.lh-50.max-220.w-100.mx-auto(type="submit") Make an Order
 			.popup-bottom
 				p.fs-14.c-gray-light.lh-20 Nihil exerci timeam vel in, ei sed postulant temporibus. Per eirmod latine scripta eu. Ex fierent consectetuer nam, atqui elitr posidoium id vix, amet vero eum ut. Pro malorum praesent eu, et mei eripuit vivendum vituperatoribus. Ut natum dolores singulis ius. Sint euismod mea et, ad vix agam eros admodum. Mei munere aliquip eu, ad ius quod dolores propriae.
