@@ -45,10 +45,14 @@
         width: 315px 
 
 .mailfree-block 
-    .w-50 
+    div 
         border-right: 1px solid $gray-200
         &:last-child
             border-right: none
+    svg 
+        width: 35px
+        height: 35px
+        fill: $gray-light
 
 .table
     &-tr
@@ -225,6 +229,8 @@
         max-width: 440px
     .content 
         width: 100%
+    .mailfree-block div 
+        border: none
 @media only screen and (max-width : 991px)
     .product
         padding: 20px 15px

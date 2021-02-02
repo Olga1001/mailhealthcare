@@ -8,7 +8,9 @@
     .d-xl-block
         display: block
     .align-xl-items-end
-        +d-flex(strat, flex-end)
+        +d-flex(flex-strat, flex-end)
+    .align-xl-items-center
+        +d-flex(flex-strat, center)
     .d-xl-none
         display: none
     .pt-xl-0
@@ -16,7 +18,16 @@
     .px-xl-15 
         padding-right: 15px 
         padding-left: 15px
-  
+    .pr-xl-15 
+        padding-right: 15px
+    .pl-xl-15 
+        padding-left: 15px
+    .mt-xl-20
+        margin-top: 20px
+    .mt-xl-0
+        margin-top: 0
+    .mr-xl-14
+        margin-right: 14px
 @media only screen and (min-width : 992px)               
     .flex-lg-center-between
         +d-flex(space-between, center) 
