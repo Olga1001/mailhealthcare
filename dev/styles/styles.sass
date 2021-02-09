@@ -163,17 +163,16 @@ table
     line-height: 30px
     font-weight: 400
     padding: 7px 45px 8px 15px
-  button 
-    position: absolute 
-    top: 0 
-    right: 0 
-    height: 100% 
-    width: 50px
-    z-index: 1
-    svg 
-      width: 20px
-      height: 20px
-      fill: $green
+    &:focus, &:valid
+      padding-left: 45px
+    &:valid ~ .btn-search, &:focus ~ .btn-search
+      right: auto 
+      left: 0
+    &:valid ~ .btn-close, &:focus ~ .btn-close
+      opacity: 1
+      pointer-events: auto 
+    &:valid ~ .search-dropdown
+      display: block
 
 input.search-drug
   padding: 15px 67px
@@ -207,6 +206,47 @@ input.search-drug
     line-height: 45px
     font-size: 16px
     max-width: 250px
+
+.search-dropdown
+  width: calc(100% - 40px)
+  position: absolute
+  left: 20px
+  top: 100% 
+  background-color: $bg-white
+  box-shadow: $shadow3
+  display: none
+  min-width: 460px
+  z-index: 8
+  max-height: calc(100vh - 80px)
+  overflow-y: auto
+  height: auto
+  &:hover 
+    display: block
+  &_list
+    border-bottom: 1px solid $gray-200
+    padding-bottom: 15px
+    a
+      font-size: 14px
+      color: $blue
+      padding: 8px 20px
+      display: block
+      transition: all 0.3s ease
+      &:hover
+        background-color: $bg-green
+        color: $white
+        b 
+          font-weight: 700
+  &_view  
+    padding: 22px 20px
+    background-color: #f6fafb
+    li 
+      padding: 15px 0
+      border-bottom: 1px dotted $gray-light
+      img 
+        +box(80px,60px)
+        margin-right: 19px
+        object-fit: cover
+
 
 .dashed-vertical
   height: 62px
@@ -378,7 +418,6 @@ hr
     svg 
       fill: $white
     
-
 .check-radio
   width: 15px 
   height: 15px 

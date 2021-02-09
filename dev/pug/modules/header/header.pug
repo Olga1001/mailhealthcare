@@ -9,8 +9,63 @@ header.header
                 .mr-lg-20.logo-item
             form.search.mr-auto
                 input(type="text" placeholder="Type your drug name (like Atorvastin, Sildenafil, etc)" required)
-                button(type="submit")
+                button.btn-search(type="submit")
                     +icon("search_magnific")
+                button.btn-close(type="reset")
+                    +icon("close")
+                .search-dropdown 
+                    ul.search-dropdown_list
+                        li 
+                            a(href="#") asp
+                                b.fw-semi irin
+                        li 
+                            a(href="#") asp
+                                b.fw-semi irin 
+                                span.fw-semi / dipyridamole ER 
+                                span.fw-medium (generic Aggrenox)
+                        li 
+                            a(href="#") asp
+                                b.fw-semi irin 
+                                span.fw-semi / caffeine / dihydrocodeine 
+                                span.fw-medium (generic Synalgos DC)
+                        li 
+                            a(href="#") asp
+                                b.fw-semi irin 
+                                span.fw-semi / omeprazole DR 
+                                span.fw-medium (generic Yosprala)
+                        li 
+                            a(href="#") Asp
+                                b.fw-semi arlas
+                        li 
+                            a(href="#") Anaspaz
+                        li 
+                            a(href="#") Astepro (azelastine)
+                        li 
+                            a(href="#") buspirone
+                        li 
+                            a(href="#") Niaspan (niacin ER)
+                    .search-dropdown_view 
+                        .flex-center-between
+                            p.fw-bold.fs-14.text-up RECENTLY VIEW
+                            button.fs-14.c-green.fw-semi(type="button") Clear All
+                        ul
+                            each val in [{img: 'rectangle_12_7672.jpg', name: 'Pantoprazole', info: '30 tablets 100mg'},{img: 'rectangle_12_7672.jpg', name: 'Ketoprofen / Sildenafil', info: '30 tablets 100mg'},{img: 'rectangle_12_7672.jpg', name: 'Viagra / Sildenafil', info: '30 tablets 100mg'},]
+                                li.flex-center-between 
+                                    .align-items-center
+                                        a(href="#") 
+                                            img(src="img/product/"+val.img, alt="product")
+                                        div 
+                                            a.fw-semi.fs-14.c-blue(href="#")=val.name
+                                            p.fs-14=val.info 
+                                    button.btn-remove(type="button")
+                                        +icon("close")
+                        label.align-items-center.mt-20
+                            input.checkbox(type="checkbox" checked)
+                            span.check.mr-14
+                                +icon("check")
+                            span.fs-14 Save recent searches
+
+
             nav.navmenu 
                 ul.menu 
                     each val, index in [{icon: 'head_question', link: 'How it Works'},{icon: 'head_discount', link: 'Discount'},{icon: 'head_call', link: 'Contact Us'}]    
@@ -20,6 +75,59 @@ header.header
                                     +icon(val.icon)
                                     =val.link
         form.search-lg
-            input(type="text" placeholder="Type your drug name (like Atorvastin, Sildenafil, etc)")
-            button(type="submit")
+            input(type="text" placeholder="Type your drug name (like Atorvastin, Sildenafil, etc)" required)
+            button.btn-search(type="submit")
                 +icon("search_magnific")
+            button.btn-close(type="reset")
+                +icon("close")
+            .search-dropdown 
+                ul.search-dropdown_list
+                    li 
+                        a(href="#") asp
+                            b.fw-semi irin
+                    li 
+                        a(href="#") asp
+                            b.fw-semi irin 
+                            span.fw-semi / dipyridamole ER 
+                            span.fw-medium (generic Aggrenox)
+                    li 
+                        a(href="#") asp
+                            b.fw-semi irin 
+                            span.fw-semi / caffeine / dihydrocodeine 
+                            span.fw-medium (generic Synalgos DC)
+                    li 
+                        a(href="#") asp
+                            b.fw-semi irin 
+                            span.fw-semi / omeprazole DR 
+                            span.fw-medium (generic Yosprala)
+                    li 
+                        a(href="#") Asp
+                            b.fw-semi arlas
+                    li 
+                        a(href="#") Anaspaz
+                    li 
+                        a(href="#") Astepro (azelastine)
+                    li 
+                        a(href="#") buspirone
+                    li 
+                        a(href="#") Niaspan (niacin ER)
+                .search-dropdown_view 
+                    .flex-center-between
+                        p.fw-bold.fs-14.text-up RECENTLY VIEW
+                        button.fs-14.c-green.fw-semi(type="button") Clear All
+                    ul
+                        each val in [{img: 'rectangle_12_7672.jpg', name: 'Pantoprazole', info: '30 tablets 100mg'},{img: 'rectangle_12_7672.jpg', name: 'Ketoprofen / Sildenafil', info: '30 tablets 100mg'},{img: 'rectangle_12_7672.jpg', name: 'Viagra / Sildenafil', info: '30 tablets 100mg'},]
+                            li.flex-center-between 
+                                .align-items-center
+                                    a(href="#") 
+                                        img(src="img/product/"+val.img, alt="product")
+                                    div 
+                                        a.fw-semi.fs-14.c-blue(href="#")=val.name
+                                        p.fs-14=val.info 
+                                button.btn-remove(type="button")
+                                    +icon("close")
+                    label.align-items-center.mt-20
+                        input.checkbox(type="checkbox" checked)
+                        span.check.mr-14
+                            +icon("check")
+                        span.fs-14 Save recent searches

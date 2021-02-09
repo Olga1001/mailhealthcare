@@ -52,6 +52,36 @@
     width: 25px
     height: 25px
 
+.btn-search, .btn-close
+    position: absolute 
+    top: 0 
+    right: 0
+    height: 100% 
+    width: 50px
+    z-index: 1
+
+.btn-search 
+    svg 
+        width: 20px
+        height: 20px
+        fill: $green
+
+.btn-close
+    opacity: 0
+    pointer-events: none
+    svg
+        fill: $blue
+        width: 14px 
+        height: 100%
+        margin: 0 auto
+
+.btn-remove
+    svg
+        fill: $gray-200-1
+        width: 14px 
+        height: 14px
+        margin: 0 auto
+
 @media only screen and (max-width : 575px)
     .btn-more
         font-size: 14px

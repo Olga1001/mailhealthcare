@@ -155,7 +155,9 @@
         background-color: transparent
         max-width: 55px
         padding: 0
-
+    .search-dropdown
+        max-height: calc(100vh - 145px)
+    
 @media only screen and (max-width : 575px)
     .fs-35
         font-size: 30px
@@ -203,3 +205,18 @@
         float: initial
         width: 100%
         height: auto  
+    .search-dropdown
+        left: 0 
+        min-width: auto
+        width: 100%
+    .search-dropdown_list a
+        padding: 8px 10px
+        font-size: 12px
+        line-height: 1.2
+    .search-dropdown_view 
+        li img
+            +box(50px,40px)
+            margin-right: 10px
+        .fs-14 
+            font-size: 12px
+            line-height: 1.2

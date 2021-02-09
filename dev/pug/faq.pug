@@ -1,0 +1,113 @@
+extends layout/main2
+
+block variables
+	-var title = 'FAQ'
+
+block content
+	main.faq
+		.container
+			ul.breadcrumbs
+				li.breadcrumbs__item
+					a.breadcrumbs__link(href="#")
+						+icon("house")
+				+breadcrumbs-item('FAQ')
+			
+			h1.fs-35.text-up.text-center frequently asked
+				span.c-green.fw-semi.d-block questions
+			.dashed-horizontal.my-25.mx-auto
+
+			.block-faq
+				- 
+					faq = [
+						{
+							letter1: 'Q',
+							letter2: 'A',
+							title: 'How can I be 100% sure Profarma Direct is legal?',
+							text: 'Profarma Direct is registered as an internet pharmacy with the General Pharmaceutical Council. You can view our registration details online.'
+						},
+						{
+							letter1: 'Q',
+							letter2: 'A',
+							title: 'Do I need a prescription to order?',
+							text: 'A prescription is required to order prescription only medicines. None prescription medication can be ordered online.'
+						},
+						{
+							letter1: 'Q',
+							letter2: 'A',
+							title: 'Can I use an existing prescription?',
+							text: 'Currently we do not accept NHS prescriptions, we only take private prescriptions. We offer a free consultation service which is reviewed by our one of our prescribers who will issue a private prescription to all eligible  patients. There is no additional cost for this process.'
+						},
+						{
+							letter1: 'Q',
+							letter2: 'A',
+							title: 'Is the packaging discreet?',
+							text: 'Yes, we only use plain, discreet packaging without any  branding or labels.'
+						},
+						{
+							letter1: 'Q',
+							letter2: 'A',
+							title: 'Is the service confidential?',
+							text: 'Your medical data and order history is completely confidential and will only be viewable by our pharmacy staff and prescribers. View our   ',
+							link: 'Privacy Policy',
+							text2: ' for further information.'
+						},
+						{
+							letter1: 'Q',
+							letter2: 'A',
+							title: 'What will appear on my bank statement?',
+							text: 'When you pay by credit/debit card, payments will be shown on your statement under the name Profarma Direct.'
+						},
+						{
+							letter1: 'Q',
+							letter2: 'A',
+							title: 'How can I pay for my order? Which credit cards do you accept?',
+							text: 'We accept all major debit and credit cards.'
+						},
+						{
+							letter1: 'Q',
+							letter2: 'A',
+							title: 'Will my GP be informed of my treatment?',
+							text: 'When placing an order, you will be required to enter your GP details. It is recommended to keep your doctor informed of the medication you are taking.'
+						},
+						{
+							letter1: 'Q',
+							letter2: 'A',
+							title: 'Q	What do I do if I experience side effects or need help after treatment?',
+							text: 'Contact your GP or emergency services if you experience any side effects of treatment and seek immediate medical attention if side effects are severe. If the side effects are life threating call 999 otherwise call 111 for NHS emergency services.'
+						},
+						{
+							letter1: 'Q',
+							letter2: 'A',
+							title: 'Which countries do you deliver to?',
+							text: ' We deliver selected prescriptions medicines to the United Kingdom but are looking to ship to the EU in the near future. We deliver selected non prescriptions medicines to the EU.',
+							textGray: 'Please note: we can only deliver medicines to countries in which that medicine is already registered.'
+						},
+					]
+				ul.block-faq_container.flex-wrap 
+					each val in faq
+						li.w-lg-50.w-100 
+							.d-flex.mb-5.block-faq_item 
+								p.fw-bold.block-faq_item-left.c-gray-600=val.letter1
+								p.fw-bold=val.title
+							.d-flex
+								p.block-faq_item-left.fw-bold.c-green.d-block=val.letter2
+								if (val.link)
+									p.text-italic=val.text
+										a.c-green(href="#")=val.link
+										=val.text2
+								else if(val.textGray)
+									p.text-italic=val.text 
+										span.c-gray-400.d-block.pt-10=val.textGray 
+								else
+									p.text-italic=val.text 
+			
+			p.fs-35.text-up.text-center Contacting
+				span.d-block profarma express
+			.dashed-horizontal.my-25.mx-auto
+			.flex-center-center.pb-60
+				+icon("support_mail")
+				div 
+					p.fs-14.fw-semi.c-gray-600 Our support center 24/7
+					p.fs-sm-16.fs-14.c-green support@mailhealthcare.com
+			
+		include modules/footer/footer
