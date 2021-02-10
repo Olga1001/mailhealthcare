@@ -1,13 +1,10 @@
 footer.footer
     .container 
         .footer-top
-            .footer-top_container.flex-md-center-between  
-                a.licence.d-md-block.d-none(href="#")
-                    span.licence-border 
-                        img(src="img/common/licence.png", alt="licence")
-                    span.fs-14.c-green-light.text-center.d-block License N325-687
+            .footer-top_container.flex-lg-center-between  
+                p.w-lg-33.c-white.d-lg-block.d-none Copyright ©2011-2020 DrugRx, Inc.
                 
-                div 
+                .w-lg-33 
                     a.logo(href="#")
                         img(src="img/common/logo_desk_futer.png", alt="logo")
                     ul.social.flex-center-center 
@@ -15,23 +12,14 @@ footer.footer
                             li.social-item 
                                 a.social-link(href="#")
                                     +icon(val)
-                    p.c-white.text-center Copyright ©2011-2020 DrugRx, Inc.
 
-                    ul.flex-wrap.flex-center-center.footer_menu
-                        each val in ['Terms of Use', 'Privacy Policy' , ' Disclaimer']
-                            li.footer_menu-item
-                                a.c-white(href="#")=val
+                ul.w-lg-33.flex-wrap.flex-center-center.footer_menu
+                    each val in ['Terms of Use', 'Privacy Policy' , ' Disclaimer']
+                        li.footer_menu-item
+                            a.c-white(href="#")=val
 
+                p.c-white.d-lg-none.text-center Copyright ©2011-2020 DrugRx, Inc.
 
-                a.licence.d-md-none(href="#")
-                    span.licence-border 
-                        img(src="img/common/licence.png", alt="licence")
-                    span.fs-14.c-green-light.text-center.d-block License N325-687
-
-                a.licence(href="#")
-                    span.licence-border 
-                        img(src="img/common/licence2.png", alt="licence")
-                    span.fs-14.c-green-light.text-center.d-block License 358N325-687
 
     .footer-bottom 
         .container 
