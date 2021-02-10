@@ -163,16 +163,23 @@ table
     line-height: 30px
     font-weight: 400
     padding: 7px 45px 8px 15px
-    &:focus, &:valid
-      padding-left: 45px
-    &:valid ~ .btn-search, &:focus ~ .btn-search
-      right: auto 
-      left: 0
-    &:valid ~ .btn-close, &:focus ~ .btn-close
-      opacity: 1
-      pointer-events: auto 
-    &:valid ~ .search-dropdown
-      display: block
+  .icon-search_magnific
+    +box(20px)
+    pointer-events: none
+
+.header 
+  .search, .search-lg 
+    input 
+      &:focus, &:valid
+        padding-left: 45px
+      &:valid ~ .btn-search, &:focus ~ .btn-search
+        right: auto 
+        left: 0
+      &:valid ~ .btn-close, &:focus ~ .btn-close
+        opacity: 1
+        pointer-events: auto 
+      &:valid ~ .search-dropdown
+        display: block
 
 input.search-drug
   padding: 15px 67px
@@ -191,11 +198,11 @@ input.search-drug
 .search-price
   margin: 36px 0 0 0
   max-width: 100%
+  display: flex
   .icon-search_magnific
     +centerY 
     left: 18px
-    width: 20px
-    height: 20px
+    +box(20px)
     fill: $gray-light
     pointer-events: none
   input 
@@ -206,6 +213,17 @@ input.search-drug
     line-height: 45px
     font-size: 16px
     max-width: 250px
+    position: absolute
+    right: 0
+    top: 0
+
+.search-drug_form
+  button 
+    position: absolute 
+    right: 0
+    top: 0
+    +box(60px,100%)
+  
 
 .search-dropdown
   width: calc(100% - 40px)
