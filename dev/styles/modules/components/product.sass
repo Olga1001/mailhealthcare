@@ -99,6 +99,7 @@
 
 .content-item
     display: none 
+    position: relative
     &.active 
         display: block
     &_table
@@ -131,8 +132,9 @@
         .drug 
             width: 100%
 
-.content 
+.content-product
     width: calc(100% - 440px)
+
 .flex-basis-1
     flex-basis: 59.5%
 
@@ -202,7 +204,7 @@
             padding: 0 15px 15px
     .card-images img 
         height: 80px
-    .content
+    .content-product
         width: calc(100% - 375px)
 @media only screen and (max-width : 1199px)
     .content-item_table, .mapside, .product-right
@@ -227,7 +229,7 @@
         max-width: 470px
     .max-xl-440
         max-width: 440px
-    .content 
+    .content-product 
         width: 100%
     .mailfree-block div 
         border: none

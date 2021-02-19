@@ -1,0 +1,138 @@
+.skeleton-content
+    display: none
+.skeleton
+    position: relative
+    z-index: 7
+    pointer-events: none
+    .skeleton-content
+        display: block
+    &:before 
+        content: ''
+        position: absolute 
+        left: 0 
+        top: 0 
+        background-color: #f6fafb
+        height: 640px 
+        width: 100%
+        z-index: -1
+    .green 
+        background-color: #33d1b0
+    .medications
+        margin-right: 60px
+    .medications-item
+        margin-bottom: 40px
+        &:last-child
+            margin-bottom: 0
+        .skeleton-5 
+            margin-bottom: 0
+  
+    .skeleton-hide 
+        display: none
+
+.skeleton-1 
+    +skeleton(#f2f2f2,10px,100%,303px)
+    margin: 0 auto
+.skeleton-2
+    +skeleton(#f2f2f2,3px,50px,50px)
+.skeleton-3
+    +skeleton(#c8d0d3,3px,50px,50px)
+.skeleton-4
+    +skeleton(#c8d0d3,10.3px,100%,21px)
+.skeleton-5
+    +skeleton(#f3f3f3,10.3px,100%,21px)
+    margin-bottom: 10px
+.skeleton-6
+    +skeleton(#33d1b0,10.3px,100%,21px)
+.skeleton-7
+    +skeleton(#f3f3f3,0,100%,50px)
+    margin-right: 30px
+    margin-top: 17px
+    &:last-child
+        margin-right: 0
+.skeleton-8
+    +skeleton(#dedede,12.5px,100%,25px)
+    margin-bottom: 20px
+.skeleton-9
+    +skeleton(#c8d0d3,30px,100%,60px)
+.skeleton-10
+    +skeleton(#f2f2f2,25px,100%,51px)
+    margin-top: 43px
+.skeleton-11
+    +skeleton(#c8d0d3,5px,100%,90px)
+    margin-bottom: 10px
+.skeleton-12
+    +skeleton(#f2f2f2,10px,100%,525px)
+    margin-top: 30px
+
+.skeleton
+    &-content
+        padding-top: 50px
+    &-line
+        +skeleton(#e6eaeb,0,100%,1px)
+        margin: 25px 0
+        &.head
+            width: calc(100% - 129px)
+            margin: 0
+    &-circle
+        +box(33px)
+        flex-shrink: 0
+        background-color: #c8d0d3
+        margin: 0 5px 
+        border-radius: 50%
+        &.big
+            +box(96px)
+        &.small 
+            +box(25px)
+            margin-right: 20px
+    &-block
+        background-color: $bg-white
+        padding: 35px 30px
+        margin-top: 30px
+        .product-left
+            .skeleton-2, .skeleton-3
+                margin: 23px 5px 15px
+        .tabs
+            padding: 20px 0
+            .skeleton-6
+                margin-right: 95px
+        .card-images 
+            padding: 0
+            margin: 20px 28px 0 0
+            width: calc(33.33% - 19px)
+            &:nth-child(3n+3)
+                margin-right: 0
+        .content-item
+            display: block
+
+@media only screen and (max-width : 991px)
+    .skeleton-block
+        padding: 14px 
+@media only screen and (max-width : 575px)
+    .skeleton-line.head
+        width: 100%
+    .skeleton-block
+        margin: 38px -15px 0
+        .tabs-item
+            padding: 20px 15px !important
+        .product-right
+            border-bottom: none
+            border-top: 1px solid #e4eaec
+            padding: 40px 0
+            margin-top: 40px
+    .skeleton-1
+        height: 87.5vw
+    .skeleton-2, .skeleton-3 
+        +box(14px)
+        border-radius: 50%
+    .skeleton-block 
+        .product-left .skeleton-2, .product-left .skeleton-3
+            margin: 45px 5px
+    .skeleton-content
+        .topblock .skeleton-circle.big 
+            margin-bottom: 16px
+    .skeleton-block .card-images
+        width: calc(50% - 14px)
+        &:nth-child(3n+3)
+            margin-right: 28px
+        &:nth-child(2n+2)
+            margin-right: 0    

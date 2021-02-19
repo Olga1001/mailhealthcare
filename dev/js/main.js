@@ -38,5 +38,14 @@ $(document).ready(function () {
   if (window.matchMedia("(max-width: 767px)").matches) {
     $(".search-price input").attr("placeholder","Type your drug name");
   }
+
+  // onload
+  window.onload = function () {
+    $("body").addClass('skeleton');
+    window.setTimeout(function () {
+        $("body").removeClass('skeleton');
+        $("div").removeClass('skeleton-hide');
+    }, 1000);
+  };
  
 });
