@@ -1,11 +1,7 @@
-.skeleton-content
-    display: none
 .skeleton
     position: relative
     z-index: 7
     pointer-events: none
-    .skeleton-content
-        display: block
     &:before 
         content: ''
         position: absolute 
@@ -26,8 +22,8 @@
         .skeleton-5 
             margin-bottom: 0
   
-    .skeleton-hide 
-        display: none
+.skeleton-hide 
+    display: none
 
 .skeleton-1 
     +skeleton(#f2f2f2,10px,100%,303px)
@@ -65,8 +61,7 @@
     margin-top: 30px
 
 .skeleton
-    &-content
-        padding-top: 50px
+    padding-top: 50px
     &-line
         +skeleton(#e6eaeb,0,100%,1px)
         margin: 25px 0
@@ -127,7 +122,7 @@
     .skeleton-block 
         .product-left .skeleton-2, .product-left .skeleton-3
             margin: 45px 5px
-    .skeleton-content
+    .skeleton
         .topblock .skeleton-circle.big 
             margin-bottom: 16px
     .skeleton-block .card-images

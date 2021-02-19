@@ -41,10 +41,9 @@ $(document).ready(function () {
 
   // onload
   window.onload = function () {
-    $("body").addClass('skeleton');
     window.setTimeout(function () {
-        $("body").removeClass('skeleton');
-        $("div").removeClass('skeleton-hide');
+        $(".skeleton").remove();
+        $(".skeleton-hide").removeClass('skeleton-hide');
     }, 1000);
   };
  
