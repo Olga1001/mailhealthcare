@@ -42,9 +42,29 @@ $(document).ready(function () {
   // onload
   window.onload = function () {
     window.setTimeout(function () {
-        $(".skeleton").remove();
-        $(".skeleton-hide").removeClass('skeleton-hide');
+      $(".skeleton").remove();
+      $(".skeleton-hide").removeClass('skeleton-hide');
     }, 1000);
   };
  
+  // open popups
+  $('[data-open-popup]').click(function() {
+    let attrItem = $(this).data("open-popup");
+    console.log(attrItem);
+    $('[data-popup="' + attrItem +'"]').addClass('active');
+  });
+  $('.stopPropagation').click(function(e) {
+    e.stopPropagation();
+  });
+
+  // close popupы
+  $('.popup, .close').click(function() {
+    $('[data-popup]').removeClass('active');
+    $(".video").trigger('pause'); 
+  });
+
+  // autoplay video on click
+  $('.btn-play').click(function() {
+    $(".video").trigger('play'); 
+  });
 });

@@ -80,19 +80,22 @@
             top: 50% 
             transform: translate(-50%,-50%) rotate(-225deg)
 
-@media only screen and (min-width : 992px)
-    .menu 
-        +d-flex(center)
+@media only screen and (min-width : 1200px)
     .burger
         display: none
-
+    .menu 
+        +d-flex(center)
+@media only screen and (max-width : 1300px)
+    .menu-item      
+        padding: 0 20px 
+        position: relative
+        &:last-child
+            padding: 0 0 0 20px 
+    .logo-item
+        width: 140px
 @media only screen and (max-width : 1199px)
-    .logo 
-        &-item 
-            width: 191px
-            height: 50px
-
-@media only screen and (max-width : 991px)
+    .logo-item
+        width: 220px
     .header
         padding: 15px 0
     .navmenu 
@@ -129,5 +132,6 @@
             svg 
                 width: 24px
                 height: 24px
+@media only screen and (max-width : 767px)
     .logo-item
         width: 140px

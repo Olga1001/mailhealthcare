@@ -31,7 +31,7 @@ block content
 							+icon("air-plane", "c-white")
 						p.fw-bold.text-up.c-white.lh-22 Free<br> express mail<br> shipping
 				.product-i-map_img
-					button.btn-play.big(type="button")
+					button.btn-play.big(type="button" data-open-popup="popup-video")
 						+icon("play")
 					img(src="img/common/main_photo_9990.png", alt="main_photo_9990")
 		.container
@@ -171,3 +171,10 @@ block content
 								button(type='button' role='tab')
 			
 			include modules/footer/footer
+		
+	.popup(data-popup="popup-video") 
+		button.close(type="button")
+		video.video.stopPropagation(controls="controls" preload="none" width="100%" poster="")
+			source(src="img/How-Profarma-Express-Works.mp4" type="video/mp4")
+			//- source(src='img/How-Profarma-Express-Works.webm' type='video/webm')
+			//- source(src='img/How-Profarma-Express-Works.ogv' type='video/ogg')

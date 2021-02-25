@@ -37,9 +37,9 @@ block content
 							.how-works__block-border
 								.how-works__block-black
 									img.how-works__block-img(src="img/common/layer_67_7696.png", alt="how it work")
-								button.btn-play(type="button")
+								button.btn-play(type="button" data-open-popup="popup-video")
 									+icon("play")
-							button.align-items-center.mx-auto.mb-25(type="button")
+							button.align-items-center.mx-auto.mb-25(type="button" data-open-popup="popup-video")
 								+icon("play-button","mr-14")
 								span.c-green.fs-sm-16.fs-13_5 Watch the How We Works video
 				hr.line-dotted.my-55
@@ -81,3 +81,9 @@ block content
 									a.c-green(href="#") Mail Helth Care
 									| - gathers current prices and discounts to help you find the lowest cost pharmacy for your prescriptions.
 								p Ei qui omnes iisque graecis. Ex justo utinam disputationi has. Te eum timeam necessitatibus, te vidisse nominati mandamus quo. Ex omnes phaedrum qualisque per. Mea eu ornatus ocurreret interesset, vis iuvaret eripuit at.
+		.popup(data-popup="popup-video") 
+			button.close(type="button")
+			video.video.stopPropagation(controls="controls" preload="none" width="100%" poster="")
+				source(src="img/How-Profarma-Express-Works.mp4" type="video/mp4")
+				//- source(src='img/How-Profarma-Express-Works.webm' type='video/webm')
+				//- source(src='img/How-Profarma-Express-Works.ogv' type='video/ogg')

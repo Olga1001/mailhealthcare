@@ -94,8 +94,16 @@
             <nav class="navmenu"> 
               <ul class="menu"> 
                 <li class="menu-item active"> <a class="menu-link" href="#"><span class="align-items-center">
+                      <svg class="svg-sprite-icon icon-books">
+                        <use xlink:href="img/sprite/symbol/sprite.svg#books"></use>
+                      </svg>A-Z Drugs</span></a></li>
+                <li class="menu-item"> <a class="menu-link" href="#"><span class="align-items-center">
                       <svg class="svg-sprite-icon icon-head_question">
                         <use xlink:href="img/sprite/symbol/sprite.svg#head_question"></use>
+                      </svg>FAQ</span></a></li>
+                <li class="menu-item"> <a class="menu-link" href="#"><span class="align-items-center">
+                      <svg class="svg-sprite-icon icon-004-info">
+                        <use xlink:href="img/sprite/symbol/sprite.svg#004-info"></use>
                       </svg>How it Works</span></a></li>
                 <li class="menu-item"> <a class="menu-link" href="#"><span class="align-items-center">
                       <svg class="svg-sprite-icon icon-head_discount">
@@ -227,7 +235,7 @@
                 </div>
               </div>
               <div class="product-i-map_img">
-                <button class="btn-play big" type="button">
+                <button class="btn-play big" type="button" data-open-popup="popup-video">
                   <svg class="svg-sprite-icon icon-play">
                     <use xlink:href="img/sprite/symbol/sprite.svg#play"></use>
                   </svg>
@@ -597,6 +605,12 @@
             </footer>
           </div>
         </main>
+        <div class="popup" data-popup="popup-video"> 
+          <button class="close" type="button"></button>
+          <video class="video stopPropagation" controls="controls" preload="none" width="100%" poster="">
+            <source src="img/How-Profarma-Express-Works.mp4" type="video/mp4">
+          </video>
+        </div>
       </div>
     </div>
     <script src="js/jquery-3.5.1.min.js"></script>

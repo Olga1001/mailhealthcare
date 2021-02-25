@@ -316,8 +316,8 @@ block content
 			.w-100
 				include layout/drug
 
-	.popup
-		.popup-container 
+	.popup.active(data-popup="popup-order-form") 
+		.popup-container.stopPropagation 
 			form.form-order
 				button.close(type="button")
 				.text-center.mb-40
