@@ -32,7 +32,7 @@ $(document).ready(function () {
     $(".header .search button").click(function (e) {
       e.preventDefault();
       $(this).hide();
-      $(this).closest(".header").find(".search-lg").slideDown(300);
+      $(this).closest(".header").find(".search-xl").slideDown(300);
     });
   }
 

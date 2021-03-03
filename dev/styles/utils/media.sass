@@ -11,6 +11,8 @@
         +d-flex(flex-strat, flex-end)
     .align-xl-items-center
         +d-flex(flex-strat, center)
+    .flex-xl-center-between
+        +d-flex(space-between, center)
     .d-xl-none
         display: none
     .pt-xl-0
@@ -28,6 +30,9 @@
         margin-top: 0
     .mr-xl-14
         margin-right: 14px
+    .mx-xl-auto
+        margin-right: auto 
+        margin-left: auto
 @media only screen and (min-width : 992px)               
     .flex-lg-center-between
         +d-flex(space-between, center) 
@@ -85,6 +90,8 @@
         width: 33.33%
     .mt-md-45
         margin-top: 45px
+    .mr-md-14
+        margin-right: 14px
 @media only screen and (min-width : 576px)
     .align-sm-items-center
         display: flex 
@@ -123,6 +130,9 @@
     .my-sm-55
         margin-top: 55px 
         margin-bottom: 55px
+    .my-sm-30
+        margin-top: 30px 
+        margin-bottom: 30px
     .pr-sm-15
         padding-right: 15px 
     .pl-sm-15
@@ -136,6 +146,8 @@
         max-width: 220px
     .max-sm-95
         max-width: 95px
+    .mb-sm-0
+        margin-bottom: 0
 @media only screen and (max-width : 991px)
     .slick-slide
         margin-right: 10px
@@ -145,11 +157,8 @@
         .search
            opacity: 0
            pointer-events: none
-        .search-lg
+        .search-xl
             display: block
-    .search-lg
-        margin: 20px 0 0
-        max-width: 100%
     .collapse 
         &-item
             .icon-angle-down
@@ -177,7 +186,8 @@
             display: none
     .search-dropdown
         max-height: calc(100vh - 145px)
-    
+    .link2
+        min-height: 70px
 @media only screen and (max-width : 575px)
     .fs-35
         font-size: 30px

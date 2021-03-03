@@ -7,33 +7,41 @@ block content
 	main.product-i-map__main
 		.product-i-map
 			.container
-				h1.fs-80.c-white.fw-bold SAME PILLS. <br> LOWER PRICES.
-				.dashed-horizontal.my-30.py-sm-3.dashed-horizontal-dark
-				.max-w-lg-480
-					p.fs-14.c-white.lh-22.pb-sm-20 Save on your medications today! MailHealthCare Helps You Save with Prescription. Drug prices vary significantly by pharmacy location. Prices can even vary between pharmacies directly across the street from each other. MailHealthCare helps you find needed drugs at pharmacies in the world, so you can save up to 85% on prescriptions.
+				div
+					h1.fs-80.c-white.fw-bold SAME PILLS. <br> LOWER <br class="d-sm-block d-none"> PRICES.
+					.dashed-horizontal.my-sm-30.my-20.py-sm-3.dashed-horizontal-dark
+					.max-480
+						p.fs-14.c-white.lh-22.pb-sm-20 Save on your medications today! MailHealthCare Helps You Save with Prescription. Drug prices vary significantly by pharmacy location. Prices can even vary between pharmacies directly across the street from each other. MailHealthCare helps you find needed drugs at pharmacies in the world, so you can save up to 85% on prescriptions.
+					.flex-xl-center-between
+						.max-w-lg-480.w-100
+							form.search.search-drug_form.mx-0.mt-30
+								+icon("pills_002", "search-pills")
+								input.search-drug(type="text" placeholder="Type your drug name")
+								button(type="submit")
+									+icon("search_magnific","c-green")
 
-					form.search.search-drug_form.mx-0.mt-30
-						+icon("pills_002", "search-pills")
-						input.search-drug(type="text" placeholder="Type your drug name")
-						button(type="submit")
-							+icon("search_magnific","c-green")
-
-					p.fs-14.c-blue-light.mt-30 Popular searches: 
-						span.fw-medium  Atorvastatin, Sildenafil, Zoloft, Lexapro...
-				.align-md-items-center
+							p.fs-14.c-blue-light.mt-30.pl-sm-20 Popular searches: 
+								span.fw-medium  Atorvastatin, Sildenafil, Zoloft, Lexapro...
+						.d-sm-block.d-none
+							.align-md-items-center
+								.align-items-center.mt-30 
+									.step__circle.left.bg-green.m-0.mr-25 
+										+icon("contract", "c-white")
+									p.fw-bold.text-up.c-white.lh-22 Licensed<br> wholesale<br> medical supplier
+								hr.mx-30.mt-30.dashed-vertical.dashed-vertical_white.d-md-block.d-none
+								.align-items-center.mt-30
+									.step__circle.left.bg-green.m-0.mr-25
+										+icon("air-plane", "c-white")
+									p.fw-bold.text-up.c-white.lh-22 Free<br> express mail<br> shipping
+				.d-sm-none.mt-auto
 					.align-items-center.mt-30 
 						.step__circle.left.bg-green.m-0.mr-25 
 							+icon("contract", "c-white")
 						p.fw-bold.text-up.c-white.lh-22 Licensed<br> wholesale<br> medical supplier
-					hr.mx-30.mt-30.dashed-vertical.dashed-vertical_white.d-md-block.d-none
 					.align-items-center.mt-30
 						.step__circle.left.bg-green.m-0.mr-25
 							+icon("air-plane", "c-white")
 						p.fw-bold.text-up.c-white.lh-22 Free<br> express mail<br> shipping
-				.product-i-map_img
-					button.btn-play.big(type="button" data-open-popup="popup-video")
-						+icon("play")
-					img(src="img/common/main_photo_9990.png", alt="main_photo_9990")
 		.container
 			.topblock-img-none
 				each val, i in [{green: true, text: 'SEARCHES', text2: 'Mail Helth Care'}]
@@ -171,10 +179,3 @@ block content
 								button(type='button' role='tab')
 			
 			include modules/footer/footer
-		
-	.popup(data-popup="popup-video") 
-		button.close(type="button")
-		video.video.stopPropagation(controls="controls" preload="none" width="100%" poster="")
-			source(src="img/How-Profarma-Express-Works.mp4" type="video/mp4")
-			//- source(src='img/How-Profarma-Express-Works.webm' type='video/webm')
-			//- source(src='img/How-Profarma-Express-Works.ogv' type='video/ogg')

@@ -4,8 +4,42 @@
     position: sticky
     top: 0
     z-index: 8
-    min-height: 80px
-    +d-flex(center)
+    &-top  
+        background-color: #002c4f
+        +d-flex(center)
+        .menu2-item:first-child
+            padding-left: 0
+        ul 
+            min-height: 30px
+
+.social2 a 
+    border: none
+    margin: 0 5px
+    
+    svg 
+        +box(18px, 16px)
+        fill: $gray-800
+        transition: all 0.3s ease
+    &:hover 
+        svg 
+            fill: $white
+
+.circle-red 
+    position: relative
+    &:before
+        content: ''
+        +centerX
+        top: 0
+        +block($bg-red,50px,10px,10px) 
+
+.link2 
+    margin-left: 50px
+    min-height: 90px
+    border-bottom: 3px solid transparent
+    &:first-child
+        margin-left: 0
+    &.active, &:hover 
+        border-bottom-color: $green
 
 .logo 
     &-item 
@@ -16,39 +50,29 @@
 
 .menu 
     &-link
-        font-size: 16px
-        line-height: 77px
-        font-weight: 500
-        color: $gray-light
+        font-size: 14px
+        line-height: 47px
+        color: $gray-600
         border-bottom: 3px solid transparent
         display: block
         white-space: nowrap
         svg 
-            width: 20px
-            height: 20px
-            fill: $gray-light
+            +box(20px)
+            fill: $gray-600
             margin-right: 10px
     &-item      
-        padding: 0 28px 
+        padding: 0 20px 
         position: relative
         &:last-child
             padding: 0 0 0 28px 
             
-        &:before 
-            content: ''
-            +centerY 
-            right: 0
-            width: 1px
-            height: 20px
-            background-color: $gray-100
-        &:last-child:before 
-            content: none
-        &.active 
+        &.active, &:hover 
             .menu-link
-                color: $blue-navy
+                color: $white
                 border-bottom: 3px solid $green
             svg
                 fill: $green
+
 
 .burger
     width: 24px
@@ -96,12 +120,12 @@
 @media only screen and (max-width : 1199px)
     .logo-item
         width: 220px
-    .header
-        padding: 15px 0
+    .header 
+        padding-bottom: 14px
     .navmenu 
         position: fixed
         left: 0 
-        top: 80px
+        top: 120px
         width: 100% 
         z-index: 8
         background-color: $bg-white
@@ -109,9 +133,14 @@
         display: none
     .menu-item
         padding: 0!important
-    .menu-item.active .menu-link
-        border-bottom: 1px solid $gray-200
-        border-left: 3px solid $green
+    .menu-link
+        border-left: 3px solid transparent
+    .menu-item
+        &.active, &:hover 
+            .menu-link
+                border-bottom: 1px solid $gray-200
+                border-left-color: $green 
+                color: $blue-navy
     .menu-link
         padding: 17px
         border-bottom: 1px solid $gray-200
@@ -132,6 +161,11 @@
             svg 
                 width: 24px
                 height: 24px
+@media only screen and (max-width : 991px)
+    .navmenu 
+        top: 100px
 @media only screen and (max-width : 767px)
     .logo-item
         width: 140px
+    .navmenu 
+        top: 70px

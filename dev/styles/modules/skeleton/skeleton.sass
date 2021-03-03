@@ -13,6 +13,8 @@
         z-index: -1
     .green 
         background-color: #33d1b0
+    .blue 
+        background-color: #00acde
     .medications
         margin-right: 60px
     .medications-item
@@ -21,49 +23,51 @@
             margin-bottom: 0
         .skeleton-5 
             margin-bottom: 0
-  
+    .h-55
+        height: 55px
+        
 .skeleton-hide 
     display: none
 
 .skeleton-1 
-    +skeleton(#f2f2f2,10px,100%,303px)
+    +block(#f2f2f2,10px,100%,303px)
     margin: 0 auto
 .skeleton-2
-    +skeleton(#f2f2f2,3px,50px,50px)
+    +block(#f2f2f2,3px,50px,50px)
 .skeleton-3
-    +skeleton(#c8d0d3,3px,50px,50px)
+    +block(#c8d0d3,3px,50px,50px)
 .skeleton-4
-    +skeleton(#c8d0d3,10.3px,100%,21px)
+    +block(#c8d0d3,10.3px,100%,21px)
 .skeleton-5
-    +skeleton(#f3f3f3,10.3px,100%,21px)
+    +block(#f3f3f3,10.3px,100%,21px)
     margin-bottom: 10px
 .skeleton-6
-    +skeleton(#33d1b0,10.3px,100%,21px)
+    +block(#33d1b0,10.3px,100%,21px)
 .skeleton-7
-    +skeleton(#f3f3f3,0,100%,50px)
+    +block(#f3f3f3,0,100%,50px)
     margin-right: 30px
     margin-top: 17px
     &:last-child
         margin-right: 0
 .skeleton-8
-    +skeleton(#dedede,12.5px,100%,25px)
+    +block(#dedede,12.5px,100%,25px)
     margin-bottom: 20px
 .skeleton-9
-    +skeleton(#c8d0d3,30px,100%,60px)
+    +block(#c8d0d3,30px,100%,60px)
 .skeleton-10
-    +skeleton(#f2f2f2,25px,100%,51px)
+    +block(#f2f2f2,25px,100%,51px)
     margin-top: 43px
 .skeleton-11
-    +skeleton(#c8d0d3,5px,100%,90px)
+    +block(#c8d0d3,5px,100%,90px)
     margin-bottom: 10px
 .skeleton-12
-    +skeleton(#f2f2f2,10px,100%,525px)
+    +block(#f2f2f2,10px,100%,525px)
     margin-top: 30px
 
 .skeleton
     padding-top: 56px
     &-line
-        +skeleton(#e6eaeb,0,100%,1px)
+        +block(#e6eaeb,0,100%,1px)
         margin: 25px 0
         &.head
             width: calc(100% - 132px)

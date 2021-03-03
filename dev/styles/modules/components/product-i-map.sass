@@ -1,6 +1,5 @@
 .product-i-map
-    background-color: #90d5d5
-    background-image: linear-gradient(-55.0deg, #bcf7f7 1%, #90d5d5 50%, #67c6c6 98%)
+    background: url("../img/common/001.png") no-repeat 10% center / cover
     margin-bottom: -100px
     .container
         padding: 126px 15px 140px 133px
@@ -140,8 +139,10 @@
             font-size: 25px
         .fs-18
             font-size: 16px
-    .product-i-map .container 
-        padding: 126px 15px 140px
+    .product-i-map 
+        background-position-x: 30%
+        .container 
+            padding: 126px 15px 140px
 
 @media only screen and (max-width : 991px)
     .product-i-map_img
@@ -152,8 +153,7 @@
             margin-left: auto
     .product-i-map 
         margin-bottom: 0
-        .container
-            padding-bottom: 0
+        background-position-x: 0
     .step
         padding: 0 15px
     .product-i-map__main
@@ -167,16 +167,21 @@
     .step__line 
         display: none
     .product-i-map .container 
-        padding: 40px 15px 0
+        padding: 40px 15px 
 
 @media only screen and (max-width : 575px)
     .product-i-map 
         overflow: hidden
+        background-image: url("../img/common/001-mob.png")
+        background-position: center top
         .fs-80
             font-size: 34px
             line-height: 35px
         .c-blue-light
             text-align: center
+        .container 
+            min-height: 350vw
+            display: grid
     .product-i-map_img
         margin-left: -40px 
         margin-right: -40px 

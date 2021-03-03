@@ -150,11 +150,13 @@ table
   margin: 0 auto 
   padding: 0 15px
 
-.search, .search-lg
-  position: relative
-  max-width: 595px
-  width: 100%
+.search
+  max-width: 660px
   margin: 0 15px
+
+.search, .search-xl
+  position: relative
+  width: 100%
   input 
     line-height: 30px
     background-color: $bg-blue-light
@@ -169,7 +171,7 @@ table
     pointer-events: none
 
 .header 
-  .search, .search-lg 
+  .search, .search-xl 
     input 
       &:focus, &:valid
         padding-left: 45px
@@ -587,10 +589,16 @@ hr
   max-width: 250px
 .max-95
   max-width: 95px!important
+.max-480
+  max-width: 480px
+
 @import "modules/modules"
 
 .wh-25
   +box(25px)
+
+.bg-blue-color
+  background-color: $blue-color
 
 .bg-green 
   background-color: $bg-green
