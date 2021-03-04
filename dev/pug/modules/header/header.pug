@@ -14,12 +14,23 @@ header.header
 
                 nav.navmenu 
                     ul.menu 
+                        li.menu-item.d-md-none
+                            a.menu-link(href="#") 
+                                span.align-items-center
+                                    +icon("user")
+                                    | Sign In
                         each val, index in [{icon: 'books', link: 'A-Z Drugs'},{icon: 'head_question', link: 'FAQ'},{icon: '004-info', link: 'How it Works'},{icon: 'head_discount', link: 'Discount'},{icon: 'head_call', link: 'Contact Us'}]    
                             li.menu-item(class=index==0 ? 'active': '') 
                                 a.menu-link(href="#")
                                     span.align-items-center
                                         +icon(val.icon)
                                         =val.link
+                    .navmenu-bottom.d-md-none  
+                        a.flex-center-center(href="tel:8557701077") 
+                            +icon("customer-service","wh-25 c-green mr-20")
+                            span.lh-1_2.text-nowrap
+                                span.fs-14.c-gray-600 Client Support
+                                span.fw-semi.d-block.c-blue-navy (855) 770-1077
 
     .container
         .flex-center-between

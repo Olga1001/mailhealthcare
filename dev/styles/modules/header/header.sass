@@ -125,7 +125,7 @@
     .navmenu 
         position: fixed
         left: 0 
-        top: 120px
+        top: 179px
         width: 100% 
         z-index: 8
         background-color: $bg-white
@@ -133,13 +133,10 @@
         display: none
     .menu-item
         padding: 0!important
-    .menu-link
-        border-left: 3px solid transparent
     .menu-item
         &.active, &:hover 
             .menu-link
                 border-bottom: 1px solid $gray-200
-                border-left-color: $green 
                 color: $blue-navy
     .menu-link
         padding: 17px
@@ -163,9 +160,17 @@
                 height: 24px
 @media only screen and (max-width : 991px)
     .navmenu 
-        top: 100px
+        top: 159px
 @media only screen and (max-width : 767px)
     .logo-item
         width: 140px
+    .navmenu-bottom
+        background-color: $bg-blue-light
+        padding: 30px 15px 35px
+    .link2
+        margin-left: 20px
+    .link2.active, .link2:hover
+        border-color: transparent
+@media only screen and (max-width : 575px)
     .navmenu 
-        top: 70px
+        top: 129px
