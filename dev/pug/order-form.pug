@@ -25,23 +25,18 @@ block content
 						.slider-for-item 
 							img(src="img/product/rectangle_12_7672.jpg", alt="product")
 						ul.slick-dots.d-md-none
+							-var dots = 3
 							li.slick-active(role='presentation')
 								button(type='button' role='tab')
-							li(role='presentation')
-								button(type='button' role='tab')
-							li(role='presentation')
-								button(type='button' role='tab')
-							li(role='presentation')
-								button(type='button' role='tab')
+							while dots--
+								li(role='presentation')
+									button(type='button' role='tab')
 					.slider-nav
-						.slider-nav-item 
-							img(src="img/product/rectangle_12_7672.jpg", alt="product")
-						.slider-nav-item 
-							img(src="img/product/rectangle_12_7672.jpg", alt="product")
-						.slider-nav-item 
-							img(src="img/product/rectangle_12_7672.jpg", alt="product")
-						.slider-nav-item 
-							img(src="img/product/rectangle_12_7672.jpg", alt="product")
+						-var slideNav = 4
+						while slideNav--
+							.slider-nav-item 
+								img(src="img/product/rectangle_12_7672.jpg", alt="product")
+						
 				.product-center
 					p.fw-bold Description
 					.dashed-horizontal.my-10

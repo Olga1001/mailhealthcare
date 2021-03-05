@@ -30,8 +30,8 @@
                       <use xlink:href="img/sprite/symbol/sprite.svg#instagram"></use>
                     </svg></a></li>
                 <li><a href="#">
-                    <svg class="svg-sprite-icon icon-twitter">
-                      <use xlink:href="img/sprite/symbol/sprite.svg#twitter"></use>
+                    <svg class="svg-sprite-icon icon-youtube">
+                      <use xlink:href="img/sprite/symbol/sprite.svg#youtube"></use>
                     </svg></a></li>
               </ul>
               <nav class="navmenu"> 
@@ -155,7 +155,7 @@
             <div class="align-items-center"> <a class="align-md-items-center link2 d-none" href="#"> 
                 <svg class="svg-sprite-icon icon-user c-green mr-14 wh-25">
                   <use xlink:href="img/sprite/symbol/sprite.svg#user"></use>
-                </svg><span class="fs-14 fw-semi c-blue-navy text-nowrap">Sign In</span></a><a class="align-items-center link2" href="#"> 
+                </svg><span class="fs-14 fw-semi c-blue-navy text-nowrap">Sign In</span></a><a class="align-items-center link2" href="#" data-open-popup="popup-cart"> 
                 <div class="circle-red mr-md-14">
                   <svg class="svg-sprite-icon icon-shopping-cart c-green wh-25">
                     <use xlink:href="img/sprite/symbol/sprite.svg#shopping-cart"></use>
@@ -245,6 +245,117 @@
           </form>
         </div>
       </header>
+      <div class="popup popup-cart" data-popup="popup-cart"> 
+        <div class="popup-container max-420 stopPropagation"> 
+          <form class="form-cart">
+            <header class="form-cart_head">
+              <button class="close" type="button"></button>
+              <h2 class="fs-35 text-up">your Cart</h2>
+              <div class="dashed-horizontal mt-25"></div>
+            </header>
+            <ul class="form-cart_list">
+              <li class="form-cart_product">
+                <div class="justify-content-between pb-10">
+                  <div class="d-flex pt-sm-0 pt-20"><a class="shrink-0" href="#"> <img class="img-product" src="img/product/rectangle_12_7672.jpg" alt="product"></a>
+                    <div class="justify-content-between flex-column"> 
+                      <div class="lh-1_2 pb-15"><a class="fs-22 text-up c-blue" href="#">Pantoprazole</a>
+                        <div class="flex-wrap">
+                          <div class="d-flex"><a class="fs-14 c-green" href="#">Generic</a>
+                            <p class="fs-14 c-gray-light mx-10">/</p>
+                          </div><a class="fs-14 c-green" href="#">Sildenafil</a>
+                        </div>
+                      </div>
+                      <div class="lh-18">
+                        <p class="fs-14 fw-bold">Prescription Settings</p>
+                        <div class="flex-wrap"> <a class="fs-14 c-blue" href="#">Generic</a>
+                          <p class="fs-14 c-gray-light mx-10">/</p><a class="fs-14 c-blue" href="#">Tablet</a>
+                        </div>
+                        <div class="flex-wrap"> <a class="fs-14 c-blue" href="#">40mg</a>
+                          <p class="fs-14 c-gray-light mx-10">/</p><a class="fs-14 c-blue" href="#">30 tablets</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="btn-remove h-fit-content" type="button">
+                    <svg class="svg-sprite-icon icon-bin c-gray-light ">
+                      <use xlink:href="img/sprite/symbol/sprite.svg#bin"></use>
+                    </svg>
+                  </button>
+                </div>
+                <hr class="line-dotted">
+                <div class="flex-center-between"> 
+                  <div class="pt-10">
+                    <div class="counter d-flex"> 
+                      <button class="counter-minus counter-btn" type="button"></button>
+                      <input class="counter-input" type="number" value="1">
+                      <button class="counter-plus counter-btn" type="button"></button>
+                    </div>
+                  </div>
+                  <div class="align-items-sm-end pt-10 d-block text-right">
+                    <p class="fs-14 c-gray-light mr-sm-10">Price</p>
+                    <p class="fs-22 fw-bold text-up c-green">$8.38</p>
+                  </div>
+                </div>
+              </li>
+              <li class="form-cart_product">
+                <div class="justify-content-between pb-10">
+                  <div class="d-flex pt-sm-0 pt-20"><a class="shrink-0" href="#"> <img class="img-product" src="img/product/layer_67_7584.jpg" alt="product"></a>
+                    <div class="justify-content-between flex-column"> 
+                      <div class="lh-1_2 pb-15"><a class="fs-22 text-up c-blue" href="#">Ketoprofen</a>
+                        <div class="flex-wrap"><a class="fs-14 c-green" href="#">Sildenafil</a>
+                        </div>
+                      </div>
+                      <div class="lh-18">
+                        <p class="fs-14 fw-bold">Prescription Settings</p>
+                        <div class="flex-wrap"> <a class="fs-14 c-blue" href="#">Generic</a>
+                          <p class="fs-14 c-gray-light mx-10">/</p><a class="fs-14 c-blue" href="#">Tablet</a>
+                        </div>
+                        <div class="flex-wrap"> <a class="fs-14 c-blue" href="#">40mg</a>
+                          <p class="fs-14 c-gray-light mx-10">/</p><a class="fs-14 c-blue" href="#">30 tablets</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="btn-remove h-fit-content" type="button">
+                    <svg class="svg-sprite-icon icon-bin c-gray-light ">
+                      <use xlink:href="img/sprite/symbol/sprite.svg#bin"></use>
+                    </svg>
+                  </button>
+                </div>
+                <hr class="line-dotted">
+                <div class="flex-center-between"> 
+                  <div class="pt-10">
+                    <div class="counter d-flex"> 
+                      <button class="counter-minus counter-btn" type="button"></button>
+                      <input class="counter-input" type="number" value="1">
+                      <button class="counter-plus counter-btn" type="button"></button>
+                    </div>
+                  </div>
+                  <div class="align-items-sm-end pt-10 d-block text-right">
+                    <p class="fs-14 c-gray-light mr-sm-10">Price</p>
+                    <p class="fs-22 fw-bold text-up c-green">$8.38</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </form>
+          <div class="popup-bottom">
+            <div class="align-items-end pb-10"> 
+              <p class="fs-14 c-gray-600 min-w-75">Sub Total</p>
+              <hr class="line-dotted w-170 ml-0 mr-10">
+              <p class="fs-14 fw-semi c-gray-600">$373,76</p>
+            </div>
+            <div class="align-items-end pb-10"> 
+              <p class="fs-20 fw-medium min-w-75">Total</p>
+              <hr class="line-dotted w-170 ml-0 mr-10">
+              <p class="fs-22 fw-bold c-green">$373,76</p>
+            </div><a class="btn lh-50 w-100 mt-20" href="#">Checkout
+              <svg class="svg-sprite-icon icon-arrow_right wh-20">
+                <use xlink:href="img/sprite/symbol/sprite.svg#arrow_right"></use>
+              </svg></a>
+          </div>
+        </div>
+      </div>
       <div class="wrapper-content">
         <div class="skeleton">
           <div class="container">
@@ -564,10 +675,10 @@
                   </ul>
                 </div>
                 <div class="slider-nav">
-                  <div class="slider-nav-item"><img src="img/product/rectangle_12_7672.jpg" alt="product"></div>
-                  <div class="slider-nav-item"><img src="img/product/rectangle_12_7672.jpg" alt="product"></div>
-                  <div class="slider-nav-item"><img src="img/product/rectangle_12_7672.jpg" alt="product"></div>
-                  <div class="slider-nav-item"><img src="img/product/rectangle_12_7672.jpg" alt="product"></div>
+                  <div class="slider-nav-item"> <img src="img/product/rectangle_12_7672.jpg" alt="product"></div>
+                  <div class="slider-nav-item"> <img src="img/product/rectangle_12_7672.jpg" alt="product"></div>
+                  <div class="slider-nav-item"> <img src="img/product/rectangle_12_7672.jpg" alt="product"></div>
+                  <div class="slider-nav-item"> <img src="img/product/rectangle_12_7672.jpg" alt="product"></div>
                 </div>
               </div>
               <div class="product-center">
@@ -621,7 +732,7 @@
                     <p class="lh-24">Price in USA</p>
                     <p class="fs-20 lh-20 fw-bold">$31.00</p>
                   </div>
-                </div><a class="btn mt-30 lh-55" href="#">Add to Cart
+                </div><a class="btn mt-30 lh-55" href="#" data-open-popup="popup-added-to-card">Add to Cart
                   <svg class="svg-sprite-icon icon-shopping-cart">
                     <use xlink:href="img/sprite/symbol/sprite.svg#shopping-cart"></use>
                   </svg></a><a class="btn mt-20 bg-blue-color lh-55" href="#">Order Now
@@ -1289,6 +1400,56 @@
                 <hr class="line my-20 d-xl-none">
                 <p class="lh-20 d-xl-none d-block">Much сheaper than in the USA</p>
               </div>
+            </div>
+          </div>
+        </div>
+        <div class="popup popup-added-to-card" data-popup="popup-added-to-card"> 
+          <div class="popup-container max-720 stopPropagation"> 
+            <form class="form-added-cart">
+              <button class="close" type="button"></button>
+              <div class="product-title mr-0 pb-30 mb-20">
+                <h2 class="fs-35 text-up">Added to Cart </h2>
+              </div>
+              <div class="justify-content-sm-between">
+                <div class="d-flex pr-sm-15"><a class="shrink-0" href="#"> <img class="img-product" src="img/product/rectangle_12_7672.jpg" alt="product"></a>
+                  <div class="justify-content-between flex-column"> 
+                    <div class="lh-1_2 pb-15"><a class="fs-22 text-up c-blue" href="#">Pantoprazole</a>
+                      <div class="flex-wrap"> <a class="fs-14 c-green" href="#">Generic</a>
+                        <p class="fs-14 c-gray-light mx-15">/</p><a class="fs-14 c-green" href="#">Sildenafil</a>
+                      </div>
+                    </div>
+                    <div class="lh-22 pb-15">
+                      <p class="fw-bold">Prescription Settings</p>
+                      <div class="flex-wrap">
+                        <div class="d-flex"> <a class="fs-14 c-blue" href="#">Generic</a>
+                          <p class="fs-14 c-gray-light mx-10">/</p>
+                        </div>
+                        <div class="d-flex"><a class="fs-14 c-blue" href="#">Tablet</a>
+                          <p class="fs-14 c-gray-light mx-10">/</p>
+                        </div>
+                        <div class="d-flex"><a class="fs-14 c-blue" href="#">40mg</a>
+                          <p class="fs-14 c-gray-light mx-10">/</p>
+                        </div><a class="fs-14 c-blue" href="#">30 tablets</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="price-col"> 
+                  <div class="d-sm-block flex-start-center ml-sm-0 ml-auto">
+                    <p class="c-gray-light">Price<span class="d-sm-none mr-20">:</span></p>
+                    <p class="fs-30 fw-bold text-up c-green">$8.38</p>
+                  </div>
+                </div>
+              </div>
+            </form>
+            <div class="popup-bottom">
+              <div class="flex-center-between flex-sm-row flex-column-reverse"> <a class="align-items-center fs-14 c-gray-600 py-3" href="#"> 
+                  <svg class="svg-sprite-icon icon-arrow_left c-gray-600 mr-20 wh-20">
+                    <use xlink:href="img/sprite/symbol/sprite.svg#arrow_left"></use>
+                  </svg>Continue Shopping</a><a class="btn lh-55 max-220 w-100" href="#">Purchase
+                  <svg class="svg-sprite-icon icon-shopping-cart wh-25">
+                    <use xlink:href="img/sprite/symbol/sprite.svg#shopping-cart"></use>
+                  </svg></a></div>
             </div>
           </div>
         </div>

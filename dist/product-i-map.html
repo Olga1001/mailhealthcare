@@ -29,8 +29,8 @@
                       <use xlink:href="img/sprite/symbol/sprite.svg#instagram"></use>
                     </svg></a></li>
                 <li><a href="#">
-                    <svg class="svg-sprite-icon icon-twitter">
-                      <use xlink:href="img/sprite/symbol/sprite.svg#twitter"></use>
+                    <svg class="svg-sprite-icon icon-youtube">
+                      <use xlink:href="img/sprite/symbol/sprite.svg#youtube"></use>
                     </svg></a></li>
               </ul>
               <nav class="navmenu"> 
@@ -154,7 +154,7 @@
             <div class="align-items-center"> <a class="align-md-items-center link2 d-none" href="#"> 
                 <svg class="svg-sprite-icon icon-user c-green mr-14 wh-25">
                   <use xlink:href="img/sprite/symbol/sprite.svg#user"></use>
-                </svg><span class="fs-14 fw-semi c-blue-navy text-nowrap">Sign In</span></a><a class="align-items-center link2" href="#"> 
+                </svg><span class="fs-14 fw-semi c-blue-navy text-nowrap">Sign In</span></a><a class="align-items-center link2" href="#" data-open-popup="popup-cart"> 
                 <div class="circle-red mr-md-14">
                   <svg class="svg-sprite-icon icon-shopping-cart c-green wh-25">
                     <use xlink:href="img/sprite/symbol/sprite.svg#shopping-cart"></use>
@@ -244,6 +244,117 @@
           </form>
         </div>
       </header>
+      <div class="popup popup-cart" data-popup="popup-cart"> 
+        <div class="popup-container max-420 stopPropagation"> 
+          <form class="form-cart">
+            <header class="form-cart_head">
+              <button class="close" type="button"></button>
+              <h2 class="fs-35 text-up">your Cart</h2>
+              <div class="dashed-horizontal mt-25"></div>
+            </header>
+            <ul class="form-cart_list">
+              <li class="form-cart_product">
+                <div class="justify-content-between pb-10">
+                  <div class="d-flex pt-sm-0 pt-20"><a class="shrink-0" href="#"> <img class="img-product" src="img/product/rectangle_12_7672.jpg" alt="product"></a>
+                    <div class="justify-content-between flex-column"> 
+                      <div class="lh-1_2 pb-15"><a class="fs-22 text-up c-blue" href="#">Pantoprazole</a>
+                        <div class="flex-wrap">
+                          <div class="d-flex"><a class="fs-14 c-green" href="#">Generic</a>
+                            <p class="fs-14 c-gray-light mx-10">/</p>
+                          </div><a class="fs-14 c-green" href="#">Sildenafil</a>
+                        </div>
+                      </div>
+                      <div class="lh-18">
+                        <p class="fs-14 fw-bold">Prescription Settings</p>
+                        <div class="flex-wrap"> <a class="fs-14 c-blue" href="#">Generic</a>
+                          <p class="fs-14 c-gray-light mx-10">/</p><a class="fs-14 c-blue" href="#">Tablet</a>
+                        </div>
+                        <div class="flex-wrap"> <a class="fs-14 c-blue" href="#">40mg</a>
+                          <p class="fs-14 c-gray-light mx-10">/</p><a class="fs-14 c-blue" href="#">30 tablets</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="btn-remove h-fit-content" type="button">
+                    <svg class="svg-sprite-icon icon-bin c-gray-light ">
+                      <use xlink:href="img/sprite/symbol/sprite.svg#bin"></use>
+                    </svg>
+                  </button>
+                </div>
+                <hr class="line-dotted">
+                <div class="flex-center-between"> 
+                  <div class="pt-10">
+                    <div class="counter d-flex"> 
+                      <button class="counter-minus counter-btn" type="button"></button>
+                      <input class="counter-input" type="number" value="1">
+                      <button class="counter-plus counter-btn" type="button"></button>
+                    </div>
+                  </div>
+                  <div class="align-items-sm-end pt-10 d-block text-right">
+                    <p class="fs-14 c-gray-light mr-sm-10">Price</p>
+                    <p class="fs-22 fw-bold text-up c-green">$8.38</p>
+                  </div>
+                </div>
+              </li>
+              <li class="form-cart_product">
+                <div class="justify-content-between pb-10">
+                  <div class="d-flex pt-sm-0 pt-20"><a class="shrink-0" href="#"> <img class="img-product" src="img/product/layer_67_7584.jpg" alt="product"></a>
+                    <div class="justify-content-between flex-column"> 
+                      <div class="lh-1_2 pb-15"><a class="fs-22 text-up c-blue" href="#">Ketoprofen</a>
+                        <div class="flex-wrap"><a class="fs-14 c-green" href="#">Sildenafil</a>
+                        </div>
+                      </div>
+                      <div class="lh-18">
+                        <p class="fs-14 fw-bold">Prescription Settings</p>
+                        <div class="flex-wrap"> <a class="fs-14 c-blue" href="#">Generic</a>
+                          <p class="fs-14 c-gray-light mx-10">/</p><a class="fs-14 c-blue" href="#">Tablet</a>
+                        </div>
+                        <div class="flex-wrap"> <a class="fs-14 c-blue" href="#">40mg</a>
+                          <p class="fs-14 c-gray-light mx-10">/</p><a class="fs-14 c-blue" href="#">30 tablets</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="btn-remove h-fit-content" type="button">
+                    <svg class="svg-sprite-icon icon-bin c-gray-light ">
+                      <use xlink:href="img/sprite/symbol/sprite.svg#bin"></use>
+                    </svg>
+                  </button>
+                </div>
+                <hr class="line-dotted">
+                <div class="flex-center-between"> 
+                  <div class="pt-10">
+                    <div class="counter d-flex"> 
+                      <button class="counter-minus counter-btn" type="button"></button>
+                      <input class="counter-input" type="number" value="1">
+                      <button class="counter-plus counter-btn" type="button"></button>
+                    </div>
+                  </div>
+                  <div class="align-items-sm-end pt-10 d-block text-right">
+                    <p class="fs-14 c-gray-light mr-sm-10">Price</p>
+                    <p class="fs-22 fw-bold text-up c-green">$8.38</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </form>
+          <div class="popup-bottom">
+            <div class="align-items-end pb-10"> 
+              <p class="fs-14 c-gray-600 min-w-75">Sub Total</p>
+              <hr class="line-dotted w-170 ml-0 mr-10">
+              <p class="fs-14 fw-semi c-gray-600">$373,76</p>
+            </div>
+            <div class="align-items-end pb-10"> 
+              <p class="fs-20 fw-medium min-w-75">Total</p>
+              <hr class="line-dotted w-170 ml-0 mr-10">
+              <p class="fs-22 fw-bold c-green">$373,76</p>
+            </div><a class="btn lh-50 w-100 mt-20" href="#">Checkout
+              <svg class="svg-sprite-icon icon-arrow_right wh-20">
+                <use xlink:href="img/sprite/symbol/sprite.svg#arrow_right"></use>
+              </svg></a>
+          </div>
+        </div>
+      </div>
       <div class="wrapper-content">
         <main class="product-i-map__main">
           <div class="product-i-map">
@@ -521,6 +632,30 @@
                 <p>Dicat falli iusto vel no. Primis mucius euismod at mea, alii nonumy eum ne, est id malorum reprimique. An malorum abhorreant mei. Vel veri dicta phaedrum et, no tale alia pericula sit. Cu mea numquam concludatu rque. Nisl civibus complectitur ex ius, te elitr iudicabit nam.</p>
               </div>
             </div>
+          </div>
+          <section class="how-work-section">
+            <div class="container">
+              <h2 class="fs-35 text-up text-center">how it works</h2>
+              <div class="dashed-horizontal mt-20 mb-40 mx-auto"></div>
+              <div class="w-max-469 ml-lg-auto mx-auto mb-30 relative">
+                <div class="how-works__block-video">
+                  <div class="how-works__block-black"><img class="how-works__block-img" src="img/common/layer_67_7696.png" alt="how it work">
+                    <button class="btn-play" type="button" data-open-popup="popup-video">
+                      <svg class="svg-sprite-icon icon-play">
+                        <use xlink:href="img/sprite/symbol/sprite.svg#play"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <button class="align-items-center mx-auto mb-25" type="button" data-open-popup="popup-video">
+                  <svg class="svg-sprite-icon icon-play-button mr-14">
+                    <use xlink:href="img/sprite/symbol/sprite.svg#play-button"></use>
+                  </svg><span class="c-green fs-sm-16 fs-13_5">Watch the How We Works video</span>
+                </button>
+              </div>
+            </div>
+          </section>
+          <div class="container">
             <div class="flex-wrap steps"> 
               <div class="step"> <img class="step__line" src="img/common/line_left.svg" alt="line">
                 <div class="step__circle left"> 
@@ -560,13 +695,13 @@
                   <div class="dashed-horizontal py-3 mx-auto"></div>
                   <p>Your prescriptions will arrive at your home within 1-5 business days once shipped.</p>
                 </div>
-              </div><a class="btn btn_how-work mx-auto" href="#">How it Works
+              </div><a class="btn btn_how-work mx-auto fs-16 lh-50" href="#">How it Works
                 <svg class="svg-sprite-icon icon-arrow_right">
                   <use xlink:href="img/sprite/symbol/sprite.svg#arrow_right"></use>
                 </svg></a>
             </div>
           </div>
-          <div class="sample-savings">
+          <section class="sample-savings">
             <div class="container">
               <h2 class="fs-35 text-up text-center">Sample Savings</h2>
               <div class="dashed-horizontal my-20 mx-auto"></div>
@@ -672,8 +807,14 @@
                 </div>
               </div>
             </footer>
-          </div>
+          </section>
         </main>
+        <div class="popup popup-video" data-popup="popup-video"> 
+          <button class="close" type="button"></button>
+          <video class="video stopPropagation" controls="controls" preload="none" width="100%" poster="">
+            <source src="img/How-Profarma-Express-Works.mp4" type="video/mp4">
+          </video>
+        </div>
       </div>
     </div>
     <script src="js/jquery-3.5.1.min.js"></script>

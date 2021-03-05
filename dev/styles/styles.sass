@@ -577,6 +577,48 @@ hr
   height: 40px 
   fill: $gray-600
 
+.counter 
+  background-color: $bg-white
+  border: 1px solid #e6ebeb
+  border-radius: 3px
+  overflow: hidden
+  &-btn 
+    +box(40px,38px)
+    background-color: $bg-blue-light
+    text-align: center
+    position: relative
+    &:before 
+      content: ''
+      +centerXY
+      background-color: $bg-blue-navy
+      width: 13px 
+      height: 3px
+  &-input
+    width: 60px 
+    text-align: center
+    border-left: 1px solid $gray-100
+    border-right: 1px solid $gray-100
+    font-size: 22.1px
+    color: $blue
+  &-plus 
+    &:after
+      content: ''
+      +centerXY
+      background-color: $bg-blue-navy
+      width: 3px 
+      height: 13px
+
+@import "modules/modules"
+
+.h-fit-content 
+  height: fit-content
+
+.shrink-0
+  flex-shrink: 0
+
+.min-w-75
+  min-width: 75px 
+  
 .max-190
   max-width: 190px!important
 .max-120
@@ -589,10 +631,15 @@ hr
   max-width: 250px
 .max-95
   max-width: 95px!important
+.max-420
+  max-width: 420px
 .max-480
   max-width: 480px
+.max-720
+  max-width: 720px
 
-@import "modules/modules"
+.wh-20
+  +box(20px)
 
 .wh-25
   +box(25px)

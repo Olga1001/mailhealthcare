@@ -98,6 +98,12 @@
         align-items: center
     .flex-sm-center-between
         +d-flex(space-between, center)
+    .align-items-sm-end
+        display: flex 
+        align-items: flex-end
+    .justify-content-sm-between
+        display: flex 
+        justify-content: space-between
     .d-sm-block 
         display: block
     .d-sm-flex 
@@ -121,6 +127,8 @@
         padding-bottom: 16px
     .mr-sm-8
         margin-right: 8px
+    .mr-sm-10
+        margin-right: 10px
     .mr-sm-25 
         margin-right: 25px
     .mr-sm-60
@@ -142,12 +150,22 @@
     .py-sm-60
         padding-top: 60px 
         padding-bottom: 60px
+    .pt-sm-0
+        padding-top: 0
     .max-sm-220
         max-width: 220px
     .max-sm-95
         max-width: 95px
+    .max-sm-420
+        max-width: 420px
     .mb-sm-0
         margin-bottom: 0
+    .ml-sm-0
+        margin-left: 0
+    .flex-sm-row
+        display: flex 
+        flex-direction: row
+    
 @media only screen and (max-width : 991px)
     .slick-slide
         margin-right: 10px
@@ -250,3 +268,6 @@
         .fs-14 
             font-size: 12px
             line-height: 1.2
+    
+    .fs-22
+        font-size: 18px

@@ -61,6 +61,20 @@ block content
 					img(src="img/common/plane_1255-1.png", alt="plane")
 				.border-left.pl-30.max-470 
 					p Dicat falli iusto vel no. Primis mucius euismod at mea, alii nonumy eum ne, est id malorum reprimique. An malorum abhorreant mei. Vel veri dicta phaedrum et, no tale alia pericula sit. Cu mea numquam concludatu rque. Nisl civibus complectitur ex ius, te elitr iudicabit nam.
+		section.how-work-section
+			.container
+				h2.fs-35.text-up.text-center how it works
+				.dashed-horizontal.mt-20.mb-40.mx-auto
+				.w-max-469.ml-lg-auto.mx-auto.mb-30.relative
+					.how-works__block-video
+						.how-works__block-black
+							img.how-works__block-img(src="img/common/layer_67_7696.png", alt="how it work")
+							button.btn-play(type="button" data-open-popup="popup-video")
+								+icon("play")
+					button.align-items-center.mx-auto.mb-25(type="button" data-open-popup="popup-video")
+						+icon("play-button","mr-14")
+						span.c-green.fs-sm-16.fs-13_5 Watch the How We Works video
+		.container
 			.flex-wrap.steps 
 				- 
 					step = [
@@ -107,10 +121,10 @@ block content
 								span.d-block=val.titleBottom 
 							.dashed-horizontal.py-3.mx-auto
 							p=val.text
-				a.btn.btn_how-work.mx-auto(href="#") How it Works
+				a.btn.btn_how-work.mx-auto.fs-16.lh-50(href="#") How it Works
 					+icon("arrow_right")
 
-		.sample-savings
+		section.sample-savings
 			.container
 				h2.fs-35.text-up.text-center Sample Savings
 				.dashed-horizontal.my-20.mx-auto
@@ -167,15 +181,20 @@ block content
 										p.c-gray-light.px-xl-15.px-8 /
 										p.fs-18.fw-semi.c-green Save 
 											span=val.stock
-
+						
 						ul.slick-dots
+							-var dots = 3
 							li.slick-active(role='presentation')
 								button(type='button' role='tab')
-							li(role='presentation')
-								button(type='button' role='tab')
-							li(role='presentation')
-								button(type='button' role='tab')
-							li(role='presentation')
-								button(type='button' role='tab')
+							while dots--
+								li(role='presentation')
+									button(type='button' role='tab')
 			
 			include modules/footer/footer
+
+	.popup.popup-video(data-popup="popup-video") 
+		button.close(type="button")
+		video.video.stopPropagation(controls="controls" preload="none" width="100%" poster="")
+			source(src="img/How-Profarma-Express-Works.mp4" type="video/mp4")
+			//- source(src='img/How-Profarma-Express-Works.webm' type='video/webm')
+			//- source(src='img/How-Profarma-Express-Works.ogv' type='videovideo/ogg')

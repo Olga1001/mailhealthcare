@@ -233,23 +233,17 @@ block content
 						.slider-for-item 
 							img(src="img/product/rectangle_12_7672.jpg", alt="product")
 						ul.slick-dots.d-md-none
+							-var dots = 3
 							li.slick-active(role='presentation')
 								button(type='button' role='tab')
-							li(role='presentation')
-								button(type='button' role='tab')
-							li(role='presentation')
-								button(type='button' role='tab')
-							li(role='presentation')
-								button(type='button' role='tab')
+							while dots--
+								li(role='presentation')
+									button(type='button' role='tab')
 					.slider-nav
-						.slider-nav-item
-							img(src="img/product/rectangle_12_7672.jpg", alt="product")
-						.slider-nav-item
-							img(src="img/product/rectangle_12_7672.jpg", alt="product")
-						.slider-nav-item
-							img(src="img/product/rectangle_12_7672.jpg", alt="product")
-						.slider-nav-item
-							img(src="img/product/rectangle_12_7672.jpg", alt="product")
+						-var slideNav = 4
+						while slideNav--
+							.slider-nav-item 
+								img(src="img/product/rectangle_12_7672.jpg", alt="product")
 				.product-center
 					p.fw-bold Description
 					.dashed-horizontal.my-10
@@ -294,7 +288,7 @@ block content
 							p.lh-24 Price in USA
 							p.fs-20.lh-20.fw-bold $31.00
 
-					a.btn.mt-30.lh-55(href="#") Add to Cart
+					a.btn.mt-30.lh-55(href="#" data-open-popup="popup-added-to-card") Add to Cart
 						+icon("shopping-cart")
 					a.btn.mt-20.bg-blue-color.lh-55(href="#") Order Now
 						+icon("arrow_right")
@@ -527,3 +521,50 @@ block content
 		.content-item_drug.mt-25.d-lg-none
 			.w-100
 				include layout/drug
+
+	.popup.popup-added-to-card(data-popup="popup-added-to-card") 
+		.popup-container.max-720.stopPropagation 
+			form.form-added-cart
+				button.close(type="button")
+				.product-title.mr-0.pb-30.mb-20
+					h2.fs-35.text-up Added to Cart 
+
+				.justify-content-sm-between
+					.d-flex.pr-sm-15
+						a.shrink-0(href="#") 
+							img.img-product(src="img/product/rectangle_12_7672.jpg", alt="product")
+						.justify-content-between.flex-column 
+							.lh-1_2.pb-15
+								a.fs-22.text-up.c-blue(href="#") Pantoprazole
+								.flex-wrap 
+									a.fs-14.c-green(href="#") Generic
+									p.fs-14.c-gray-light.mx-15 /
+									a.fs-14.c-green(href="#") Sildenafil
+							.lh-22.pb-15
+								p.fw-bold Prescription Settings
+								.flex-wrap
+									.d-flex 
+										a.fs-14.c-blue(href="#") Generic
+										p.fs-14.c-gray-light.mx-10 /
+									.d-flex
+										a.fs-14.c-blue(href="#") Tablet
+										p.fs-14.c-gray-light.mx-10 /
+									.d-flex
+										a.fs-14.c-blue(href="#") 40mg
+										p.fs-14.c-gray-light.mx-10 /
+									a.fs-14.c-blue(href="#") 30 tablets
+					.price-col 
+						.d-sm-block.flex-start-center.ml-sm-0.ml-auto
+							p.c-gray-light Price
+								span.d-sm-none.mr-20 :
+							p.fs-30.fw-bold.text-up.c-green $8.38
+
+
+				
+			.popup-bottom
+				.flex-center-between.flex-sm-row.flex-column-reverse 
+					a.align-items-center.fs-14.c-gray-600.py-3(href="#") 
+						+icon("arrow_left", "c-gray-600 mr-20 wh-20")
+						| Continue Shopping
+					a.btn.lh-55.max-220.w-100(href="#") Purchase
+						+icon("shopping-cart", "wh-25")

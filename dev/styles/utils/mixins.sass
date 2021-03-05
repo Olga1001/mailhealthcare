@@ -1,6 +1,6 @@
 @mixin box($width,$height: $width) 
-  width: $width
-  height: $height
+  width: $width!important
+  height: $height!important
 
 @mixin cover-background 
   background-repeat: no-repeat
@@ -23,7 +23,7 @@
 //   @media screen and (min-width: if(unitless($res), $res*$units, $res))
 //     @content
 
-@mixin d-flex($justify: space-between, $items: center, $wrap:false) 
+@mixin d-flex($justify: space-between, $items: center, $wrap:false, $align:true) 
   display: flex
   justify-content: $justify
   align-items: $items
