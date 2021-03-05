@@ -12,8 +12,7 @@
         right: 0
         z-index: -1
         img 
-            width: 857px
-            height: 717px
+            +box(857px,717px)
 
 .order-from 
     padding-right: 125px
@@ -21,8 +20,7 @@
     padding-bottom: 130px
     background: url("../img/common/map_9669-1.png") no-repeat center / 96%
     .icon-top_20_arrow 
-        width: 40px 
-        height: 40px
+        +box(40px)
     .max-470
         margin-top: 297px
 
@@ -50,8 +48,7 @@
         left: calc(50% + 50px)
         width: 75%
     &__circle 
-        width: 97px
-        height: 97px
+        +box(97px)
         background-color: $gray-100
         border-radius: 50% 
         position: relative
@@ -59,8 +56,7 @@
         &:before 
             content: ''
             position: absolute 
-            width: 98px
-            height: 98px
+            +box(98px)
             top: -4px 
             background: url("../img/common/steps_circle.svg") no-repeat center / contain
         &.left:before  
@@ -69,15 +65,13 @@
             right: -7px
 
         .svg-sprite-icon 
-            width: 55px 
-            height: 100%
+            +box(55px,100%)
             fill: $green
             margin: 0 auto
             display: block
     &__num 
         position: absolute
-        width: 36px
-        height: 36px
+        +box(36px)
         background-color: $bg-blue-navy
         text-align: center
         font-size: 18px
@@ -111,8 +105,7 @@
     &:last-child
         margin-right: 0
     &__img 
-        width: 100%
-        height: 290px
+        +box(100%,290px)
         object-fit: contain 
         border-bottom: 1px solid $gray-200
         margin-bottom: 15px
@@ -123,8 +116,7 @@
 
 @media only screen and (max-width : 1400px)
   .product-i-map_img img
-    height: auto
-    width: 690px
+    +box(690px,auto)
 
 @media only screen and (max-width : 1199px)
     .order-from 
@@ -212,8 +204,7 @@
         .fs-20
             font-size: 16px
     .order-from .icon-top_20_arrow
-        width: 30px
-        height: 30px
+        +box(30px)
     .steps
         margin: 30px auto 60px
     .sample-savings
