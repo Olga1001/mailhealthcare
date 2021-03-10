@@ -50,14 +50,13 @@ $(document).ready(function () {
   // open popups
   $('[data-open-popup]').click(function() {
     let attrItem = $(this).data("open-popup");
-    console.log(attrItem);
     $('[data-popup="' + attrItem +'"]').addClass('active');
   });
   $('.stopPropagation').click(function(e) {
     e.stopPropagation();
   });
 
-  // close popupы
+  // close popupы and pause video
   $('.popup, .close').click(function() {
     $('[data-popup]').removeClass('active');
     $(".video").trigger('pause'); 

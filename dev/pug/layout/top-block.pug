@@ -2,6 +2,10 @@
 .topblock
     .topblock-container
         .topblock-img
+            if (letter)
+                p.c-white.text-up.m-auto.text-center 
+                    span.fs-100.fw-extrabold #{letter}
+                    span.fs-20.fw-semi.d-block Drugs
         .topblock-title.align-lg-items-end
             .align-md-items-end
                 .mr-25.text-up 
@@ -10,10 +14,18 @@
                         +icon("top_20_arrow")
                     p.fs-100.fw-bold.c-green 20
                 p.fs-35.c-blue-navy.mb--5.text-up Most 
-                    span.d-block Common
+                    span.d-block Common 
+                        if (letter)
+                            span.c-green.fw-bold 'K'
                     | Medications
             .dashed-vertical.dashed-vertical-lg
-            p.c-blue.fs-18.mb--5 These are the most <br class="d-lg-block d-none"> commonly-prescribed <br class="d-lg-block d-none"> medications on GoodRx.
+            if (letter)
+                p.c-blue.fs-18.mb--5 These are the most commonly <br class="d-lg-block d-none"> prescribed  drugs beginning with <br class="d-lg-block d-none"> the letter 
+                    span.c-green 'K'
+                    |.
+            else
+                p.c-blue.fs-18.mb--5 These are the most <br class="d-lg-block d-none"> commonly prescribed <br class="d-lg-block d-none"> medications on GoodRx.
+        
         .slider-medications
             .d-flex
                 ul.medications

@@ -1,0 +1,227 @@
+extends layout/main2
+
+block variables
+	-var title = 'Popup Delivery'
+
+block content
+	main.product-i-map__main
+		.product-i-map
+			.container
+				div
+					h1.fs-80.c-white.fw-bold SAME PILLS. <br> LOWER <br class="d-sm-block d-none"> PRICES.
+					.dashed-horizontal.my-sm-30.my-20.py-sm-3.dashed-horizontal-dark
+					.max-480
+						p.fs-14.c-white.lh-22.pb-sm-20 Save on your medications today! MailHealthCare Helps You Save with Prescription. Drug prices vary significantly by pharmacy location. Prices can even vary between pharmacies directly across the street from each other. MailHealthCare helps you find needed drugs at pharmacies in the world, so you can save up to 85% on prescriptions.
+					.flex-xl-center-between
+						.max-w-lg-480.w-100
+							form.search.search-drug_form.mx-0.mt-30
+								+icon("pills_002", "search-pills")
+								input.search-drug(type="text" placeholder="Type your drug name")
+								button(type="submit")
+									+icon("search_magnific","c-green")
+
+							p.fs-14.c-blue-light.mt-30.pl-sm-20 Popular searches: 
+								span.fw-medium  Atorvastatin, Sildenafil, Zoloft, Lexapro...
+						.d-sm-block.d-none
+							.align-md-items-center
+								.align-items-center.mt-30 
+									.step__circle.left.bg-green.m-0.mr-25 
+										+icon("contract", "c-white")
+									p.fw-bold.text-up.c-white.lh-22 Licensed<br> wholesale<br> medical supplier
+								hr.mx-30.mt-30.dashed-vertical.dashed-vertical_white.d-md-block.d-none
+								.align-items-center.mt-30
+									.step__circle.left.bg-green.m-0.mr-25
+										+icon("air-plane", "c-white")
+									p.fw-bold.text-up.c-white.lh-22 Free<br> express mail<br> shipping
+				.d-sm-none.mt-auto
+					.align-items-center.mt-30 
+						.step__circle.left.bg-green.m-0.mr-25 
+							+icon("contract", "c-white")
+						p.fw-bold.text-up.c-white.lh-22 Licensed<br> wholesale<br> medical supplier
+					.align-items-center.mt-30
+						.step__circle.left.bg-green.m-0.mr-25
+							+icon("air-plane", "c-white")
+						p.fw-bold.text-up.c-white.lh-22 Free<br> express mail<br> shipping
+		.container
+			.topblock-img-none
+				each val, i in [{green: true, text: 'SEARCHES', text2: 'Mail Helth Care'}]
+					+topblock(val.green, val.text, val.text2)
+
+			.order-from 
+				.ml-auto.text-right.text-up.w-fit-content
+					p.fs-80.fw-extrabold.c-green Save
+					.flex-center-end.c-green.mb-10
+						p.fs-40.lh-34.fw-extrabold.mr-sm-8.mr-3 up<br>to 
+						p.fs-100.fw-extrabold 80%
+					p.fs-50.fw-extrabold on drugs
+					.flex-end-between.pt-35
+						+icon("top_20_arrow", "arrow-leftdown")
+						p.fw-semi.fs-20 order pills from <br> another country 
+				.order-from__map.d-sm-none.d-block
+					img(src="img/common/plane_1255-1.png", alt="plane")
+				.border-left.pl-30.max-470 
+					p Dicat falli iusto vel no. Primis mucius euismod at mea, alii nonumy eum ne, est id malorum reprimique. An malorum abhorreant mei. Vel veri dicta phaedrum et, no tale alia pericula sit. Cu mea numquam concludatu rque. Nisl civibus complectitur ex ius, te elitr iudicabit nam.
+		section.how-work-section
+			.container
+				h2.fs-35.text-up.text-center how it works
+				.dashed-horizontal.mt-20.mb-40.mx-auto
+				.w-max-469.ml-lg-auto.mx-auto.mb-30.relative
+					.how-works__block-video
+						.how-works__block-black
+							img.how-works__block-img(src="img/common/layer_67_7696.png", alt="how it work")
+							button.btn-play(type="button" data-open-popup="popup-video")
+								+icon("play")
+					button.align-items-center.mx-auto.mb-25(type="button" data-open-popup="popup-video")
+						+icon("play-button","mr-14")
+						span.c-green.fs-sm-16.fs-13_5 Watch the How We Works video
+		.container
+			.flex-wrap.steps 
+				- 
+					step = [
+						{
+							line: 'line_left.svg', 
+							svg: 'step_01', 
+							positionCircle: 'left',
+							num: '01',
+							positionNum: 'topright',
+							titleTop: 'Search for ', 
+							titleBottom: ' the Lowest Price',
+							text: 'Easily find the lowest price for your medication in more than 20 countries.'
+						},
+						{
+							line: 'line_right.svg', 
+							svg: 'step_02', 
+							positionCircle: 'right',
+							num: '02',
+							positionNum: 'bottomleft',
+							titleTop: 'Order Your ', 
+							titleBottom: ' Prescriptions',
+							text: 'Place your order online or by phone with a valid prescription for the drug'
+						},
+						{
+							svg: 'step_03', 
+							positionCircle: 'right',
+							num: '03',
+							positionNum: 'topleft',
+							titleTop: 'Free Shipping ', 
+							titleBottom: ' on All Orders',
+							text: 'Your prescriptions will arrive at your home within 1-5 business days once shipped.'
+						}
+					]
+				each val in step
+					.step 
+						if (val.line)
+							img.step__line(src="img/common/"+val.line, alt="line")
+						.step__circle(class=val.positionCircle) 
+							+icon(val.svg)
+							.step__num(class=val.positionNum)=val.num
+						.text-center
+							p.fw-bold.text-up.lh-20
+								span=val.titleTop 
+								span.d-block=val.titleBottom 
+							.dashed-horizontal.py-3.mx-auto
+							p=val.text
+				a.btn.btn_how-work.mx-auto.fs-16.lh-50(href="#") How it Works
+					+icon("arrow_right")
+
+		section.sample-savings
+			.container
+				h2.fs-35.text-up.text-center Sample Savings
+				.dashed-horizontal.my-20.mx-auto
+				p.text-center.pt-10 Here are examples of the savings available via GoodRx coupons on popular medications.
+
+				.relative 
+					.d-sm-block.d-none
+						button.slider-prev.slider-arrow(type="button")
+							+icon("arrow_left")
+						button.slider-next.slider-arrow(type="button")
+							+icon("arrow_right")
+					.slider.dots-circle
+						.d-flex
+							- 
+								card = [
+									{
+										srcProduct: 'layer_67_7584.jpg',
+										name: 'Ketoprofen',
+										span: 'Sildenafil',
+										price: '$8.38',
+										stock: '73%'
+									},
+									{
+										srcProduct: 'rectangle_12_7672.jpg',
+										name: 'Pantoprazole',
+										span: 'Generic',
+										price: '$10.78',
+										stock: '22%'
+									},
+									{
+										srcProduct: 'layer_67_7584.jpg',
+										name: 'Ketoprofen',
+										span: 'Sildenafil',
+										price: '$8.38',
+										stock: '73%'
+									},
+									{
+										srcProduct: 'rectangle_12_7672.jpg',
+										name: 'Pantoprazole',
+										span: 'Generic',
+										price: '$10.78',
+										stock: '22%'
+									}
+								]
+							each val in card 
+								.card-medication
+									a(href="#")
+										img.card-medication__img(src="img/product/"+val.srcProduct, alt=val.name)
+									.mb-10
+										a.text-up.fs-25.c-blue(href="#")=val.name
+										a.c-green.d-block.lh-1(href="#")=val.span
+									.align-items-end
+										p.fs-30.c-green.fw-bold.lh-34=val.price
+										p.c-gray-light.px-xl-15.px-8 /
+										p.fs-18.fw-semi.c-green Save 
+											span=val.stock
+						
+						ul.slick-dots
+							-var dots = 3
+							li.slick-active(role='presentation')
+								button(type='button' role='tab')
+							while dots--
+								li(role='presentation')
+									button(type='button' role='tab')
+			
+			include modules/footer/footer
+
+	.popup.popup-video(data-popup="popup-video") 
+		button.close(type="button")
+		video.video.stopPropagation(controls="controls" preload="none" width="100%" poster="")
+			source(src="img/How-Profarma-Express-Works.mp4" type="video/mp4")
+			//- source(src='img/How-Profarma-Express-Works.webm' type='video/webm')
+			//- source(src='img/How-Profarma-Express-Works.ogv' type='videovideo/ogg')
+	.popup.active(data-popup="popup-delivery") 
+		.popup-container.stopPropagation
+			.px-sm-30.px-15.py-20
+				button.close(type="button")
+				h2.fs-35.text-up.text-center Delivery
+				.dashed-horizontal.my-30.mx-auto
+				.step__circle.left.bg-green.mx-auto 
+					+icon("air-plane", "c-white")
+				.text-center
+					p.mt-50.fw-bold How does ProFarmaExpress Delivery work?
+					.dashed-horizontal.my-10.mx-auto
+					p.fs-14 With ProFarmaExpress, you can order your prescriptions from the comfort of your home and get them delivered to you with free shipping from $200 for order!
+				hr.my-30
+				.text-center
+					p.mt-50.fw-bold Is ProFarmaExpress Delivery available where I live?
+					.dashed-horizontal.my-10.mx-auto
+					p.fs-14 ProFarmaExpress Delivery is available in 49 states and the District of Columbia, excluding Washington state.
+				hr.my-30
+				.text-center.mb-20
+					p.mt-50.fw-bold How long will my Delivery order take?
+					.dashed-horizontal.my-10.mx-auto
+					p.fs-14 Orders typically arrive within 3-5 days of your order. Once your order ships, you will receive an email with a delivery status.
+			.popup-bottom
+				.py-20
+					a.btn.max-220.mx-auto.lh-50(href="#") 
+						+icon("arrow_left","left")
+						|Back to Shop
