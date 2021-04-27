@@ -314,13 +314,61 @@ block content
 						p.fw-medium Side Effects
 						.plus.d-sm-none
 			.flex-wrap
-				.content-product
+				.content-product.relative
+					.skeleton-local-1
+						.flex-wrap
+							.content-item_links.mt-25 
+								.skeleton-4.max-190.mb-25
+								.skeleton-5.max-190
+								.skeleton-5.max-190
+								.skeleton-5.max-150
+								.skeleton-5.max-190
+								.skeleton-5.max-190
+								.skeleton-5.max-150
+							.content-item_info.mt-25 
+								.skeleton-4.max-190.mb-25
+								.skeleton-5
+								.skeleton-5
+								.skeleton-5
+								.skeleton-5.max-220
+								.skeleton-line
+								.skeleton-4.max-190.mb-25
+								.skeleton-5
+								.skeleton-5
+								.skeleton-5
+								.skeleton-5.max-220
+								.d-xl-block.d-none
+									.skeleton-line
+									.skeleton-4.max-190.mb-25
+									.skeleton-5
+									.skeleton-5
+									.skeleton-5
+									.skeleton-5.max-220
+									.skeleton-line
+									.skeleton-4.max-190.mb-25
+									.skeleton-5
+									.skeleton-5
+									.skeleton-5
+									.skeleton-5.max-220
+									.skeleton-line
+									.skeleton-4.max-190.mb-25
+									.skeleton-5
+									.skeleton-5
+									.skeleton-5
+									.skeleton-5.max-220
+									.skeleton-line
+									.skeleton-4.max-190.mb-25
+									.skeleton-5
+									.skeleton-5
+									.skeleton-5
+									.skeleton-5.max-220
+						hr.line.mt-20.d-xl-none.w-100
 					.tabs-item.d-sm-none(data-tab="1")
 						.align-items-center.tabs-item_main
 							+icon("info")
 							p.fw-medium Drug Info
 							.plus.d-sm-none
-					.content-item.active(data-content="1")
+					.content-item.hide.active(data-content="1")
 						.flex-wrap
 							.content-item_links.mt-25  
 								
@@ -445,7 +493,7 @@ block content
 							+icon("warning")
 							p.fw-medium Side Effects
 							.plus.d-sm-none
-					.content-item(data-content="2")
+					.content-item.hide(data-content="2")
 						.flex-wrap 
 							.content-item_side.mt-25 
 								.collapse.pt-10
