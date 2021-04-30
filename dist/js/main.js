@@ -44,8 +44,8 @@ $(document).ready(function () {
   window.onload = function () {
     window.setTimeout(function () {
       // $(".skeleton").remove();
-      $(".skeleton").hide(); // $(".skeleton-local-2").hide();
-
+      $(".skeleton").hide(); 
+      $(".skeleton-local-2").hide();
       $(".skeleton-hide").removeClass('skeleton-hide');
       window.setTimeout(function () {
         $(".skeleton-local-1").hide();
