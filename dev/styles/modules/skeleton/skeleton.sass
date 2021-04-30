@@ -63,6 +63,16 @@
 .skeleton-12
     +block(#f2f2f2,10px,100%,525px)
     margin-top: 30px
+.skeleton-13
+    +block(#c8d0d3,12.5px,100%,25px)
+    max-width: 536px
+    margin-bottom: 8px
+.skeleton-14
+    +block(#f3f3f3,10px,100%,20px)
+    max-width: 192px
+    margin-bottom: 15px
+.skeleton-15
+    +block(#f2f2f2,10px,100%,519px)
 
 .skeleton
     padding-top: 56px
@@ -106,9 +116,20 @@
 .skeleton-local-1
     width: 100%
 
+.skeleton-local-2
+    width: 100% 
+    position: absolute
+    top: 5px
+    left: 0
+    background-color: $bg-white
+    .drugs 
+        margin-top: 77px
+
 @media only screen and (max-width : 991px)
     .skeleton-block
         padding: 14px 
+    .skeleton-15
+        height: 475px
 @media only screen and (max-width : 575px)
     .skeleton
         padding-top: 132px
@@ -142,3 +163,11 @@
             margin-right: 28px
         &:nth-child(2n+2)
             margin-right: 0    
+    .skeleton-local-2
+        top: 0
+    .skeleton-local-2 .drugs
+        margin-top: 74px
+        margin-bottom: 17px
+@media only screen and (max-width : 411px)
+    .skeleton-local-2 .drugs .w-50 
+        width: 100%
